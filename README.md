@@ -1,7 +1,7 @@
 # BSC_POOL_ID
 
-- find your find pool id from BSC scan.
+- find your pool id from BSC scan.
 
 # HOW TO USE
 
-- paste code on browser Console and remove let from variable before you paste
+- paste code on browser Console and remove let from variable before you paste this fucntion.
