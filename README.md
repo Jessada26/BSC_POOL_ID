@@ -5,3 +5,6 @@
 # HOW TO USE
 
 - paste code on browser Console and remove let from variable before you paste this fucntion.
+
+# CATEGORY
+- blockchain developer.
