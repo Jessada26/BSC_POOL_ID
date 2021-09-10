@@ -1,10 +1,10 @@
 # BSC_POOL_ID
 
-- find your pool id from BSC scan.
+- auto click and find your pool id from BSC scan.
 
 # HOW TO USE
 
-- paste code on browser Console and remove let from variable before you paste this fucntion.
+- just paste code on browser Console and remove let from variable before you paste this fucntion.
 
 # CATEGORY
 - blockchain developer.
