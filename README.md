@@ -5,7 +5,7 @@
 # HOW TO USE
 ![image](https://user-images.githubusercontent.com/58971201/132912826-9f41deef-d3a4-463d-aa8b-e51c1648621b.png)
 
-- step ond add value by manual input and click query button to create dom poolID element.
+- step ond add value by manual input and click query button to create dom IP_Token element.
 
 ![Screen Shot 2564-09-11 at 03 26 01](https://user-images.githubusercontent.com/58971201/132913713-b2ce6936-b213-409b-8d9d-8536c5125413.png)
 
