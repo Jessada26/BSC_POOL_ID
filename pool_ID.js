@@ -1,5 +1,5 @@
 let startClickID = 0;
-let yourLpInput = "0x01ecc44Ddd2D104F44D2AA1A2bD9DFbC91aE8275";
+let yourLpInput = "0xA527a61703D82139F8a06Bc30097cC9CAA2df5A6";
 let poolInfo = "9";
 
 let btn = document.querySelector(
@@ -14,12 +14,14 @@ async function Auto() {
   ) {
     if (Number(startClickID - 1) === -1) {
       await alert(
-        "poolID is:" +
-          document.querySelector("#readCollapse" + String(poolInfo) + " input")
-            .value
+        "poolID is:" + document.querySelector("#readCollapse" + String(poolInfo) + " input").value
       );
     } else {
-      await alert("poolID is:" + (startClickID - 1));
+      if (Number(document.querySelector("#readCollapse" + String(poolInfo) + " input").value) === Number(startClickID)) {
+        await alert("poolID is:" + (startClickID));
+      } else {
+        await alert("poolID is:" + (startClickID - 1));
+      }
     }
   } else {
     document.querySelector(
@@ -34,5 +36,10 @@ async function Auto() {
     }
   }
 }
+
+// document.querySelector("#readCollapse" + String(poolInfo) + " input").addEventListener("keypress", function() {
+//   console.log("onkeypress")
+//   btn.click();
+// });
 
 Auto();
