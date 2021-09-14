@@ -1,5 +1,5 @@
 let startClickID = 0;
-let yourLpInput = "0xA527a61703D82139F8a06Bc30097cC9CAA2df5A6";
+let yourLpInput = "0x0eD7e52944161450477ee417DE9Cd3a859b14fD0";
 let poolInfo = "9";
 
 let btn = document.querySelector(
@@ -33,6 +33,7 @@ async function Auto() {
       await setTimeout(Auto, 1500);
     } else {
       await alert("BSC Limit click at pool_id:" + (startClickID - 1));
+      await location.reload();
     }
   }
 }
