@@ -1,5 +1,5 @@
 let startClickID = 0;
-let yourLpInput = "0x3747e3e107223539FD09bb730b055A1f11F78Adf";
+let yourLpInput = "";
 let poolInfo = "9";
 
 let btn = document.querySelector(
@@ -29,6 +29,9 @@ async function Auto() {
     ).value = await startClickID;
     await btn.click();
     if (btn.disabled) {
+      if (startClickID > 0) {
+        await console.log(" address: "+ document.querySelector("#myanswer_" + String(poolInfo) + " a").innerText + " id: " + (startClickID - 1));
+      }
       await startClickID++;
       await setTimeout(Auto, 1500);
     } else {
