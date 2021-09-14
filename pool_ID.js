@@ -1,5 +1,5 @@
 let startClickID = 0;
-let yourLpInput = "0x0eD7e52944161450477ee417DE9Cd3a859b14fD0";
+let yourLpInput = "0x3747e3e107223539FD09bb730b055A1f11F78Adf";
 let poolInfo = "9";
 
 let btn = document.querySelector(
@@ -37,10 +37,5 @@ async function Auto() {
     }
   }
 }
-
-// document.querySelector("#readCollapse" + String(poolInfo) + " input").addEventListener("keypress", function() {
-//   console.log("onkeypress")
-//   btn.click();
-// });
 
 Auto();
