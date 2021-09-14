@@ -1,0 +1,1530 @@
+jquery.min.js?v=21.8.4.1:2 [Deprecation] Synchronous XMLHttpRequest on the main thread is deprecated because of its detrimental effects to the end user's experience. For more help, check https://xhr.spec.whatwg.org/.
+send @ jquery.min.js?v=21.8.4.1:2
+ajax @ jquery.min.js?v=21.8.4.1:2
+e.ajax @ jquery-migrate.min.js?v=21.8.4.1:1
+w._evalUrl @ jquery.min.js?v=21.8.4.1:2
+Re @ jquery.min.js?v=21.8.4.1:2
+append @ jquery.min.js?v=21.8.4.1:2
+(anonymous) @ jquery.mCustomScrollbar.concat.min.js?v=21.8.4.1:1
+(anonymous) @ jquery.mCustomScrollbar.concat.min.js?v=21.8.4.1:1
+(anonymous) @ jquery.mCustomScrollbar.concat.min.js?v=21.8.4.1:1
+VM4628:3 h {0: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', 1: '31870', 2: '10902543', 3: '2708150679508881444', lpToken: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', allocPoint: '31870', lastRewardBlock: '10902543', accCakePerShare: '2708150679508881444'}
+let startClickID = 0;
+let yourLpInput = "";
+let poolInfo = "9";
+
+let btn = document.querySelector(
+  "#readCollapse" + String(poolInfo) + " #btn_" + String(poolInfo)
+);
+
+async function Auto() {
+  if (
+    String(
+      document.querySelector("#myanswer_" + String(poolInfo) + " a").innerText
+    ) === String(yourLpInput)
+  ) {
+    if (Number(startClickID - 1) === -1) {
+      await alert(
+        "poolID is:" + document.querySelector("#readCollapse" + String(poolInfo) + " input").value
+      );
+    } else {
+      if (Number(document.querySelector("#readCollapse" + String(poolInfo) + " input").value) === Number(startClickID)) {
+        await alert("poolID is:" + (startClickID));
+      } else {
+        await alert("poolID is:" + (startClickID - 1));
+      }
+    }
+  } else {
+    document.querySelector(
+      "#readCollapse" + String(poolInfo) + " input"
+    ).value = await startClickID;
+    await btn.click();
+    if (btn.disabled) {
+      if (startClickID > 0) {
+        await console.log(" address: "+ document.querySelector("#myanswer_" + String(poolInfo) + " a").innerText + " id: " + (startClickID - 1));
+      }
+      await startClickID++;
+      await setTimeout(Auto, 1500);
+    } else {
+      await alert("BSC Limit click at pool_id:" + (startClickID - 1));
+      await location.reload();
+    }
+  }
+}
+
+Auto();
+
+Promise {<fulfilled>: undefined}
+VM4794:3 h {0: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', 1: '31870', 2: '10902546', 3: '2708150679509060142', lpToken: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', allocPoint: '31870', lastRewardBlock: '10902546', accCakePerShare: '2708150679509060142'}
+VM4793:33  address: 0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82 id: 0
+VM4796:3 h {0: '0xA527a61703D82139F8a06Bc30097cC9CAA2df5A6', 1: '0', 2: '10900288', 3: '53768013836948340', lpToken: '0xA527a61703D82139F8a06Bc30097cC9CAA2df5A6', allocPoint: '0', lastRewardBlock: '10900288', accCakePerShare: '53768013836948340'}
+VM4793:33  address: 0xA527a61703D82139F8a06Bc30097cC9CAA2df5A6 id: 1
+VM4797:3 h {0: '0x1B96B92314C44b159149f7E0303511fB2Fc4774f', 1: '0', 2: '10796680', 3: '4058473427596', lpToken: '0x1B96B92314C44b159149f7E0303511fB2Fc4774f', allocPoint: '0', lastRewardBlock: '10796680', accCakePerShare: '4058473427596'}
+VM4793:33  address: 0x1B96B92314C44b159149f7E0303511fB2Fc4774f id: 2
+VM4798:3 h {0: '0xBA51D1AB95756ca4eaB8737eCD450cd8F05384cF', 1: '0', 2: '10860600', 3: '2160058466619', lpToken: '0xBA51D1AB95756ca4eaB8737eCD450cd8F05384cF', allocPoint: '0', lastRewardBlock: '10860600', accCakePerShare: '2160058466619'}
+VM4793:33  address: 0xBA51D1AB95756ca4eaB8737eCD450cd8F05384cF id: 3
+VM4799:3 h {0: '0xc639187ef82271D8f517de6FEAE4FaF5b517533c', 1: '0', 2: '10555192', 3: '19391364425536', lpToken: '0xc639187ef82271D8f517de6FEAE4FaF5b517533c', allocPoint: '0', lastRewardBlock: '10555192', accCakePerShare: '19391364425536'}
+VM4793:33  address: 0xc639187ef82271D8f517de6FEAE4FaF5b517533c id: 4
+VM4800:3 h {0: '0xbCD62661A6b1DEd703585d3aF7d7649Ef4dcDB5c', 1: '0', 2: '10651273', 3: '11001875592039', lpToken: '0xbCD62661A6b1DEd703585d3aF7d7649Ef4dcDB5c', allocPoint: '0', lastRewardBlock: '10651273', accCakePerShare: '11001875592039'}
+VM4793:33  address: 0xbCD62661A6b1DEd703585d3aF7d7649Ef4dcDB5c id: 5
+VM4801:3 h {0: '0x981d2Ba1b298888408d342C39c2Ab92e8991691e', 1: '0', 2: '10491087', 3: '5699911921148', lpToken: '0x981d2Ba1b298888408d342C39c2Ab92e8991691e', allocPoint: '0', lastRewardBlock: '10491087', accCakePerShare: '5699911921148'}
+VM4793:33  address: 0x981d2Ba1b298888408d342C39c2Ab92e8991691e id: 6
+VM4802:3 h {0: '0xaeBE45E3a03B734c68e5557AE04BFC76917B4686', 1: '0', 2: '10786495', 3: '19234708131433', lpToken: '0xaeBE45E3a03B734c68e5557AE04BFC76917B4686', allocPoint: '0', lastRewardBlock: '10786495', accCakePerShare: '19234708131433'}
+VM4793:33  address: 0xaeBE45E3a03B734c68e5557AE04BFC76917B4686 id: 7
+VM4803:3 h {0: '0xc2Eed0F5a0dc28cfa895084bC0a9B8B8279aE492', 1: '0', 2: '7941779', 3: '1067947609559', lpToken: '0xc2Eed0F5a0dc28cfa895084bC0a9B8B8279aE492', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '1067947609559'}
+VM4793:33  address: 0xc2Eed0F5a0dc28cfa895084bC0a9B8B8279aE492 id: 8
+VM4804:3 h {0: '0xd937FB9E6e47F3805981453BFB277a49FFfE04D7', 1: '0', 2: '10225654', 3: '4943999983337', lpToken: '0xd937FB9E6e47F3805981453BFB277a49FFfE04D7', allocPoint: '0', lastRewardBlock: '10225654', accCakePerShare: '4943999983337'}
+VM4793:33  address: 0xd937FB9E6e47F3805981453BFB277a49FFfE04D7 id: 9
+VM4805:3 h {0: '0x3Da30727ed0626b78C212e81B37B97A8eF8A25bB', 1: '0', 2: '9152350', 3: '20199875642030858', lpToken: '0x3Da30727ed0626b78C212e81B37B97A8eF8A25bB', allocPoint: '0', lastRewardBlock: '9152350', accCakePerShare: '20199875642030858'}
+VM4793:33  address: 0x3Da30727ed0626b78C212e81B37B97A8eF8A25bB id: 10
+VM4806:3 h {0: '0xc15fa3E22c912A276550F3E5FE3b0Deb87B55aCd', 1: '0', 2: '10895962', 3: '2015220057428352', lpToken: '0xc15fa3E22c912A276550F3E5FE3b0Deb87B55aCd', allocPoint: '0', lastRewardBlock: '10895962', accCakePerShare: '2015220057428352'}
+VM4793:33  address: 0xc15fa3E22c912A276550F3E5FE3b0Deb87B55aCd id: 11
+VM4807:3 h {0: '0x610e7a287c27dfFcaC0F0a94f547Cc1B770cF483', 1: '0', 2: '10889618', 3: '44164960803244', lpToken: '0x610e7a287c27dfFcaC0F0a94f547Cc1B770cF483', allocPoint: '0', lastRewardBlock: '10889618', accCakePerShare: '44164960803244'}
+VM4793:33  address: 0x610e7a287c27dfFcaC0F0a94f547Cc1B770cF483 id: 12
+VM4808:3 h {0: '0x41182c32F854dd97bA0e0B1816022e0aCB2fc0bb', 1: '0', 2: '10559566', 3: '18188989963710', lpToken: '0x41182c32F854dd97bA0e0B1816022e0aCB2fc0bb', allocPoint: '0', lastRewardBlock: '10559566', accCakePerShare: '18188989963710'}
+VM4793:33  address: 0x41182c32F854dd97bA0e0B1816022e0aCB2fc0bb id: 13
+VM4809:3 h {0: '0x70D8929d04b60Af4fb9B58713eBcf18765aDE422', 1: '0', 2: '10901223', 3: '27667508476269375', lpToken: '0x70D8929d04b60Af4fb9B58713eBcf18765aDE422', allocPoint: '0', lastRewardBlock: '10901223', accCakePerShare: '27667508476269375'}
+VM4793:33  address: 0x70D8929d04b60Af4fb9B58713eBcf18765aDE422 id: 14
+VM4810:3 h {0: '0x7561EEe90e24F3b348E1087A005F78B4c8453524', 1: '0', 2: '10898189', 3: '5832375741022262', lpToken: '0x7561EEe90e24F3b348E1087A005F78B4c8453524', allocPoint: '0', lastRewardBlock: '10898189', accCakePerShare: '5832375741022262'}
+VM4793:33  address: 0x7561EEe90e24F3b348E1087A005F78B4c8453524 id: 15
+VM4811:3 h {0: '0x4e0f3385d932F7179DeE045369286FFa6B03d887', 1: '0', 2: '10559574', 3: '3864128495319', lpToken: '0x4e0f3385d932F7179DeE045369286FFa6B03d887', allocPoint: '0', lastRewardBlock: '10559574', accCakePerShare: '3864128495319'}
+VM4793:33  address: 0x4e0f3385d932F7179DeE045369286FFa6B03d887 id: 16
+VM4812:3 h {0: '0x20bCC3b8a0091dDac2d0BC30F68E6CBb97de59Cd', 1: '0', 2: '10773826', 3: '3018496218076', lpToken: '0x20bCC3b8a0091dDac2d0BC30F68E6CBb97de59Cd', allocPoint: '0', lastRewardBlock: '10773826', accCakePerShare: '3018496218076'}
+VM4793:33  address: 0x20bCC3b8a0091dDac2d0BC30F68E6CBb97de59Cd id: 17
+VM4813:3 h {0: '0xC7b4B32A3be2cB6572a1c9959401F832Ce47a6d2', 1: '0', 2: '10692514', 3: '2536074898378', lpToken: '0xC7b4B32A3be2cB6572a1c9959401F832Ce47a6d2', allocPoint: '0', lastRewardBlock: '10692514', accCakePerShare: '2536074898378'}
+VM4793:33  address: 0xC7b4B32A3be2cB6572a1c9959401F832Ce47a6d2 id: 18
+VM4814:3 h {0: '0x2333c77FC0B2875c11409cdCD3C75D42D402E834', 1: '0', 2: '10892913', 3: '11231647215101', lpToken: '0x2333c77FC0B2875c11409cdCD3C75D42D402E834', allocPoint: '0', lastRewardBlock: '10892913', accCakePerShare: '11231647215101'}
+VM4793:33  address: 0x2333c77FC0B2875c11409cdCD3C75D42D402E834 id: 19
+VM4815:3 h {0: '0x574a978c2D0d36D707a05E459466C7A1054F1210', 1: '0', 2: '10686338', 3: '272109740307686', lpToken: '0x574a978c2D0d36D707a05E459466C7A1054F1210', allocPoint: '0', lastRewardBlock: '10686338', accCakePerShare: '272109740307686'}
+VM4793:33  address: 0x574a978c2D0d36D707a05E459466C7A1054F1210 id: 20
+VM4816:3 h {0: '0x56C77d59E82f33c712f919D09FcedDf49660a829', 1: '0', 2: '10075178', 3: '2753081217104', lpToken: '0x56C77d59E82f33c712f919D09FcedDf49660a829', allocPoint: '0', lastRewardBlock: '10075178', accCakePerShare: '2753081217104'}
+VM4793:33  address: 0x56C77d59E82f33c712f919D09FcedDf49660a829 id: 21
+VM4817:3 h {0: '0x5acaC332F0F49c8bAdC7aFd0134aD19D3DB972e6', 1: '0', 2: '10761487', 3: '6512107434927', lpToken: '0x5acaC332F0F49c8bAdC7aFd0134aD19D3DB972e6', allocPoint: '0', lastRewardBlock: '10761487', accCakePerShare: '6512107434927'}
+VM4793:33  address: 0x5acaC332F0F49c8bAdC7aFd0134aD19D3DB972e6 id: 22
+VM4818:3 h {0: '0x54EdD846dB17f43b6e43296134ECD96284671E81', 1: '0', 2: '10491241', 3: '51255944628247', lpToken: '0x54EdD846dB17f43b6e43296134ECD96284671E81', allocPoint: '0', lastRewardBlock: '10491241', accCakePerShare: '51255944628247'}
+VM4793:33  address: 0x54EdD846dB17f43b6e43296134ECD96284671E81 id: 23
+VM4819:3 h {0: '0x68Ff2ca47D27db5Ac0b5c46587645835dD51D3C1', 1: '0', 2: '10325741', 3: '1005582326425490', lpToken: '0x68Ff2ca47D27db5Ac0b5c46587645835dD51D3C1', allocPoint: '0', lastRewardBlock: '10325741', accCakePerShare: '1005582326425490'}
+VM4793:33  address: 0x68Ff2ca47D27db5Ac0b5c46587645835dD51D3C1 id: 24
+VM4820:3 h {0: '0x4269e7F43A63CEA1aD7707Be565a94a9189967E9', 1: '0', 2: '10731975', 3: '8064759946437', lpToken: '0x4269e7F43A63CEA1aD7707Be565a94a9189967E9', allocPoint: '0', lastRewardBlock: '10731975', accCakePerShare: '8064759946437'}
+VM4793:33  address: 0x4269e7F43A63CEA1aD7707Be565a94a9189967E9 id: 25
+VM4821:3 h {0: '0x35FE9787F0eBF2a200BAc413D3030CF62D312774', 1: '0', 2: '9645359', 3: '39332574490949', lpToken: '0x35FE9787F0eBF2a200BAc413D3030CF62D312774', allocPoint: '0', lastRewardBlock: '9645359', accCakePerShare: '39332574490949'}
+VM4793:33  address: 0x35FE9787F0eBF2a200BAc413D3030CF62D312774 id: 26
+VM4822:3 h {0: '0x7a34bd64d18e44CfdE3ef4B81b87BAf3EB3315B6', 1: '0', 2: '10058037', 3: '12547115308277', lpToken: '0x7a34bd64d18e44CfdE3ef4B81b87BAf3EB3315B6', allocPoint: '0', lastRewardBlock: '10058037', accCakePerShare: '12547115308277'}
+VM4793:33  address: 0x7a34bd64d18e44CfdE3ef4B81b87BAf3EB3315B6 id: 27
+VM4823:3 h {0: '0x7a34bd64d18e44CfdE3ef4B81b87BAf3EB3315B6', 1: '0', 2: '7941779', 3: '47966790686', lpToken: '0x7a34bd64d18e44CfdE3ef4B81b87BAf3EB3315B6', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '47966790686'}
+VM4793:33  address: 0x7a34bd64d18e44CfdE3ef4B81b87BAf3EB3315B6 id: 28
+VM4824:3 h {0: '0x30479874f9320A62BcE3bc0e315C920E1D73E278', 1: '0', 2: '10325797', 3: '2106968864535', lpToken: '0x30479874f9320A62BcE3bc0e315C920E1D73E278', allocPoint: '0', lastRewardBlock: '10325797', accCakePerShare: '2106968864535'}
+VM4793:33  address: 0x30479874f9320A62BcE3bc0e315C920E1D73E278 id: 29
+VM4825:3 h {0: '0x752E713fB70E3FA1Ac08bCF34485F14A986956c4', 1: '0', 2: '10844147', 3: '3700745560201', lpToken: '0x752E713fB70E3FA1Ac08bCF34485F14A986956c4', allocPoint: '0', lastRewardBlock: '10844147', accCakePerShare: '3700745560201'}
+VM4793:33  address: 0x752E713fB70E3FA1Ac08bCF34485F14A986956c4 id: 30
+VM4826:3 h {0: '0xa96B5Ac38B33AF0fef7D40C200f2BAc9d817eBCA', 1: '0', 2: '8993947', 3: '19452665414827407991', lpToken: '0xa96B5Ac38B33AF0fef7D40C200f2BAc9d817eBCA', allocPoint: '0', lastRewardBlock: '8993947', accCakePerShare: '19452665414827407991'}
+VM4793:33  address: 0xa96B5Ac38B33AF0fef7D40C200f2BAc9d817eBCA id: 31
+VM4827:3 h {0: '0x7793870484647a7278907498ec504879d6971EAb', 1: '0', 2: '8545632', 3: '779027982290928167416421230', lpToken: '0x7793870484647a7278907498ec504879d6971EAb', allocPoint: '0', lastRewardBlock: '8545632', accCakePerShare: '779027982290928167416421230'}
+VM4793:33  address: 0x7793870484647a7278907498ec504879d6971EAb id: 32
+VM4828:3 h {0: '0xE0388F5Fe45EE31d1838CBA963B92d49E9879fD9', 1: '0', 2: '7941779', 3: '77060264738022456748', lpToken: '0xE0388F5Fe45EE31d1838CBA963B92d49E9879fD9', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '77060264738022456748'}
+VM4793:33  address: 0xE0388F5Fe45EE31d1838CBA963B92d49E9879fD9 id: 33
+VM4829:3 h {0: '0x7cd05f8b960Ba071FdF69C750c0E5a57C8366500', 1: '0', 2: '9142206', 3: '2904518190064', lpToken: '0x7cd05f8b960Ba071FdF69C750c0E5a57C8366500', allocPoint: '0', lastRewardBlock: '9142206', accCakePerShare: '2904518190064'}
+VM4793:33  address: 0x7cd05f8b960Ba071FdF69C750c0E5a57C8366500 id: 34
+VM4830:3 h {0: '0x745C4fD226E169d6da959283275A8E0EcDd7F312', 1: '0', 2: '10267565', 3: '1085996497405', lpToken: '0x745C4fD226E169d6da959283275A8E0EcDd7F312', allocPoint: '0', lastRewardBlock: '10267565', accCakePerShare: '1085996497405'}
+VM4793:33  address: 0x745C4fD226E169d6da959283275A8E0EcDd7F312 id: 35
+VM4831:3 h {0: '0x2730bf486d658838464A4ef077880998D944252d', 1: '0', 2: '10288735', 3: '487951179860', lpToken: '0x2730bf486d658838464A4ef077880998D944252d', allocPoint: '0', lastRewardBlock: '10288735', accCakePerShare: '487951179860'}
+VM4793:33  address: 0x2730bf486d658838464A4ef077880998D944252d id: 36
+VM4832:3 h {0: '0x9F40e8a2Fcaa267A0c374B6c661E0b372264cC3D', 1: '0', 2: '10868244', 3: '1238207059428592649324', lpToken: '0x9F40e8a2Fcaa267A0c374B6c661E0b372264cC3D', allocPoint: '0', lastRewardBlock: '10868244', accCakePerShare: '1238207059428592649324'}
+VM4793:33  address: 0x9F40e8a2Fcaa267A0c374B6c661E0b372264cC3D id: 37
+VM4833:3 h {0: '0x970858016C963b780E06f7DCfdEf8e809919BcE8', 1: '0', 2: '9984733', 3: '11054826988194', lpToken: '0x970858016C963b780E06f7DCfdEf8e809919BcE8', allocPoint: '0', lastRewardBlock: '9984733', accCakePerShare: '11054826988194'}
+VM4793:33  address: 0x970858016C963b780E06f7DCfdEf8e809919BcE8 id: 38
+VM4834:3 h {0: '0xbEA35584b9a88107102ABEf0BDeE2c4FaE5D8c31', 1: '0', 2: '10491261', 3: '1205318734788517', lpToken: '0xbEA35584b9a88107102ABEf0BDeE2c4FaE5D8c31', allocPoint: '0', lastRewardBlock: '10491261', accCakePerShare: '1205318734788517'}
+VM4793:33  address: 0xbEA35584b9a88107102ABEf0BDeE2c4FaE5D8c31 id: 39
+VM4835:3 h {0: '0xC743Dc05F03D25E1aF8eC5F8228f4BD25513c8d0', 1: '0', 2: '10737673', 3: '2348007095567118793', lpToken: '0xC743Dc05F03D25E1aF8eC5F8228f4BD25513c8d0', allocPoint: '0', lastRewardBlock: '10737673', accCakePerShare: '2348007095567118793'}
+VM4793:33  address: 0xC743Dc05F03D25E1aF8eC5F8228f4BD25513c8d0 id: 40
+VM4836:3 h {0: '0xfF17ff314925Dff772b71AbdFF2782bC913B3575', 1: '0', 2: '10864732', 3: '219311955267', lpToken: '0xfF17ff314925Dff772b71AbdFF2782bC913B3575', allocPoint: '0', lastRewardBlock: '10864732', accCakePerShare: '219311955267'}
+VM4793:33  address: 0xfF17ff314925Dff772b71AbdFF2782bC913B3575 id: 41
+VM4837:3 h {0: '0x9c4f6a5050CF863e67a402E8b377973b4E3372c1', 1: '0', 2: '10453371', 3: '17468903333095765553751296872', lpToken: '0x9c4f6a5050CF863e67a402E8b377973b4E3372c1', allocPoint: '0', lastRewardBlock: '10453371', accCakePerShare: '17468903333095765553751296872'}
+VM4793:33  address: 0x9c4f6a5050CF863e67a402E8b377973b4E3372c1 id: 42
+VM4838:3 h {0: '0x51a2ffa5B7DE506F9a22549E48B33F6Cf0D9030e', 1: '0', 2: '9123349', 3: '300513167549880418239579826', lpToken: '0x51a2ffa5B7DE506F9a22549E48B33F6Cf0D9030e', allocPoint: '0', lastRewardBlock: '9123349', accCakePerShare: '300513167549880418239579826'}
+VM4793:33  address: 0x51a2ffa5B7DE506F9a22549E48B33F6Cf0D9030e id: 43
+VM4839:3 h {0: '0x470BC451810B312BBb1256f96B0895D95eA659B1', 1: '0', 2: '10788612', 3: '186712769068300066', lpToken: '0x470BC451810B312BBb1256f96B0895D95eA659B1', allocPoint: '0', lastRewardBlock: '10788612', accCakePerShare: '186712769068300066'}
+VM4793:33  address: 0x470BC451810B312BBb1256f96B0895D95eA659B1 id: 44
+VM4840:3 h {0: '0x58B58cab6C5cF158f63A2390b817710826d116D0', 1: '0', 2: '10816977', 3: '445280208253', lpToken: '0x58B58cab6C5cF158f63A2390b817710826d116D0', allocPoint: '0', lastRewardBlock: '10816977', accCakePerShare: '445280208253'}
+VM4793:33  address: 0x58B58cab6C5cF158f63A2390b817710826d116D0 id: 45
+VM4841:3 h {0: '0x64373608f2E93Ea97aD4D8Ca2CCE6B2575dB2F55', 1: '0', 2: '10598679', 3: '14910114283143299286068', lpToken: '0x64373608f2E93Ea97aD4D8Ca2CCE6B2575dB2F55', allocPoint: '0', lastRewardBlock: '10598679', accCakePerShare: '14910114283143299286068'}
+VM4793:33  address: 0x64373608f2E93Ea97aD4D8Ca2CCE6B2575dB2F55 id: 46
+VM4842:3 h {0: '0xd6B900D5308356317299dAFe303E661271AA12F1', 1: '0', 2: '10853285', 3: '299630022658583279558097', lpToken: '0xd6B900D5308356317299dAFe303E661271AA12F1', allocPoint: '0', lastRewardBlock: '10853285', accCakePerShare: '299630022658583279558097'}
+VM4793:33  address: 0xd6B900D5308356317299dAFe303E661271AA12F1 id: 47
+VM4843:3 h {0: '0xd5B3ebF1a85D32C73A82B40F75e1cd929cAf4029', 1: '0', 2: '9909093', 3: '11260737690350579381144', lpToken: '0xd5B3ebF1a85D32C73A82B40F75e1cd929cAf4029', allocPoint: '0', lastRewardBlock: '9909093', accCakePerShare: '11260737690350579381144'}
+VM5030:3 h {0: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', 1: '31870', 2: '10902597', 3: '2708150679512098016', lpToken: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', allocPoint: '31870', lastRewardBlock: '10902597', accCakePerShare: '2708150679512098016'}
+let startClickID = 48;
+let yourLpInput = "";
+let poolInfo = "9";
+
+let btn = document.querySelector(
+  "#readCollapse" + String(poolInfo) + " #btn_" + String(poolInfo)
+);
+
+async function Auto() {
+  if (
+    String(
+      document.querySelector("#myanswer_" + String(poolInfo) + " a").innerText
+    ) === String(yourLpInput)
+  ) {
+    if (Number(startClickID - 1) === -1) {
+      await alert(
+        "poolID is:" + document.querySelector("#readCollapse" + String(poolInfo) + " input").value
+      );
+    } else {
+      if (Number(document.querySelector("#readCollapse" + String(poolInfo) + " input").value) === Number(startClickID)) {
+        await alert("poolID is:" + (startClickID));
+      } else {
+        await alert("poolID is:" + (startClickID - 1));
+      }
+    }
+  } else {
+    document.querySelector(
+      "#readCollapse" + String(poolInfo) + " input"
+    ).value = await startClickID;
+    await btn.click();
+    if (btn.disabled) {
+      if (startClickID > 0) {
+        await console.log(" address: "+ document.querySelector("#myanswer_" + String(poolInfo) + " a").innerText + " id: " + (startClickID - 1));
+      }
+      await startClickID++;
+      await setTimeout(Auto, 1500);
+    } else {
+      await alert("BSC Limit click at pool_id:" + (startClickID - 1));
+      await location.reload();
+    }
+  }
+}
+
+Auto();
+
+VM5208:33  address: 0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82 id: 47
+Promise {<fulfilled>: undefined}
+VM5209:3 h {0: '0xd5B3ebF1a85D32C73A82B40F75e1cd929cAf4029', 1: '0', 2: '9909093', 3: '11260737690350579381144', lpToken: '0xd5B3ebF1a85D32C73A82B40F75e1cd929cAf4029', allocPoint: '0', lastRewardBlock: '9909093', accCakePerShare: '11260737690350579381144'}
+VM5208:33  address: 0xd5B3ebF1a85D32C73A82B40F75e1cd929cAf4029 id: 48
+VM5211:3 h {0: '0xbe14f3a89A4F7f279Af9d99554cf12E8C29dB921', 1: '0', 2: '10786817', 3: '2604714650190', lpToken: '0xbe14f3a89A4F7f279Af9d99554cf12E8C29dB921', allocPoint: '0', lastRewardBlock: '10786817', accCakePerShare: '2604714650190'}
+VM5208:33  address: 0xbe14f3a89A4F7f279Af9d99554cf12E8C29dB921 id: 49
+VM5212:3 h {0: '0x01ecc44Ddd2D104F44D2AA1A2bD9DFbC91aE8275', 1: '0', 2: '9336121', 3: '4494142262319', lpToken: '0x01ecc44Ddd2D104F44D2AA1A2bD9DFbC91aE8275', allocPoint: '0', lastRewardBlock: '9336121', accCakePerShare: '4494142262319'}
+VM5208:33  address: 0x01ecc44Ddd2D104F44D2AA1A2bD9DFbC91aE8275 id: 50
+VM5213:3 h {0: '0x20781bc3701C5309ac75291f5D09BdC23D7b7Fa8', 1: '0', 2: '10787340', 3: '11494154619911', lpToken: '0x20781bc3701C5309ac75291f5D09BdC23D7b7Fa8', allocPoint: '0', lastRewardBlock: '10787340', accCakePerShare: '11494154619911'}
+VM5208:33  address: 0x20781bc3701C5309ac75291f5D09BdC23D7b7Fa8 id: 51
+VM5214:3 h {0: '0x3aB77e40340AB084c3e23Be8e5A6f7afed9D41DC', 1: '0', 2: '10352896', 3: '7843389368085', lpToken: '0x3aB77e40340AB084c3e23Be8e5A6f7afed9D41DC', allocPoint: '0', lastRewardBlock: '10352896', accCakePerShare: '7843389368085'}
+VM5208:33  address: 0x3aB77e40340AB084c3e23Be8e5A6f7afed9D41DC id: 52
+VM5215:3 h {0: '0x680Dd100E4b394Bda26A59dD5c119A391e747d18', 1: '0', 2: '10760595', 3: '9521097193841', lpToken: '0x680Dd100E4b394Bda26A59dD5c119A391e747d18', allocPoint: '0', lastRewardBlock: '10760595', accCakePerShare: '9521097193841'}
+VM5208:33  address: 0x680Dd100E4b394Bda26A59dD5c119A391e747d18 id: 53
+VM5216:3 h {0: '0xBc765Fd113c5bDB2ebc25F711191B56bB8690aec', 1: '0', 2: '10169769', 3: '1853808662796104', lpToken: '0xBc765Fd113c5bDB2ebc25F711191B56bB8690aec', allocPoint: '0', lastRewardBlock: '10169769', accCakePerShare: '1853808662796104'}
+VM5208:33  address: 0xBc765Fd113c5bDB2ebc25F711191B56bB8690aec id: 54
+VM5217:3 h {0: '0x91589786D36fEe5B27A5539CfE638a5fc9834665', 1: '0', 2: '10711175', 3: '39604110913207', lpToken: '0x91589786D36fEe5B27A5539CfE638a5fc9834665', allocPoint: '0', lastRewardBlock: '10711175', accCakePerShare: '39604110913207'}
+VM5208:33  address: 0x91589786D36fEe5B27A5539CfE638a5fc9834665 id: 55
+VM5218:3 h {0: '0x6411310C07d8c48730172146Fd6F31FA84034a8b', 1: '0', 2: '10770199', 3: '2937171805715', lpToken: '0x6411310C07d8c48730172146Fd6F31FA84034a8b', allocPoint: '0', lastRewardBlock: '10770199', accCakePerShare: '2937171805715'}
+VM5208:33  address: 0x6411310C07d8c48730172146Fd6F31FA84034a8b id: 56
+VM5219:3 h {0: '0x36b7D2e5C7877392Fb17f9219efaD56F3D794700', 1: '0', 2: '10543774', 3: '3613198776705', lpToken: '0x36b7D2e5C7877392Fb17f9219efaD56F3D794700', allocPoint: '0', lastRewardBlock: '10543774', accCakePerShare: '3613198776705'}
+VM5208:33  address: 0x36b7D2e5C7877392Fb17f9219efaD56F3D794700 id: 57
+VM5220:3 h {0: '0xFfb9E2d5ce4378F1a89b29bf53F80804CC078102', 1: '0', 2: '10635291', 3: '2104675563187', lpToken: '0xFfb9E2d5ce4378F1a89b29bf53F80804CC078102', allocPoint: '0', lastRewardBlock: '10635291', accCakePerShare: '2104675563187'}
+VM5208:33  address: 0xFfb9E2d5ce4378F1a89b29bf53F80804CC078102 id: 58
+VM5221:3 h {0: '0xD5664D2d15cdffD597515f1c0D945c6c1D3Bf85B', 1: '0', 2: '10277473', 3: '66274530453113', lpToken: '0xD5664D2d15cdffD597515f1c0D945c6c1D3Bf85B', allocPoint: '0', lastRewardBlock: '10277473', accCakePerShare: '66274530453113'}
+VM5208:33  address: 0xD5664D2d15cdffD597515f1c0D945c6c1D3Bf85B id: 59
+VM5222:3 h {0: '0xF609ade3846981825776068a8eD7746470029D1f', 1: '0', 2: '10647013', 3: '39956592506866', lpToken: '0xF609ade3846981825776068a8eD7746470029D1f', allocPoint: '0', lastRewardBlock: '10647013', accCakePerShare: '39956592506866'}
+VM5208:33  address: 0xF609ade3846981825776068a8eD7746470029D1f id: 60
+VM5223:3 h {0: '0x852A68181f789AE6d1Da3dF101740a59A071004f', 1: '0', 2: '10022282', 3: '7090030462524', lpToken: '0x852A68181f789AE6d1Da3dF101740a59A071004f', allocPoint: '0', lastRewardBlock: '10022282', accCakePerShare: '7090030462524'}
+VM5208:33  address: 0x852A68181f789AE6d1Da3dF101740a59A071004f id: 61
+VM5224:3 h {0: '0xc92Dc34665c8a21f98E1E38474580b61b4f3e1b9', 1: '0', 2: '10008021', 3: '259076478962590', lpToken: '0xc92Dc34665c8a21f98E1E38474580b61b4f3e1b9', allocPoint: '0', lastRewardBlock: '10008021', accCakePerShare: '259076478962590'}
+VM5208:33  address: 0xc92Dc34665c8a21f98E1E38474580b61b4f3e1b9 id: 62
+VM5225:3 h {0: '0xD1F12370b2ba1C79838337648F820a87eDF5e1e6', 1: '0', 2: '10841345', 3: '37249537024', lpToken: '0xD1F12370b2ba1C79838337648F820a87eDF5e1e6', allocPoint: '0', lastRewardBlock: '10841345', accCakePerShare: '37249537024'}
+VM5208:33  address: 0xD1F12370b2ba1C79838337648F820a87eDF5e1e6 id: 63
+VM5226:3 h {0: '0x6aaD6e2ec5B3B12F1853518534Cc9C2e5b2177ae', 1: '0', 2: '7941779', 3: '0', lpToken: '0x6aaD6e2ec5B3B12F1853518534Cc9C2e5b2177ae', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5208:33  address: 0x6aaD6e2ec5B3B12F1853518534Cc9C2e5b2177ae id: 64
+VM5227:3 h {0: '0x3Ef4952C7a9AfbE374EA02d1Bf5eD5a0015b7716', 1: '0', 2: '10856411', 3: '1780029438948413385491862714870', lpToken: '0x3Ef4952C7a9AfbE374EA02d1Bf5eD5a0015b7716', allocPoint: '0', lastRewardBlock: '10856411', accCakePerShare: '1780029438948413385491862714870'}
+VM5208:33  address: 0x3Ef4952C7a9AfbE374EA02d1Bf5eD5a0015b7716 id: 65
+VM5228:3 h {0: '0x74690f829fec83ea424ee1F1654041b2491A7bE9', 1: '0', 2: '10417054', 3: '1916557792323', lpToken: '0x74690f829fec83ea424ee1F1654041b2491A7bE9', allocPoint: '0', lastRewardBlock: '10417054', accCakePerShare: '1916557792323'}
+VM5208:33  address: 0x74690f829fec83ea424ee1F1654041b2491A7bE9 id: 66
+VM5229:3 h {0: '0x66b9E1eAc8a81F3752F7f3A5E95dE460688A17Ee', 1: '0', 2: '10828191', 3: '1646881218697590203517296332350', lpToken: '0x66b9E1eAc8a81F3752F7f3A5E95dE460688A17Ee', allocPoint: '0', lastRewardBlock: '10828191', accCakePerShare: '1646881218697590203517296332350'}
+VM5208:33  address: 0x66b9E1eAc8a81F3752F7f3A5E95dE460688A17Ee id: 67
+VM5230:3 h {0: '0x60bB03D1010b99CEAdD0dd209b64bC8bd83da161', 1: '0', 2: '10730554', 3: '9289617486338797818104727551651', lpToken: '0x60bB03D1010b99CEAdD0dd209b64bC8bd83da161', allocPoint: '0', lastRewardBlock: '10730554', accCakePerShare: '9289617486338797818104727551651'}
+VM5208:33  address: 0x60bB03D1010b99CEAdD0dd209b64bC8bd83da161 id: 68
+VM5231:3 h {0: '0xeB325a8ea1c5abf40c7ceAf645596c1F943d0948', 1: '0', 2: '10749443', 3: '1025270201899', lpToken: '0xeB325a8ea1c5abf40c7ceAf645596c1F943d0948', allocPoint: '0', lastRewardBlock: '10749443', accCakePerShare: '1025270201899'}
+VM5208:33  address: 0xeB325a8ea1c5abf40c7ceAf645596c1F943d0948 id: 69
+VM5232:3 h {0: '0x99d865Ed50D2C32c1493896810FA386c1Ce81D91', 1: '0', 2: '10873350', 3: '11703191091517858', lpToken: '0x99d865Ed50D2C32c1493896810FA386c1Ce81D91', allocPoint: '0', lastRewardBlock: '10873350', accCakePerShare: '11703191091517858'}
+VM5208:33  address: 0x99d865Ed50D2C32c1493896810FA386c1Ce81D91 id: 70
+VM5233:3 h {0: '0xcBe2cF3bd012e9C1ADE2Ee4d41DB3DaC763e78F3', 1: '0', 2: '10845681', 3: '2659574468085106950980231708231', lpToken: '0xcBe2cF3bd012e9C1ADE2Ee4d41DB3DaC763e78F3', allocPoint: '0', lastRewardBlock: '10845681', accCakePerShare: '2659574468085106950980231708231'}
+VM5208:33  address: 0xcBe2cF3bd012e9C1ADE2Ee4d41DB3DaC763e78F3 id: 71
+VM5234:3 h {0: '0x0392957571F28037607C14832D16f8B653eDd472', 1: '0', 2: '10680903', 3: '42619208673118', lpToken: '0x0392957571F28037607C14832D16f8B653eDd472', allocPoint: '0', lastRewardBlock: '10680903', accCakePerShare: '42619208673118'}
+VM5208:33  address: 0x0392957571F28037607C14832D16f8B653eDd472 id: 72
+VM5235:3 h {0: '0xC1800c29CF91954357cd0bf3f0accAADa3D0109c', 1: '0', 2: '10288710', 3: '1578389641322', lpToken: '0xC1800c29CF91954357cd0bf3f0accAADa3D0109c', allocPoint: '0', lastRewardBlock: '10288710', accCakePerShare: '1578389641322'}
+VM5208:33  address: 0xC1800c29CF91954357cd0bf3f0accAADa3D0109c id: 73
+VM5236:3 h {0: '0xB5Ab3996808c7e489DCDc0f1Af2AB212ae0059aF', 1: '0', 2: '10860544', 3: '1738820389845', lpToken: '0xB5Ab3996808c7e489DCDc0f1Af2AB212ae0059aF', allocPoint: '0', lastRewardBlock: '10860544', accCakePerShare: '1738820389845'}
+VM5208:33  address: 0xB5Ab3996808c7e489DCDc0f1Af2AB212ae0059aF id: 74
+VM5237:3 h {0: '0x5E3CD27F36932Bc0314aC4e2510585798C34a2fC', 1: '0', 2: '10878511', 3: '17609902379888981051478711667527', lpToken: '0x5E3CD27F36932Bc0314aC4e2510585798C34a2fC', allocPoint: '0', lastRewardBlock: '10878511', accCakePerShare: '17609902379888981051478711667527'}
+VM5208:33  address: 0x5E3CD27F36932Bc0314aC4e2510585798C34a2fC id: 75
+VM5238:3 h {0: '0x4576C456AF93a37a096235e5d83f812AC9aeD027', 1: '0', 2: '10860538', 3: '1127959608092', lpToken: '0x4576C456AF93a37a096235e5d83f812AC9aeD027', allocPoint: '0', lastRewardBlock: '10860538', accCakePerShare: '1127959608092'}
+VM5208:33  address: 0x4576C456AF93a37a096235e5d83f812AC9aeD027 id: 76
+VM5239:3 h {0: '0x9e642d174B14fAEa31D842Dc83037c42b53236E6', 1: '0', 2: '10746995', 3: '1092557505634', lpToken: '0x9e642d174B14fAEa31D842Dc83037c42b53236E6', allocPoint: '0', lastRewardBlock: '10746995', accCakePerShare: '1092557505634'}
+VM5208:33  address: 0x9e642d174B14fAEa31D842Dc83037c42b53236E6 id: 77
+VM5240:3 h {0: '0x17580340F3dAEDAE871a8C21D15911742ec79e0F', 1: '0', 2: '9373339', 3: '2597757486499', lpToken: '0x17580340F3dAEDAE871a8C21D15911742ec79e0F', allocPoint: '0', lastRewardBlock: '9373339', accCakePerShare: '2597757486499'}
+VM5208:33  address: 0x17580340F3dAEDAE871a8C21D15911742ec79e0F id: 78
+VM5241:3 h {0: '0x9d8b7e4a9D53654D82F12c83448D8f92732bC761', 1: '0', 2: '10892152', 3: '1507563812525', lpToken: '0x9d8b7e4a9D53654D82F12c83448D8f92732bC761', allocPoint: '0', lastRewardBlock: '10892152', accCakePerShare: '1507563812525'}
+VM5208:33  address: 0x9d8b7e4a9D53654D82F12c83448D8f92732bC761 id: 79
+VM5242:3 h {0: '0x86E650350C40a5178a5D014ba37FE8556232B898', 1: '0', 2: '10737659', 3: '26916015224984', lpToken: '0x86E650350C40a5178a5D014ba37FE8556232B898', allocPoint: '0', lastRewardBlock: '10737659', accCakePerShare: '26916015224984'}
+VM5208:33  address: 0x86E650350C40a5178a5D014ba37FE8556232B898 id: 80
+VM5243:3 h {0: '0x36B8B28D37f93372188F2aa2507b68A5CD8b2664', 1: '0', 2: '10471796', 3: '15449155462', lpToken: '0x36B8B28D37f93372188F2aa2507b68A5CD8b2664', allocPoint: '0', lastRewardBlock: '10471796', accCakePerShare: '15449155462'}
+VM5208:33  address: 0x36B8B28D37f93372188F2aa2507b68A5CD8b2664 id: 81
+VM5244:3 h {0: '0x4D5aA94Ce6BbB1BC4eb73207a5a5d4D052cFcD67', 1: '0', 2: '10880000', 3: '6621396768889', lpToken: '0x4D5aA94Ce6BbB1BC4eb73207a5a5d4D052cFcD67', allocPoint: '0', lastRewardBlock: '10880000', accCakePerShare: '6621396768889'}
+VM5208:33  address: 0x4D5aA94Ce6BbB1BC4eb73207a5a5d4D052cFcD67 id: 82
+VM5245:3 h {0: '0x292Ca56ED5b3330A19037f835Af4A9c0098EA6Fa', 1: '0', 2: '10737646', 3: '19365921439256079', lpToken: '0x292Ca56ED5b3330A19037f835Af4A9c0098EA6Fa', allocPoint: '0', lastRewardBlock: '10737646', accCakePerShare: '19365921439256079'}
+VM5208:33  address: 0x292Ca56ED5b3330A19037f835Af4A9c0098EA6Fa id: 83
+VM5246:3 h {0: '0xdC6C130299E53ACD2CC2D291fa10552CA2198a6b', 1: '0', 2: '10830969', 3: '4853667697108023000745623883981', lpToken: '0xdC6C130299E53ACD2CC2D291fa10552CA2198a6b', allocPoint: '0', lastRewardBlock: '10830969', accCakePerShare: '4853667697108023000745623883981'}
+VM5208:33  address: 0xdC6C130299E53ACD2CC2D291fa10552CA2198a6b id: 84
+VM5247:3 h {0: '0x4db28767D1527bA545CA5bbdA1C96a94ED6ff242', 1: '0', 2: '10863257', 3: '196347357608405451', lpToken: '0x4db28767D1527bA545CA5bbdA1C96a94ED6ff242', allocPoint: '0', lastRewardBlock: '10863257', accCakePerShare: '196347357608405451'}
+VM5208:33  address: 0x4db28767D1527bA545CA5bbdA1C96a94ED6ff242 id: 85
+VM5248:3 h {0: '0xAB97952a2806D5c92b7046c7aB13a72A87e0097b', 1: '0', 2: '10236211', 3: '1031429927156', lpToken: '0xAB97952a2806D5c92b7046c7aB13a72A87e0097b', allocPoint: '0', lastRewardBlock: '10236211', accCakePerShare: '1031429927156'}
+VM5208:33  address: 0xAB97952a2806D5c92b7046c7aB13a72A87e0097b id: 86
+VM5249:3 h {0: '0x69AB367BC1BEA1D2c0fB4dBaEc6b7197951Da56C', 1: '0', 2: '10874861', 3: '292976038504', lpToken: '0x69AB367BC1BEA1D2c0fB4dBaEc6b7197951Da56C', allocPoint: '0', lastRewardBlock: '10874861', accCakePerShare: '292976038504'}
+VM5208:33  address: 0x69AB367BC1BEA1D2c0fB4dBaEc6b7197951Da56C id: 87
+VM5250:3 h {0: '0x45a9e8D48BC560416008D122C9437927fEd50E7d', 1: '0', 2: '10410230', 3: '22413818636015', lpToken: '0x45a9e8D48BC560416008D122C9437927fEd50E7d', allocPoint: '0', lastRewardBlock: '10410230', accCakePerShare: '22413818636015'}
+VM5208:33  address: 0x45a9e8D48BC560416008D122C9437927fEd50E7d id: 88
+VM5251:3 h {0: '0xbF36959939982D0D34B37Fb3f3425da9676C13a3', 1: '0', 2: '10737634', 3: '31310765998', lpToken: '0xbF36959939982D0D34B37Fb3f3425da9676C13a3', allocPoint: '0', lastRewardBlock: '10737634', accCakePerShare: '31310765998'}
+VM5208:33  address: 0xbF36959939982D0D34B37Fb3f3425da9676C13a3 id: 89
+VM5252:3 h {0: '0x83B92D283cd279fF2e057BD86a95BdEfffED6faa', 1: '0', 2: '10874865', 3: '385663021294662', lpToken: '0x83B92D283cd279fF2e057BD86a95BdEfffED6faa', allocPoint: '0', lastRewardBlock: '10874865', accCakePerShare: '385663021294662'}
+VM5208:33  address: 0x83B92D283cd279fF2e057BD86a95BdEfffED6faa id: 90
+VM5253:3 h {0: '0xad7E515409e5a7d516411a85aCc88C5E993F570a', 1: '0', 2: '10507111', 3: '30735340351102232', lpToken: '0xad7E515409e5a7d516411a85aCc88C5E993F570a', allocPoint: '0', lastRewardBlock: '10507111', accCakePerShare: '30735340351102232'}
+VM5208:33  address: 0xad7E515409e5a7d516411a85aCc88C5E993F570a id: 91
+VM5254:3 h {0: '0xCA01F5D89d5b1d24ca5D6Ecc856D21e8a61DAFCc', 1: '0', 2: '9945389', 3: '2354899068301087', lpToken: '0xCA01F5D89d5b1d24ca5D6Ecc856D21e8a61DAFCc', allocPoint: '0', lastRewardBlock: '9945389', accCakePerShare: '2354899068301087'}
+VM5208:33  address: 0xCA01F5D89d5b1d24ca5D6Ecc856D21e8a61DAFCc id: 92
+VM5255:3 h {0: '0x0F556f4E47513d1a19Be456a9aF778d7e1A226B9', 1: '0', 2: '9663216', 3: '5341551731846', lpToken: '0x0F556f4E47513d1a19Be456a9aF778d7e1A226B9', allocPoint: '0', lastRewardBlock: '9663216', accCakePerShare: '5341551731846'}
+VM5208:33  address: 0x0F556f4E47513d1a19Be456a9aF778d7e1A226B9 id: 93
+VM5256:3 h {0: '0xfEc200A5E3adDD4a7915a556DDe3F5850e644020', 1: '0', 2: '10168135', 3: '64337993586', lpToken: '0xfEc200A5E3adDD4a7915a556DDe3F5850e644020', allocPoint: '0', lastRewardBlock: '10168135', accCakePerShare: '64337993586'}
+VM5208:33  address: 0xfEc200A5E3adDD4a7915a556DDe3F5850e644020 id: 94
+VM5257:3 h {0: '0xe022baa3E5E87658f789c9132B10d7425Fd3a389', 1: '0', 2: '10729269', 3: '5565725220345684889112', lpToken: '0xe022baa3E5E87658f789c9132B10d7425Fd3a389', allocPoint: '0', lastRewardBlock: '10729269', accCakePerShare: '5565725220345684889112'}
+VM5208:33  address: 0xe022baa3E5E87658f789c9132B10d7425Fd3a389 id: 95
+VM5258:3 h {0: '0x7Bb89460599Dbf32ee3Aa50798BBcEae2A5F7f6a', 1: '0', 2: '10692947', 3: '29222701861053', lpToken: '0x7Bb89460599Dbf32ee3Aa50798BBcEae2A5F7f6a', allocPoint: '0', lastRewardBlock: '10692947', accCakePerShare: '29222701861053'}
+VM5270:3 h {0: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', 1: '31870', 2: '10902697', 3: '2708150679518054568', lpToken: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', allocPoint: '31870', lastRewardBlock: '10902697', accCakePerShare: '2708150679518054568'}
+let startClickID = 96;
+let yourLpInput = "";
+let poolInfo = "9";
+
+let btn = document.querySelector(
+  "#readCollapse" + String(poolInfo) + " #btn_" + String(poolInfo)
+);
+
+async function Auto() {
+  if (
+    String(
+      document.querySelector("#myanswer_" + String(poolInfo) + " a").innerText
+    ) === String(yourLpInput)
+  ) {
+    if (Number(startClickID - 1) === -1) {
+      await alert(
+        "poolID is:" + document.querySelector("#readCollapse" + String(poolInfo) + " input").value
+      );
+    } else {
+      if (Number(document.querySelector("#readCollapse" + String(poolInfo) + " input").value) === Number(startClickID)) {
+        await alert("poolID is:" + (startClickID));
+      } else {
+        await alert("poolID is:" + (startClickID - 1));
+      }
+    }
+  } else {
+    document.querySelector(
+      "#readCollapse" + String(poolInfo) + " input"
+    ).value = await startClickID;
+    await btn.click();
+    if (btn.disabled) {
+      if (startClickID > 0) {
+        await console.log(" address: "+ document.querySelector("#myanswer_" + String(poolInfo) + " a").innerText + " id: " + (startClickID - 1));
+      }
+      await startClickID++;
+      await setTimeout(Auto, 1500);
+    } else {
+      await alert("BSC Limit click at pool_id:" + (startClickID - 1));
+      await location.reload();
+    }
+  }
+}
+
+Auto();
+
+Promise {<rejected>: TypeError: Cannot read properties of null (reading 'innerText')
+    at Auto (<anonymous>:12:69)
+   …}
+VM5277:12 Uncaught (in promise) TypeError: Cannot read properties of null (reading 'innerText')
+    at Auto (<anonymous>:12:69)
+    at <anonymous>:44:1
+Auto @ VM5277:12
+(anonymous) @ VM5277:44
+let startClickID = 96;
+let yourLpInput = "";
+let poolInfo = "9";
+
+let btn = document.querySelector(
+  "#readCollapse" + String(poolInfo) + " #btn_" + String(poolInfo)
+);
+
+async function Auto() {
+  if (
+    String(
+      document.querySelector("#myanswer_" + String(poolInfo) + " a").innerText
+    ) === String(yourLpInput)
+  ) {
+    if (Number(startClickID - 1) === -1) {
+      await alert(
+        "poolID is:" + document.querySelector("#readCollapse" + String(poolInfo) + " input").value
+      );
+    } else {
+      if (Number(document.querySelector("#readCollapse" + String(poolInfo) + " input").value) === Number(startClickID)) {
+        await alert("poolID is:" + (startClickID));
+      } else {
+        await alert("poolID is:" + (startClickID - 1));
+      }
+    }
+  } else {
+    document.querySelector(
+      "#readCollapse" + String(poolInfo) + " input"
+    ).value = await startClickID;
+    await btn.click();
+    if (btn.disabled) {
+      if (startClickID > 0) {
+        await console.log(" address: "+ document.querySelector("#myanswer_" + String(poolInfo) + " a").innerText + " id: " + (startClickID - 1));
+      }
+      await startClickID++;
+      await setTimeout(Auto, 1500);
+    } else {
+      await alert("BSC Limit click at pool_id:" + (startClickID - 1));
+      await location.reload();
+    }
+  }
+}
+
+Auto();
+
+VM5339:33  address: 0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82 id: 95
+Promise {<fulfilled>: undefined}
+VM5340:3 h {0: '0x7Bb89460599Dbf32ee3Aa50798BBcEae2A5F7f6a', 1: '0', 2: '10692947', 3: '29222701861053', lpToken: '0x7Bb89460599Dbf32ee3Aa50798BBcEae2A5F7f6a', allocPoint: '0', lastRewardBlock: '10692947', accCakePerShare: '29222701861053'}
+VM5339:33  address: 0x7Bb89460599Dbf32ee3Aa50798BBcEae2A5F7f6a id: 96
+VM5371:3 h {0: '0x7b1e440240B220244761C9D9A3B07fbA1995BD84', 1: '0', 2: '10531967', 3: '145353182165', lpToken: '0x7b1e440240B220244761C9D9A3B07fbA1995BD84', allocPoint: '0', lastRewardBlock: '10531967', accCakePerShare: '145353182165'}
+VM5339:33  address: 0x7b1e440240B220244761C9D9A3B07fbA1995BD84 id: 97
+VM5387:3 h {0: '0xD20E0BcCa8B29409bf5726CB24DD779Fe337020e', 1: '0', 2: '10654657', 3: '37629166221', lpToken: '0xD20E0BcCa8B29409bf5726CB24DD779Fe337020e', allocPoint: '0', lastRewardBlock: '10654657', accCakePerShare: '37629166221'}
+VM5339:33  address: 0xD20E0BcCa8B29409bf5726CB24DD779Fe337020e id: 98
+VM5392:3 h {0: '0xd132D2C24F29EE8ABb64a66559d1b7aa627Bd7fD', 1: '0', 2: '10250746', 3: '61570939769791', lpToken: '0xd132D2C24F29EE8ABb64a66559d1b7aa627Bd7fD', allocPoint: '0', lastRewardBlock: '10250746', accCakePerShare: '61570939769791'}
+VM5339:33  address: 0xd132D2C24F29EE8ABb64a66559d1b7aa627Bd7fD id: 99
+VM5393:3 h {0: '0xB7918560273FD56e50E9c215CC0DFE8D764C36C5', 1: '0', 2: '10090982', 3: '395144605173', lpToken: '0xB7918560273FD56e50E9c215CC0DFE8D764C36C5', allocPoint: '0', lastRewardBlock: '10090982', accCakePerShare: '395144605173'}
+VM5339:33  address: 0xB7918560273FD56e50E9c215CC0DFE8D764C36C5 id: 100
+VM5394:3 h {0: '0x2562f94E90dE6D9eb4fB6B3b8Eab56b15Aa4FC72', 1: '0', 2: '10653444', 3: '568235925110', lpToken: '0x2562f94E90dE6D9eb4fB6B3b8Eab56b15Aa4FC72', allocPoint: '0', lastRewardBlock: '10653444', accCakePerShare: '568235925110'}
+VM5339:33  address: 0x2562f94E90dE6D9eb4fB6B3b8Eab56b15Aa4FC72 id: 101
+VM5395:3 h {0: '0xf64a269F0A06dA07D23F43c1Deb217101ee6Bee7', 1: '0', 2: '8540997', 3: '152857528671', lpToken: '0xf64a269F0A06dA07D23F43c1Deb217101ee6Bee7', allocPoint: '0', lastRewardBlock: '8540997', accCakePerShare: '152857528671'}
+VM5339:33  address: 0xf64a269F0A06dA07D23F43c1Deb217101ee6Bee7 id: 102
+VM5396:3 h {0: '0x85644FcD00C401E1A0a0a10d2aE6Bbe04A73e4ab', 1: '0', 2: '10390961', 3: '346841495843', lpToken: '0x85644FcD00C401E1A0a0a10d2aE6Bbe04A73e4ab', allocPoint: '0', lastRewardBlock: '10390961', accCakePerShare: '346841495843'}
+VM5339:33  address: 0x85644FcD00C401E1A0a0a10d2aE6Bbe04A73e4ab id: 103
+VM5397:3 h {0: '0xE1E33459505bB3763843a426F7Fd9933418184ae', 1: '0', 2: '9989960', 3: '938312298669856', lpToken: '0xE1E33459505bB3763843a426F7Fd9933418184ae', allocPoint: '0', lastRewardBlock: '9989960', accCakePerShare: '938312298669856'}
+VM5339:33  address: 0xE1E33459505bB3763843a426F7Fd9933418184ae id: 104
+VM5398:3 h {0: '0xBB2281cA5B4d07263112604D1F182AD0Ab26a252', 1: '0', 2: '5935592', 3: '0', lpToken: '0xBB2281cA5B4d07263112604D1F182AD0Ab26a252', allocPoint: '0', lastRewardBlock: '5935592', accCakePerShare: '0'}
+VM5339:33  address: 0xBB2281cA5B4d07263112604D1F182AD0Ab26a252 id: 105
+VM5399:3 h {0: '0x10F461CEAC7A17F59e249954Db0784d42EfF5DB5', 1: '0', 2: '7941779', 3: '49188342604531', lpToken: '0x10F461CEAC7A17F59e249954Db0784d42EfF5DB5', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '49188342604531'}
+VM5339:33  address: 0x10F461CEAC7A17F59e249954Db0784d42EfF5DB5 id: 106
+VM5400:3 h {0: '0x889E81d25bFfbA437b2a5d3e0E4FC58a0E2749c5', 1: '0', 2: '10880334', 3: '2757360742154', lpToken: '0x889E81d25bFfbA437b2a5d3e0E4FC58a0E2749c5', allocPoint: '0', lastRewardBlock: '10880334', accCakePerShare: '2757360742154'}
+VM5339:33  address: 0x889E81d25bFfbA437b2a5d3e0E4FC58a0E2749c5 id: 107
+VM5401:3 h {0: '0xc746337b5F800a0e19eD4eB3bda03FF1401B8167', 1: '0', 2: '10787656', 3: '633158984780826', lpToken: '0xc746337b5F800a0e19eD4eB3bda03FF1401B8167', allocPoint: '0', lastRewardBlock: '10787656', accCakePerShare: '633158984780826'}
+VM5339:33  address: 0xc746337b5F800a0e19eD4eB3bda03FF1401B8167 id: 108
+VM5402:3 h {0: '0xcd14855150335AAE984aa6D281E090c27035C692', 1: '0', 2: '9630696', 3: '412848423273968991', lpToken: '0xcd14855150335AAE984aa6D281E090c27035C692', allocPoint: '0', lastRewardBlock: '9630696', accCakePerShare: '412848423273968991'}
+VM5339:33  address: 0xcd14855150335AAE984aa6D281E090c27035C692 id: 109
+VM5403:3 h {0: '0x8c5cFfad6cddb96Ee33DA685D0d50a37e030E115', 1: '0', 2: '10669948', 3: '10532481320974838', lpToken: '0x8c5cFfad6cddb96Ee33DA685D0d50a37e030E115', allocPoint: '0', lastRewardBlock: '10669948', accCakePerShare: '10532481320974838'}
+VM5339:33  address: 0x8c5cFfad6cddb96Ee33DA685D0d50a37e030E115 id: 110
+VM5404:3 h {0: '0x8FbCbD7e30b1733965a8980bf7Ae2ca1c0C456cc', 1: '0', 2: '10696633', 3: '418376052039', lpToken: '0x8FbCbD7e30b1733965a8980bf7Ae2ca1c0C456cc', allocPoint: '0', lastRewardBlock: '10696633', accCakePerShare: '418376052039'}
+VM5339:33  address: 0x8FbCbD7e30b1733965a8980bf7Ae2ca1c0C456cc id: 111
+VM5405:3 h {0: '0xb5F6f7dAD23132d40d778085D795BD0FD4B859CD', 1: '0', 2: '10317137', 3: '82791466584857', lpToken: '0xb5F6f7dAD23132d40d778085D795BD0FD4B859CD', allocPoint: '0', lastRewardBlock: '10317137', accCakePerShare: '82791466584857'}
+VM5339:33  address: 0xb5F6f7dAD23132d40d778085D795BD0FD4B859CD id: 112
+VM5406:3 h {0: '0x155645cDF8e4B28d5B7790b65d9f79efc222740C', 1: '0', 2: '10086816', 3: '648930001980', lpToken: '0x155645cDF8e4B28d5B7790b65d9f79efc222740C', allocPoint: '0', lastRewardBlock: '10086816', accCakePerShare: '648930001980'}
+VM5339:33  address: 0x155645cDF8e4B28d5B7790b65d9f79efc222740C id: 113
+VM5407:3 h {0: '0x17F0b998B81cE75074a7CDAdAe6D63Da3cb23572', 1: '0', 2: '9630689', 3: '1200544306905', lpToken: '0x17F0b998B81cE75074a7CDAdAe6D63Da3cb23572', allocPoint: '0', lastRewardBlock: '9630689', accCakePerShare: '1200544306905'}
+VM5339:33  address: 0x17F0b998B81cE75074a7CDAdAe6D63Da3cb23572 id: 114
+VM5408:3 h {0: '0x5a805994a2E30aC710e7376ccc0211285bD4dD92', 1: '0', 2: '10855758', 3: '473226017998', lpToken: '0x5a805994a2E30aC710e7376ccc0211285bD4dD92', allocPoint: '0', lastRewardBlock: '10855758', accCakePerShare: '473226017998'}
+VM5339:33  address: 0x5a805994a2E30aC710e7376ccc0211285bD4dD92 id: 115
+VM5409:3 h {0: '0xBD1eC00B0d1CCA9D5B28fbE0bB7d664238af2fFa', 1: '0', 2: '10462730', 3: '1928738985464', lpToken: '0xBD1eC00B0d1CCA9D5B28fbE0bB7d664238af2fFa', allocPoint: '0', lastRewardBlock: '10462730', accCakePerShare: '1928738985464'}
+VM5339:33  address: 0xBD1eC00B0d1CCA9D5B28fbE0bB7d664238af2fFa id: 116
+VM5410:3 h {0: '0x61376B56Ff33c618B115131712A4138f98810A6a', 1: '0', 2: '10869777', 3: '580347948161', lpToken: '0x61376B56Ff33c618B115131712A4138f98810A6a', allocPoint: '0', lastRewardBlock: '10869777', accCakePerShare: '580347948161'}
+VM5339:33  address: 0x61376B56Ff33c618B115131712A4138f98810A6a id: 117
+VM5411:3 h {0: '0x3C9E55EdBD937ae0aD8C084a1A8302110612A371', 1: '0', 2: '8829202', 3: '1335870839449863', lpToken: '0x3C9E55EdBD937ae0aD8C084a1A8302110612A371', allocPoint: '0', lastRewardBlock: '8829202', accCakePerShare: '1335870839449863'}
+VM5339:33  address: 0x3C9E55EdBD937ae0aD8C084a1A8302110612A371 id: 118
+VM5412:3 h {0: '0xE5783Cc9dFb3E7e474B81B07369a008e80F1cEdb', 1: '0', 2: '10069305', 3: '583191252957', lpToken: '0xE5783Cc9dFb3E7e474B81B07369a008e80F1cEdb', allocPoint: '0', lastRewardBlock: '10069305', accCakePerShare: '583191252957'}
+VM5339:33  address: 0xE5783Cc9dFb3E7e474B81B07369a008e80F1cEdb id: 119
+VM5413:3 h {0: '0x496a8b716A3A3410B16e71E3c906968CE4488e52', 1: '0', 2: '10526239', 3: '100004461414093686', lpToken: '0x496a8b716A3A3410B16e71E3c906968CE4488e52', allocPoint: '0', lastRewardBlock: '10526239', accCakePerShare: '100004461414093686'}
+VM5339:33  address: 0x496a8b716A3A3410B16e71E3c906968CE4488e52 id: 120
+VM5414:3 h {0: '0x67581BFB4fc13BB73C71489b504E9b5354769063', 1: '0', 2: '10015278', 3: '239750019778', lpToken: '0x67581BFB4fc13BB73C71489b504E9b5354769063', allocPoint: '0', lastRewardBlock: '10015278', accCakePerShare: '239750019778'}
+VM5339:33  address: 0x67581BFB4fc13BB73C71489b504E9b5354769063 id: 121
+VM5415:3 h {0: '0xCdC53345192D0e31eEAD03D7E9e008Ee659FAEbE', 1: '0', 2: '10807468', 3: '93602861427', lpToken: '0xCdC53345192D0e31eEAD03D7E9e008Ee659FAEbE', allocPoint: '0', lastRewardBlock: '10807468', accCakePerShare: '93602861427'}
+VM5339:33  address: 0xCdC53345192D0e31eEAD03D7E9e008Ee659FAEbE id: 122
+VM5416:3 h {0: '0xFB29fCa952b478dDCb8A43f57176161e498225b1', 1: '0', 2: '10807463', 3: '109760609537', lpToken: '0xFB29fCa952b478dDCb8A43f57176161e498225b1', allocPoint: '0', lastRewardBlock: '10807463', accCakePerShare: '109760609537'}
+VM5339:33  address: 0xFB29fCa952b478dDCb8A43f57176161e498225b1 id: 123
+VM5417:3 h {0: '0xf9045866e7b372DeF1EFf3712CE55FAc1A98dAF0', 1: '0', 2: '10364227', 3: '588825332415', lpToken: '0xf9045866e7b372DeF1EFf3712CE55FAc1A98dAF0', allocPoint: '0', lastRewardBlock: '10364227', accCakePerShare: '588825332415'}
+VM5339:33  address: 0xf9045866e7b372DeF1EFf3712CE55FAc1A98dAF0 id: 124
+VM5418:3 h {0: '0x890479844484D67e34B99e1BBc1468231b254c08', 1: '0', 2: '10770982', 3: '485348376633', lpToken: '0x890479844484D67e34B99e1BBc1468231b254c08', allocPoint: '0', lastRewardBlock: '10770982', accCakePerShare: '485348376633'}
+VM5339:33  address: 0x890479844484D67e34B99e1BBc1468231b254c08 id: 125
+VM5419:3 h {0: '0x2222227E22102Fe3322098e4CBfE18cFebD57c95', 1: '0', 2: '6546824', 3: '13654566201399970561275160', lpToken: '0x2222227E22102Fe3322098e4CBfE18cFebD57c95', allocPoint: '0', lastRewardBlock: '6546824', accCakePerShare: '13654566201399970561275160'}
+VM5339:33  address: 0x2222227E22102Fe3322098e4CBfE18cFebD57c95 id: 126
+VM5420:3 h {0: '0x34e821e785A93261B697eBD2797988B3AA78ca33', 1: '0', 2: '10850618', 3: '104197657346583236919', lpToken: '0x34e821e785A93261B697eBD2797988B3AA78ca33', allocPoint: '0', lastRewardBlock: '10850618', accCakePerShare: '104197657346583236919'}
+VM5339:33  address: 0x34e821e785A93261B697eBD2797988B3AA78ca33 id: 127
+VM5421:3 h {0: '0x044e9985C14A547D478b1e3d4a4E562e69c8f936', 1: '0', 2: '9827355', 3: '82209812928', lpToken: '0x044e9985C14A547D478b1e3d4a4E562e69c8f936', allocPoint: '0', lastRewardBlock: '9827355', accCakePerShare: '82209812928'}
+VM5339:33  address: 0x044e9985C14A547D478b1e3d4a4E562e69c8f936 id: 128
+VM5422:3 h {0: '0x837cD42282801E340f1F17AAdf3166fEE99fb07c', 1: '0', 2: '10628374', 3: '430327335249', lpToken: '0x837cD42282801E340f1F17AAdf3166fEE99fb07c', allocPoint: '0', lastRewardBlock: '10628374', accCakePerShare: '430327335249'}
+VM5339:33  address: 0x837cD42282801E340f1F17AAdf3166fEE99fb07c id: 129
+VM5423:3 h {0: '0xEE4ca18E91012bf87fefde3Dd6723A8834347A4D', 1: '0', 2: '10822540', 3: '58182525548161555', lpToken: '0xEE4ca18E91012bf87fefde3Dd6723A8834347A4D', allocPoint: '0', lastRewardBlock: '10822540', accCakePerShare: '58182525548161555'}
+VM5339:33  address: 0xEE4ca18E91012bf87fefde3Dd6723A8834347A4D id: 130
+VM5424:3 h {0: '0x9e6f9f3382f9edC683203b528222c554c92382C2', 1: '0', 2: '10425016', 3: '51213882202', lpToken: '0x9e6f9f3382f9edC683203b528222c554c92382C2', allocPoint: '0', lastRewardBlock: '10425016', accCakePerShare: '51213882202'}
+VM5339:33  address: 0x9e6f9f3382f9edC683203b528222c554c92382C2 id: 131
+VM5425:3 h {0: '0x6Ff75C20656A0E4745E7c114972D361F483AFa5f', 1: '0', 2: '10542321', 3: '37824378272', lpToken: '0x6Ff75C20656A0E4745E7c114972D361F483AFa5f', allocPoint: '0', lastRewardBlock: '10542321', accCakePerShare: '37824378272'}
+VM5339:33  address: 0x6Ff75C20656A0E4745E7c114972D361F483AFa5f id: 132
+VM5426:3 h {0: '0x484c60f6202c8043DCA0236bB3101ada7ec50AD4', 1: '0', 2: '10844955', 3: '277181772547', lpToken: '0x484c60f6202c8043DCA0236bB3101ada7ec50AD4', allocPoint: '0', lastRewardBlock: '10844955', accCakePerShare: '277181772547'}
+VM5339:33  address: 0x484c60f6202c8043DCA0236bB3101ada7ec50AD4 id: 133
+VM5427:3 h {0: '0x56Bc8De6E90a8454cB2614B33E750D960aECDF12', 1: '0', 2: '10429822', 3: '2574187185', lpToken: '0x56Bc8De6E90a8454cB2614B33E750D960aECDF12', allocPoint: '0', lastRewardBlock: '10429822', accCakePerShare: '2574187185'}
+VM5339:33  address: 0x56Bc8De6E90a8454cB2614B33E750D960aECDF12 id: 134
+VM5428:3 h {0: '0x718d3BaA161e1A38758bb0f1Fe751E401f431ac4', 1: '0', 2: '10800413', 3: '339675066769', lpToken: '0x718d3BaA161e1A38758bb0f1Fe751E401f431ac4', allocPoint: '0', lastRewardBlock: '10800413', accCakePerShare: '339675066769'}
+VM5339:33  address: 0x718d3BaA161e1A38758bb0f1Fe751E401f431ac4 id: 135
+VM5429:3 h {0: '0x2D4E52c48fD18eE06D3959E82AB0f773c41B9277', 1: '0', 2: '9745271', 3: '6525058524436391219', lpToken: '0x2D4E52c48fD18eE06D3959E82AB0f773c41B9277', allocPoint: '0', lastRewardBlock: '9745271', accCakePerShare: '6525058524436391219'}
+VM5339:33  address: 0x2D4E52c48fD18eE06D3959E82AB0f773c41B9277 id: 136
+VM5430:3 h {0: '0xcA8825E9486ac20b17737E7231d67e1373B7FB4a', 1: '5500', 2: '10785001', 3: '56149184951322405783', lpToken: '0xcA8825E9486ac20b17737E7231d67e1373B7FB4a', allocPoint: '5500', lastRewardBlock: '10785001', accCakePerShare: '56149184951322405783'}
+VM5339:33  address: 0xcA8825E9486ac20b17737E7231d67e1373B7FB4a id: 137
+VM5431:3 h {0: '0xffaf3aF0Cb86BA126158CAb09DbD094996Bb4d24', 1: '79100', 2: '10785012', 3: '681648085045994705694', lpToken: '0xffaf3aF0Cb86BA126158CAb09DbD094996Bb4d24', allocPoint: '79100', lastRewardBlock: '10785012', accCakePerShare: '681648085045994705694'}
+VM5339:33  address: 0xffaf3aF0Cb86BA126158CAb09DbD094996Bb4d24 id: 138
+VM5432:3 h {0: '0xFB7E9FE9D13561AdA7131Fa746942a14F7dd4Cf6', 1: '0', 2: '7941779', 3: '0', lpToken: '0xFB7E9FE9D13561AdA7131Fa746942a14F7dd4Cf6', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5339:33  address: 0xFB7E9FE9D13561AdA7131Fa746942a14F7dd4Cf6 id: 139
+VM5433:3 h {0: '0x9bdEdb0c876fC0Da79D945DF28942b898Af89Fc7', 1: '0', 2: '7941779', 3: '0', lpToken: '0x9bdEdb0c876fC0Da79D945DF28942b898Af89Fc7', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5339:33  address: 0x9bdEdb0c876fC0Da79D945DF28942b898Af89Fc7 id: 140
+VM5434:3 h {0: '0xec0C5719cC100DfB6c6F371bb48d3D079ab6A6D2', 1: '0', 2: '7941779', 3: '0', lpToken: '0xec0C5719cC100DfB6c6F371bb48d3D079ab6A6D2', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5339:33  address: 0xec0C5719cC100DfB6c6F371bb48d3D079ab6A6D2 id: 141
+VM5435:3 h {0: '0x473390697036E7611a670575eA9141583471fF47', 1: '0', 2: '7941779', 3: '0', lpToken: '0x473390697036E7611a670575eA9141583471fF47', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5339:33  address: 0x473390697036E7611a670575eA9141583471fF47 id: 142
+VM5436:3 h {0: '0x3aFfc4dd05286ed6B7206Fc85219d222130e35a9', 1: '0', 2: '7941779', 3: '0', lpToken: '0x3aFfc4dd05286ed6B7206Fc85219d222130e35a9', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5339:33  address: 0x3aFfc4dd05286ed6B7206Fc85219d222130e35a9 id: 143
+VM5437:3 h {0: '0x082A80b3a55BD3B320a16678784186a979882b21', 1: '0', 2: '7941779', 3: '0', lpToken: '0x082A80b3a55BD3B320a16678784186a979882b21', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5451:3 h {0: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', 1: '31870', 2: '10902774', 3: '2708150679522641122', lpToken: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', allocPoint: '31870', lastRewardBlock: '10902774', accCakePerShare: '2708150679522641122'}
+let startClickID = 144;
+let yourLpInput = "";
+let poolInfo = "9";
+
+let btn = document.querySelector(
+  "#readCollapse" + String(poolInfo) + " #btn_" + String(poolInfo)
+);
+
+async function Auto() {
+  if (
+    String(
+      document.querySelector("#myanswer_" + String(poolInfo) + " a").innerText
+    ) === String(yourLpInput)
+  ) {
+    if (Number(startClickID - 1) === -1) {
+      await alert(
+        "poolID is:" + document.querySelector("#readCollapse" + String(poolInfo) + " input").value
+      );
+    } else {
+      if (Number(document.querySelector("#readCollapse" + String(poolInfo) + " input").value) === Number(startClickID)) {
+        await alert("poolID is:" + (startClickID));
+      } else {
+        await alert("poolID is:" + (startClickID - 1));
+      }
+    }
+  } else {
+    document.querySelector(
+      "#readCollapse" + String(poolInfo) + " input"
+    ).value = await startClickID;
+    await btn.click();
+    if (btn.disabled) {
+      if (startClickID > 0) {
+        await console.log(" address: "+ document.querySelector("#myanswer_" + String(poolInfo) + " a").innerText + " id: " + (startClickID - 1));
+      }
+      await startClickID++;
+      await setTimeout(Auto, 1500);
+    } else {
+      await alert("BSC Limit click at pool_id:" + (startClickID - 1));
+      await location.reload();
+    }
+  }
+}
+
+Auto();
+
+VM5608:33  address: 0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82 id: 143
+Promise {<fulfilled>: undefined}
+VM5609:3 h {0: '0x082A80b3a55BD3B320a16678784186a979882b21', 1: '0', 2: '7941779', 3: '0', lpToken: '0x082A80b3a55BD3B320a16678784186a979882b21', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x082A80b3a55BD3B320a16678784186a979882b21 id: 144
+VM5611:3 h {0: '0x380941fFd7b7cbf4AEbBfa8A26aa80c2f6570909', 1: '0', 2: '7941779', 3: '0', lpToken: '0x380941fFd7b7cbf4AEbBfa8A26aa80c2f6570909', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x380941fFd7b7cbf4AEbBfa8A26aa80c2f6570909 id: 145
+VM5612:3 h {0: '0x28b81C6b155fd9152AE4A09c4eeB7E7F1C114FaC', 1: '0', 2: '7941779', 3: '0', lpToken: '0x28b81C6b155fd9152AE4A09c4eeB7E7F1C114FaC', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x28b81C6b155fd9152AE4A09c4eeB7E7F1C114FaC id: 146
+VM5613:3 h {0: '0x34910518Faf5bfd3a4D15ccFE104B63f06ee3d85', 1: '0', 2: '7941779', 3: '0', lpToken: '0x34910518Faf5bfd3a4D15ccFE104B63f06ee3d85', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x34910518Faf5bfd3a4D15ccFE104B63f06ee3d85 id: 147
+VM5614:3 h {0: '0x77B5dB64fD4Cf5B699855420fF2608B2EA6708B3', 1: '0', 2: '7941779', 3: '0', lpToken: '0x77B5dB64fD4Cf5B699855420fF2608B2EA6708B3', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x77B5dB64fD4Cf5B699855420fF2608B2EA6708B3 id: 148
+VM5615:3 h {0: '0x4D7078a6B348766E7a16cD6e6fCb3064721bc6a6', 1: '0', 2: '7941779', 3: '0', lpToken: '0x4D7078a6B348766E7a16cD6e6fCb3064721bc6a6', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x4D7078a6B348766E7a16cD6e6fCb3064721bc6a6 id: 149
+VM5616:3 h {0: '0x356b7d0d3c54F22C82B7a670C6Ba9E2381b0624c', 1: '0', 2: '7941779', 3: '0', lpToken: '0x356b7d0d3c54F22C82B7a670C6Ba9E2381b0624c', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x356b7d0d3c54F22C82B7a670C6Ba9E2381b0624c id: 150
+VM5617:3 h {0: '0x0edAA38Bd263E83fAECbC8476822800F30eE6028', 1: '0', 2: '7941779', 3: '0', lpToken: '0x0edAA38Bd263E83fAECbC8476822800F30eE6028', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x0edAA38Bd263E83fAECbC8476822800F30eE6028 id: 151
+VM5618:3 h {0: '0x4160910ca32eAD83B6d4b32107974397D2579c2d', 1: '0', 2: '7941779', 3: '0', lpToken: '0x4160910ca32eAD83B6d4b32107974397D2579c2d', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x4160910ca32eAD83B6d4b32107974397D2579c2d id: 152
+VM5619:3 h {0: '0x0F640E3ec77415Fd810D18B3ac000cD8a172E22f', 1: '0', 2: '7941779', 3: '0', lpToken: '0x0F640E3ec77415Fd810D18B3ac000cD8a172E22f', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x0F640E3ec77415Fd810D18B3ac000cD8a172E22f id: 153
+VM5620:3 h {0: '0x7DD05eF533b1eBCE7815c90678D4B7344E32b8c9', 1: '0', 2: '7941779', 3: '0', lpToken: '0x7DD05eF533b1eBCE7815c90678D4B7344E32b8c9', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x7DD05eF533b1eBCE7815c90678D4B7344E32b8c9 id: 154
+VM5621:3 h {0: '0x237E7016Ff50D3B704A7e07571aE08628909A116', 1: '0', 2: '7941779', 3: '0', lpToken: '0x237E7016Ff50D3B704A7e07571aE08628909A116', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x237E7016Ff50D3B704A7e07571aE08628909A116 id: 155
+VM5622:3 h {0: '0xfffad7374c894E65b498BDBD489a9a5324A59F60', 1: '0', 2: '7941779', 3: '0', lpToken: '0xfffad7374c894E65b498BDBD489a9a5324A59F60', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0xfffad7374c894E65b498BDBD489a9a5324A59F60 id: 156
+VM5623:3 h {0: '0x2937202a53C82E36bC8beCFBe79795bedF284804', 1: '0', 2: '7941779', 3: '0', lpToken: '0x2937202a53C82E36bC8beCFBe79795bedF284804', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x2937202a53C82E36bC8beCFBe79795bedF284804 id: 157
+VM5624:3 h {0: '0xD027c0B352578b1Cf57f472107591CaE5fa27Eb1', 1: '0', 2: '7941779', 3: '0', lpToken: '0xD027c0B352578b1Cf57f472107591CaE5fa27Eb1', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0xD027c0B352578b1Cf57f472107591CaE5fa27Eb1 id: 158
+VM5625:3 h {0: '0x0444712EE8DFF8913B2b44CB1D2a0273b4CDaBe9', 1: '0', 2: '7941779', 3: '0', lpToken: '0x0444712EE8DFF8913B2b44CB1D2a0273b4CDaBe9', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x0444712EE8DFF8913B2b44CB1D2a0273b4CDaBe9 id: 159
+VM5626:3 h {0: '0x6294D8518b7321dc22E32AA907A89B1DAfc1aDbB', 1: '0', 2: '7941779', 3: '0', lpToken: '0x6294D8518b7321dc22E32AA907A89B1DAfc1aDbB', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x6294D8518b7321dc22E32AA907A89B1DAfc1aDbB id: 160
+VM5627:3 h {0: '0xcbb3fCE7134aF9ef2f3DCe0EAE96db68961b1337', 1: '0', 2: '7941779', 3: '0', lpToken: '0xcbb3fCE7134aF9ef2f3DCe0EAE96db68961b1337', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0xcbb3fCE7134aF9ef2f3DCe0EAE96db68961b1337 id: 161
+VM5628:3 h {0: '0x158e337e7Dcfcd8FC512840208BB522d122bB19d', 1: '0', 2: '7941779', 3: '0', lpToken: '0x158e337e7Dcfcd8FC512840208BB522d122bB19d', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x158e337e7Dcfcd8FC512840208BB522d122bB19d id: 162
+VM5629:3 h {0: '0x029f944CD3afa7c229122b19c706d8B7c01e062a', 1: '0', 2: '7941779', 3: '0', lpToken: '0x029f944CD3afa7c229122b19c706d8B7c01e062a', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x029f944CD3afa7c229122b19c706d8B7c01e062a id: 163
+VM5630:3 h {0: '0xdA5a79fFe24739876a52AEF0d419aBB3b2517922', 1: '0', 2: '7941779', 3: '0', lpToken: '0xdA5a79fFe24739876a52AEF0d419aBB3b2517922', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0xdA5a79fFe24739876a52AEF0d419aBB3b2517922 id: 164
+VM5631:3 h {0: '0x9d95063661fa34B67E0Be0cc71Cf92fc6126aF37', 1: '0', 2: '7941779', 3: '0', lpToken: '0x9d95063661fa34B67E0Be0cc71Cf92fc6126aF37', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x9d95063661fa34B67E0Be0cc71Cf92fc6126aF37 id: 165
+VM5632:3 h {0: '0xb33D432eACe45DF62F0145228B550b214DCaA6D4', 1: '0', 2: '7941779', 3: '0', lpToken: '0xb33D432eACe45DF62F0145228B550b214DCaA6D4', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0xb33D432eACe45DF62F0145228B550b214DCaA6D4 id: 166
+VM5633:3 h {0: '0x074ed2De503580887073A0F788E035C0fbe13F48', 1: '0', 2: '7941779', 3: '0', lpToken: '0x074ed2De503580887073A0F788E035C0fbe13F48', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x074ed2De503580887073A0F788E035C0fbe13F48 id: 167
+VM5634:3 h {0: '0x1B8ab50d894CfE793B44057F681A950E87Bd0331', 1: '0', 2: '7941779', 3: '0', lpToken: '0x1B8ab50d894CfE793B44057F681A950E87Bd0331', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x1B8ab50d894CfE793B44057F681A950E87Bd0331 id: 168
+VM5635:3 h {0: '0x003C4d60de42eAD30739dD204BD153fE69E20Fb2', 1: '0', 2: '7941779', 3: '0', lpToken: '0x003C4d60de42eAD30739dD204BD153fE69E20Fb2', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x003C4d60de42eAD30739dD204BD153fE69E20Fb2 id: 169
+VM5636:3 h {0: '0x5fE5394BBc394345737b8e6e48be2804E89eC0eB', 1: '0', 2: '7941779', 3: '0', lpToken: '0x5fE5394BBc394345737b8e6e48be2804E89eC0eB', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x5fE5394BBc394345737b8e6e48be2804E89eC0eB id: 170
+VM5637:3 h {0: '0xdaFE10aA3AB6758596aDAC70f6873C49F5a9bf86', 1: '0', 2: '7941779', 3: '0', lpToken: '0xdaFE10aA3AB6758596aDAC70f6873C49F5a9bf86', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0xdaFE10aA3AB6758596aDAC70f6873C49F5a9bf86 id: 171
+VM5638:3 h {0: '0x05FC2ac8a4FA697501087C916c87b8a5dc4f7b46', 1: '0', 2: '7941779', 3: '0', lpToken: '0x05FC2ac8a4FA697501087C916c87b8a5dc4f7b46', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x05FC2ac8a4FA697501087C916c87b8a5dc4f7b46 id: 172
+VM5639:3 h {0: '0x286E8d71722c585c9A82876B1B2FB4dEe9fc536E', 1: '0', 2: '7941779', 3: '0', lpToken: '0x286E8d71722c585c9A82876B1B2FB4dEe9fc536E', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x286E8d71722c585c9A82876B1B2FB4dEe9fc536E id: 173
+VM5640:3 h {0: '0xf967845A6D30C44b555C49C50530076dF5D7fd75', 1: '0', 2: '7941779', 3: '0', lpToken: '0xf967845A6D30C44b555C49C50530076dF5D7fd75', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0xf967845A6D30C44b555C49C50530076dF5D7fd75 id: 174
+VM5641:3 h {0: '0xD09648792d7e77523ae311Fa5A8F38E4684A5f15', 1: '0', 2: '7941779', 3: '0', lpToken: '0xD09648792d7e77523ae311Fa5A8F38E4684A5f15', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0xD09648792d7e77523ae311Fa5A8F38E4684A5f15 id: 175
+VM5642:3 h {0: '0x84Df48B3e900C79539F6c523D6F528802BeAa713', 1: '0', 2: '7941779', 3: '0', lpToken: '0x84Df48B3e900C79539F6c523D6F528802BeAa713', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x84Df48B3e900C79539F6c523D6F528802BeAa713 id: 176
+VM5643:3 h {0: '0xe5909de3822d589c220Fb4FA1660A0Fd251Fa87d', 1: '0', 2: '7941779', 3: '0', lpToken: '0xe5909de3822d589c220Fb4FA1660A0Fd251Fa87d', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0xe5909de3822d589c220Fb4FA1660A0Fd251Fa87d id: 177
+VM5644:3 h {0: '0x36285DDD149949f366b5aFb3f41Cea71d35B8c9e', 1: '0', 2: '7941779', 3: '0', lpToken: '0x36285DDD149949f366b5aFb3f41Cea71d35B8c9e', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x36285DDD149949f366b5aFb3f41Cea71d35B8c9e id: 178
+VM5645:3 h {0: '0xe1d76359FE4Eb7f0dAd1D719256c22890864718E', 1: '0', 2: '7941779', 3: '0', lpToken: '0xe1d76359FE4Eb7f0dAd1D719256c22890864718E', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0xe1d76359FE4Eb7f0dAd1D719256c22890864718E id: 179
+VM5646:3 h {0: '0x74d8Dbac5053d31E904a821A3B4C411Bd4dd2307', 1: '0', 2: '7941779', 3: '0', lpToken: '0x74d8Dbac5053d31E904a821A3B4C411Bd4dd2307', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x74d8Dbac5053d31E904a821A3B4C411Bd4dd2307 id: 180
+VM5647:3 h {0: '0x2c065E42B464ef38480778B0624A207A09042481', 1: '0', 2: '7941779', 3: '0', lpToken: '0x2c065E42B464ef38480778B0624A207A09042481', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x2c065E42B464ef38480778B0624A207A09042481 id: 181
+VM5648:3 h {0: '0x1719606031F1E0B3CCaCa11A2CF550Ef8feBEB0F', 1: '0', 2: '7941779', 3: '0', lpToken: '0x1719606031F1E0B3CCaCa11A2CF550Ef8feBEB0F', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x1719606031F1E0B3CCaCa11A2CF550Ef8feBEB0F id: 182
+VM5649:3 h {0: '0xB4670bBEce2D02c4D30786D173985A984686042C', 1: '0', 2: '7941779', 3: '0', lpToken: '0xB4670bBEce2D02c4D30786D173985A984686042C', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0xB4670bBEce2D02c4D30786D173985A984686042C id: 183
+VM5650:3 h {0: '0xF7045D7dE334a3F6c1254f98167b2af130eEA8E6', 1: '0', 2: '7941779', 3: '0', lpToken: '0xF7045D7dE334a3F6c1254f98167b2af130eEA8E6', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0xF7045D7dE334a3F6c1254f98167b2af130eEA8E6 id: 184
+VM5651:3 h {0: '0x239aD1874114B2235485e34b14c48dB73CCA3ffb', 1: '0', 2: '7941779', 3: '0', lpToken: '0x239aD1874114B2235485e34b14c48dB73CCA3ffb', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x239aD1874114B2235485e34b14c48dB73CCA3ffb id: 185
+VM5652:3 h {0: '0x41D69Beda3AFF2FFE48E715e2f4248Cb272cFf30', 1: '0', 2: '7941779', 3: '0', lpToken: '0x41D69Beda3AFF2FFE48E715e2f4248Cb272cFf30', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x41D69Beda3AFF2FFE48E715e2f4248Cb272cFf30 id: 186
+VM5653:3 h {0: '0xb923A2Beeb0834528D20b8973A2c69088571aA9E', 1: '0', 2: '7941779', 3: '0', lpToken: '0xb923A2Beeb0834528D20b8973A2c69088571aA9E', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0xb923A2Beeb0834528D20b8973A2c69088571aA9E id: 187
+VM5654:3 h {0: '0x01744B868fe98dB669EBf4e9CA557462BAA6097c', 1: '0', 2: '7941779', 3: '0', lpToken: '0x01744B868fe98dB669EBf4e9CA557462BAA6097c', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x01744B868fe98dB669EBf4e9CA557462BAA6097c id: 188
+VM5655:3 h {0: '0x6A55a9176f11c1118f01CBaf6c4033a5c1B22a81', 1: '0', 2: '7941779', 3: '0', lpToken: '0x6A55a9176f11c1118f01CBaf6c4033a5c1B22a81', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x6A55a9176f11c1118f01CBaf6c4033a5c1B22a81 id: 189
+VM5656:3 h {0: '0xd2A5008d555371e97F30B6dD71597b4F1eDB0f20', 1: '0', 2: '7941779', 3: '0', lpToken: '0xd2A5008d555371e97F30B6dD71597b4F1eDB0f20', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0xd2A5008d555371e97F30B6dD71597b4F1eDB0f20 id: 190
+VM5657:3 h {0: '0x6d1299B158bd13F4B50e951aaBf2Aa501FD87E52', 1: '0', 2: '7941779', 3: '0', lpToken: '0x6d1299B158bd13F4B50e951aaBf2Aa501FD87E52', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5608:33  address: 0x6d1299B158bd13F4B50e951aaBf2Aa501FD87E52 id: 191
+VM5658:3 h {0: '0xC3E303647cbD43EC22989275e7ecFA8952A6BA02', 1: '0', 2: '7941779', 3: '0', lpToken: '0xC3E303647cbD43EC22989275e7ecFA8952A6BA02', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5670:3 h {0: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', 1: '31870', 2: '10902827', 3: '2708150679525798102', lpToken: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', allocPoint: '31870', lastRewardBlock: '10902827', accCakePerShare: '2708150679525798102'}
+let startClickID = 192;
+let yourLpInput = "";
+let poolInfo = "9";
+
+let btn = document.querySelector(
+  "#readCollapse" + String(poolInfo) + " #btn_" + String(poolInfo)
+);
+
+async function Auto() {
+  if (
+    String(
+      document.querySelector("#myanswer_" + String(poolInfo) + " a").innerText
+    ) === String(yourLpInput)
+  ) {
+    if (Number(startClickID - 1) === -1) {
+      await alert(
+        "poolID is:" + document.querySelector("#readCollapse" + String(poolInfo) + " input").value
+      );
+    } else {
+      if (Number(document.querySelector("#readCollapse" + String(poolInfo) + " input").value) === Number(startClickID)) {
+        await alert("poolID is:" + (startClickID));
+      } else {
+        await alert("poolID is:" + (startClickID - 1));
+      }
+    }
+  } else {
+    document.querySelector(
+      "#readCollapse" + String(poolInfo) + " input"
+    ).value = await startClickID;
+    await btn.click();
+    if (btn.disabled) {
+      if (startClickID > 0) {
+        await console.log(" address: "+ document.querySelector("#myanswer_" + String(poolInfo) + " a").innerText + " id: " + (startClickID - 1));
+      }
+      await startClickID++;
+      await setTimeout(Auto, 1500);
+    } else {
+      await alert("BSC Limit click at pool_id:" + (startClickID - 1));
+      await location.reload();
+    }
+  }
+}
+
+Auto();
+
+VM5791:33  address: 0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82 id: 191
+Promise {<fulfilled>: undefined}
+VM5792:3 h {0: '0xC3E303647cbD43EC22989275e7ecFA8952A6BA02', 1: '0', 2: '7941779', 3: '0', lpToken: '0xC3E303647cbD43EC22989275e7ecFA8952A6BA02', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0xC3E303647cbD43EC22989275e7ecFA8952A6BA02 id: 192
+VM5794:3 h {0: '0xA0e3F72BAFcc5d52F0052a39165FD40D3d4d34Fc', 1: '0', 2: '7941779', 3: '0', lpToken: '0xA0e3F72BAFcc5d52F0052a39165FD40D3d4d34Fc', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0xA0e3F72BAFcc5d52F0052a39165FD40D3d4d34Fc id: 193
+VM5795:3 h {0: '0x220e34306a93002fB7947C9Fc633d6f538bd5032', 1: '0', 2: '7941779', 3: '0', lpToken: '0x220e34306a93002fB7947C9Fc633d6f538bd5032', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x220e34306a93002fB7947C9Fc633d6f538bd5032 id: 194
+VM5796:3 h {0: '0x3BECbb09F622187B544C0892EeDeB58C004117e1', 1: '0', 2: '7941779', 3: '0', lpToken: '0x3BECbb09F622187B544C0892EeDeB58C004117e1', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x3BECbb09F622187B544C0892EeDeB58C004117e1 id: 195
+VM5797:3 h {0: '0xD2FcF98EaeD2c08e9BcA854802C07b93D27913aC', 1: '0', 2: '7941779', 3: '0', lpToken: '0xD2FcF98EaeD2c08e9BcA854802C07b93D27913aC', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0xD2FcF98EaeD2c08e9BcA854802C07b93D27913aC id: 196
+VM5798:3 h {0: '0xE0243Ce3b50bd551168cE6964F178507d0a1acD5', 1: '0', 2: '7941779', 3: '0', lpToken: '0xE0243Ce3b50bd551168cE6964F178507d0a1acD5', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0xE0243Ce3b50bd551168cE6964F178507d0a1acD5 id: 197
+VM5799:3 h {0: '0x8503462D0d4D3ce73e857bCC7D0Ef1125B0d66fF', 1: '0', 2: '7941779', 3: '0', lpToken: '0x8503462D0d4D3ce73e857bCC7D0Ef1125B0d66fF', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x8503462D0d4D3ce73e857bCC7D0Ef1125B0d66fF id: 198
+VM5800:3 h {0: '0x037d38c7DfF5732DAA5f8C05478Eb75cdf24f42B', 1: '0', 2: '7941779', 3: '0', lpToken: '0x037d38c7DfF5732DAA5f8C05478Eb75cdf24f42B', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x037d38c7DfF5732DAA5f8C05478Eb75cdf24f42B id: 199
+VM5801:3 h {0: '0x601aE41C5a65b2089a6af2CcfaF984896a1f52AD', 1: '0', 2: '7941779', 3: '0', lpToken: '0x601aE41C5a65b2089a6af2CcfaF984896a1f52AD', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x601aE41C5a65b2089a6af2CcfaF984896a1f52AD id: 200
+VM5802:3 h {0: '0xD5fBfFf5faB9d29f614d9bd50AF9b1356C53049C', 1: '0', 2: '7941779', 3: '0', lpToken: '0xD5fBfFf5faB9d29f614d9bd50AF9b1356C53049C', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0xD5fBfFf5faB9d29f614d9bd50AF9b1356C53049C id: 201
+VM5803:3 h {0: '0xC14c2dd21d6aEA3C2068A1F8e58d41D3c28F9288', 1: '0', 2: '7941779', 3: '0', lpToken: '0xC14c2dd21d6aEA3C2068A1F8e58d41D3c28F9288', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0xC14c2dd21d6aEA3C2068A1F8e58d41D3c28F9288 id: 202
+VM5804:3 h {0: '0x2013265224E3cB6A53C67130F9Fe53Ae36CFcfdd', 1: '0', 2: '7941779', 3: '0', lpToken: '0x2013265224E3cB6A53C67130F9Fe53Ae36CFcfdd', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x2013265224E3cB6A53C67130F9Fe53Ae36CFcfdd id: 203
+VM5805:3 h {0: '0x534b0b0700c0cfF9785852707f07f60E7C0bc07E', 1: '0', 2: '7941779', 3: '0', lpToken: '0x534b0b0700c0cfF9785852707f07f60E7C0bc07E', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x534b0b0700c0cfF9785852707f07f60E7C0bc07E id: 204
+VM5806:3 h {0: '0xFFA2357f1E6f48d74b1c18c363c3Fe58A032405a', 1: '0', 2: '7941779', 3: '0', lpToken: '0xFFA2357f1E6f48d74b1c18c363c3Fe58A032405a', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0xFFA2357f1E6f48d74b1c18c363c3Fe58A032405a id: 205
+VM5807:3 h {0: '0x6ED589e69D1927AC45054cBb6E57877879384d6F', 1: '0', 2: '7941779', 3: '0', lpToken: '0x6ED589e69D1927AC45054cBb6E57877879384d6F', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x6ED589e69D1927AC45054cBb6E57877879384d6F id: 206
+VM5808:3 h {0: '0x446ff2C0F5350bF2dadD0e0F1AaAA573b362CA6B', 1: '0', 2: '7941779', 3: '0', lpToken: '0x446ff2C0F5350bF2dadD0e0F1AaAA573b362CA6B', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x446ff2C0F5350bF2dadD0e0F1AaAA573b362CA6B id: 207
+VM5809:3 h {0: '0xaB46737CAAFbB99999f8b91E4D3C6D4D28E10e05', 1: '0', 2: '7941779', 3: '0', lpToken: '0xaB46737CAAFbB99999f8b91E4D3C6D4D28E10e05', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0xaB46737CAAFbB99999f8b91E4D3C6D4D28E10e05 id: 208
+VM5810:3 h {0: '0x7aA4eb5c3bF33e3AD41A47e26b3Bd9b902984610', 1: '0', 2: '7941779', 3: '0', lpToken: '0x7aA4eb5c3bF33e3AD41A47e26b3Bd9b902984610', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x7aA4eb5c3bF33e3AD41A47e26b3Bd9b902984610 id: 209
+VM5811:3 h {0: '0xaBB817B07663521Cf64B006EC9D0FF185b65cfE5', 1: '0', 2: '7941779', 3: '0', lpToken: '0xaBB817B07663521Cf64B006EC9D0FF185b65cfE5', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0xaBB817B07663521Cf64B006EC9D0FF185b65cfE5 id: 210
+VM5812:3 h {0: '0x9e1BB5033d47BF8F16FC017CEC0959De7FF00833', 1: '0', 2: '7941779', 3: '0', lpToken: '0x9e1BB5033d47BF8F16FC017CEC0959De7FF00833', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x9e1BB5033d47BF8F16FC017CEC0959De7FF00833 id: 211
+VM5813:3 h {0: '0x283FA8d459Da6e3165B2faF7FA0DD0137503DECf', 1: '0', 2: '7941779', 3: '0', lpToken: '0x283FA8d459Da6e3165B2faF7FA0DD0137503DECf', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x283FA8d459Da6e3165B2faF7FA0DD0137503DECf id: 212
+VM5814:3 h {0: '0xAfB2e729A24629aBdE8E55CEB0e1f899bEe0f70f', 1: '0', 2: '7941779', 3: '0', lpToken: '0xAfB2e729A24629aBdE8E55CEB0e1f899bEe0f70f', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0xAfB2e729A24629aBdE8E55CEB0e1f899bEe0f70f id: 213
+VM5815:3 h {0: '0x8Ba7eB4056338fd7271E1b7431C8ca3827eF907c', 1: '0', 2: '7941779', 3: '0', lpToken: '0x8Ba7eB4056338fd7271E1b7431C8ca3827eF907c', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x8Ba7eB4056338fd7271E1b7431C8ca3827eF907c id: 214
+VM5816:3 h {0: '0x01956F08A55e4FF9775bc01aF6ACb09144564837', 1: '0', 2: '7941779', 3: '0', lpToken: '0x01956F08A55e4FF9775bc01aF6ACb09144564837', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x01956F08A55e4FF9775bc01aF6ACb09144564837 id: 215
+VM5817:3 h {0: '0x69773f622cE228Ca7dEd42D8C34Eba8582e85dcA', 1: '0', 2: '7941779', 3: '0', lpToken: '0x69773f622cE228Ca7dEd42D8C34Eba8582e85dcA', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x69773f622cE228Ca7dEd42D8C34Eba8582e85dcA id: 216
+VM5818:3 h {0: '0x52fCfB6d91Bcf1F1f6d375D0f6c303688b0E8550', 1: '0', 2: '7941779', 3: '0', lpToken: '0x52fCfB6d91Bcf1F1f6d375D0f6c303688b0E8550', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x52fCfB6d91Bcf1F1f6d375D0f6c303688b0E8550 id: 217
+VM5819:3 h {0: '0x905186a70ba3Eb50090d1d0f6914F5460B4DdB40', 1: '0', 2: '7941779', 3: '0', lpToken: '0x905186a70ba3Eb50090d1d0f6914F5460B4DdB40', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x905186a70ba3Eb50090d1d0f6914F5460B4DdB40 id: 218
+VM5820:3 h {0: '0xF62e92292772F24EAa6B6B8a105c9FC7B8F31EC5', 1: '0', 2: '7941779', 3: '0', lpToken: '0xF62e92292772F24EAa6B6B8a105c9FC7B8F31EC5', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0xF62e92292772F24EAa6B6B8a105c9FC7B8F31EC5 id: 219
+VM5821:3 h {0: '0xfbfa92e037e37F946c0105902640914E3aCe6752', 1: '0', 2: '7941779', 3: '0', lpToken: '0xfbfa92e037e37F946c0105902640914E3aCe6752', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0xfbfa92e037e37F946c0105902640914E3aCe6752 id: 220
+VM5822:3 h {0: '0x87Ae7b5c43D4e160cDB9427a78BA87B9503ee37b', 1: '0', 2: '7941779', 3: '0', lpToken: '0x87Ae7b5c43D4e160cDB9427a78BA87B9503ee37b', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x87Ae7b5c43D4e160cDB9427a78BA87B9503ee37b id: 221
+VM5823:3 h {0: '0xe3D941e74141311436F82523817EBaa26462967d', 1: '0', 2: '7941779', 3: '0', lpToken: '0xe3D941e74141311436F82523817EBaa26462967d', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0xe3D941e74141311436F82523817EBaa26462967d id: 222
+VM5824:3 h {0: '0xcBDf499db66Df19A66aB48F16C790FF9eE872add', 1: '0', 2: '7941779', 3: '0', lpToken: '0xcBDf499db66Df19A66aB48F16C790FF9eE872add', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0xcBDf499db66Df19A66aB48F16C790FF9eE872add id: 223
+VM5825:3 h {0: '0xbe7BDE4aD1c136038Dc9f57ef94d1d16e6F9CbF7', 1: '0', 2: '7941779', 3: '0', lpToken: '0xbe7BDE4aD1c136038Dc9f57ef94d1d16e6F9CbF7', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0xbe7BDE4aD1c136038Dc9f57ef94d1d16e6F9CbF7 id: 224
+VM5826:3 h {0: '0x4f6dfFc9795d35dc1D92c2a7B23Cb7d6EF190B33', 1: '0', 2: '7941779', 3: '0', lpToken: '0x4f6dfFc9795d35dc1D92c2a7B23Cb7d6EF190B33', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x4f6dfFc9795d35dc1D92c2a7B23Cb7d6EF190B33 id: 225
+VM5827:3 h {0: '0xe86d075051f20eb8c741007Cb8e262f4519944ee', 1: '0', 2: '7941779', 3: '0', lpToken: '0xe86d075051f20eb8c741007Cb8e262f4519944ee', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0xe86d075051f20eb8c741007Cb8e262f4519944ee id: 226
+VM5828:3 h {0: '0xaccd6673FFc24cD56B080D71384327f78fD92496', 1: '0', 2: '7941779', 3: '0', lpToken: '0xaccd6673FFc24cD56B080D71384327f78fD92496', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0xaccd6673FFc24cD56B080D71384327f78fD92496 id: 227
+VM5829:3 h {0: '0xA99d1926a3c15DC4Fb83aB3Fafd63B6C3E87CF22', 1: '0', 2: '7941779', 3: '0', lpToken: '0xA99d1926a3c15DC4Fb83aB3Fafd63B6C3E87CF22', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0xA99d1926a3c15DC4Fb83aB3Fafd63B6C3E87CF22 id: 228
+VM5830:3 h {0: '0x6108aBd546AF17D8f7aFAe59EBfb4A01132A11Bb', 1: '0', 2: '7941779', 3: '0', lpToken: '0x6108aBd546AF17D8f7aFAe59EBfb4A01132A11Bb', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x6108aBd546AF17D8f7aFAe59EBfb4A01132A11Bb id: 229
+VM5831:3 h {0: '0x25dea33a42c7775F6945fae22A8fFBfAC9fB22CD', 1: '0', 2: '7941779', 3: '0', lpToken: '0x25dea33a42c7775F6945fae22A8fFBfAC9fB22CD', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x25dea33a42c7775F6945fae22A8fFBfAC9fB22CD id: 230
+VM5832:3 h {0: '0x4b0ec41404a7FF59BaE33C8Dc420804c58B7bF24', 1: '0', 2: '7941779', 3: '0', lpToken: '0x4b0ec41404a7FF59BaE33C8Dc420804c58B7bF24', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x4b0ec41404a7FF59BaE33C8Dc420804c58B7bF24 id: 231
+VM5833:3 h {0: '0x3B0a7d1030bcDFf45ABB7B03C04110FcCc8095BC', 1: '0', 2: '7941779', 3: '0', lpToken: '0x3B0a7d1030bcDFf45ABB7B03C04110FcCc8095BC', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x3B0a7d1030bcDFf45ABB7B03C04110FcCc8095BC id: 232
+VM5834:3 h {0: '0xc12dAD966505443b5aad7b0C55716c13d285B520', 1: '0', 2: '7941779', 3: '0', lpToken: '0xc12dAD966505443b5aad7b0C55716c13d285B520', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0xc12dAD966505443b5aad7b0C55716c13d285B520 id: 233
+VM5835:3 h {0: '0x7A5523f50a80790cAD011167E20bD21056A2f04A', 1: '0', 2: '7941779', 3: '0', lpToken: '0x7A5523f50a80790cAD011167E20bD21056A2f04A', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x7A5523f50a80790cAD011167E20bD21056A2f04A id: 234
+VM5836:3 h {0: '0xc43EdF4a7e89160135C2553E9868446fef9C18DD', 1: '0', 2: '7941779', 3: '0', lpToken: '0xc43EdF4a7e89160135C2553E9868446fef9C18DD', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0xc43EdF4a7e89160135C2553E9868446fef9C18DD id: 235
+VM5837:3 h {0: '0x2205a6424ec4D74a7588450fB71ffd0C4A3Ead65', 1: '0', 2: '7941779', 3: '0', lpToken: '0x2205a6424ec4D74a7588450fB71ffd0C4A3Ead65', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x2205a6424ec4D74a7588450fB71ffd0C4A3Ead65 id: 236
+VM5838:3 h {0: '0x3e78b0eD211a49e263fF9b3F0B410932a021E368', 1: '0', 2: '7941779', 3: '0', lpToken: '0x3e78b0eD211a49e263fF9b3F0B410932a021E368', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x3e78b0eD211a49e263fF9b3F0B410932a021E368 id: 237
+VM5839:3 h {0: '0xD55e5A7b886aE9657b95641c6A7dc5A662EcAbF3', 1: '0', 2: '7941779', 3: '0', lpToken: '0xD55e5A7b886aE9657b95641c6A7dc5A662EcAbF3', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0xD55e5A7b886aE9657b95641c6A7dc5A662EcAbF3 id: 238
+VM5840:3 h {0: '0x43bc6C256240e657Ad84aFb86825E21B48FEDe78', 1: '0', 2: '7941779', 3: '0', lpToken: '0x43bc6C256240e657Ad84aFb86825E21B48FEDe78', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5791:33  address: 0x43bc6C256240e657Ad84aFb86825E21B48FEDe78 id: 239
+VM5841:3 h {0: '0x8fD5ca41B2B44e4713590584f97c85f9FF59F00D', 1: '0', 2: '7941779', 3: '0', lpToken: '0x8fD5ca41B2B44e4713590584f97c85f9FF59F00D', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5853:3 h {0: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', 1: '31870', 2: '10902882', 3: '2708150679529074186', lpToken: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', allocPoint: '31870', lastRewardBlock: '10902882', accCakePerShare: '2708150679529074186'}
+let startClickID = 240;
+let yourLpInput = "";
+let poolInfo = "9";
+
+let btn = document.querySelector(
+  "#readCollapse" + String(poolInfo) + " #btn_" + String(poolInfo)
+);
+
+async function Auto() {
+  if (
+    String(
+      document.querySelector("#myanswer_" + String(poolInfo) + " a").innerText
+    ) === String(yourLpInput)
+  ) {
+    if (Number(startClickID - 1) === -1) {
+      await alert(
+        "poolID is:" + document.querySelector("#readCollapse" + String(poolInfo) + " input").value
+      );
+    } else {
+      if (Number(document.querySelector("#readCollapse" + String(poolInfo) + " input").value) === Number(startClickID)) {
+        await alert("poolID is:" + (startClickID));
+      } else {
+        await alert("poolID is:" + (startClickID - 1));
+      }
+    }
+  } else {
+    document.querySelector(
+      "#readCollapse" + String(poolInfo) + " input"
+    ).value = await startClickID;
+    await btn.click();
+    if (btn.disabled) {
+      if (startClickID > 0) {
+        await console.log(" address: "+ document.querySelector("#myanswer_" + String(poolInfo) + " a").innerText + " id: " + (startClickID - 1));
+      }
+      await startClickID++;
+      await setTimeout(Auto, 1500);
+    } else {
+      await alert("BSC Limit click at pool_id:" + (startClickID - 1));
+      await location.reload();
+    }
+  }
+}
+
+Auto();
+
+VM5988:33  address: 0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82 id: 239
+Promise {<fulfilled>: undefined}
+VM5989:3 h {0: '0x8fD5ca41B2B44e4713590584f97c85f9FF59F00D', 1: '0', 2: '7941779', 3: '0', lpToken: '0x8fD5ca41B2B44e4713590584f97c85f9FF59F00D', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5988:33  address: 0x8fD5ca41B2B44e4713590584f97c85f9FF59F00D id: 240
+VM5991:3 h {0: '0x25f15Cb3D3B3753702E1d5c4E5f6F0720b197843', 1: '0', 2: '7941779', 3: '0', lpToken: '0x25f15Cb3D3B3753702E1d5c4E5f6F0720b197843', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5988:33  address: 0x25f15Cb3D3B3753702E1d5c4E5f6F0720b197843 id: 241
+VM5992:3 h {0: '0xB1C2e08A992a619DA570425E78828A8508654f4F', 1: '0', 2: '7941779', 3: '0', lpToken: '0xB1C2e08A992a619DA570425E78828A8508654f4F', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5988:33  address: 0xB1C2e08A992a619DA570425E78828A8508654f4F id: 242
+VM5993:3 h {0: '0xBB41898A3051A6b6D4A36a1c43e906b05799B744', 1: '0', 2: '7941779', 3: '0', lpToken: '0xBB41898A3051A6b6D4A36a1c43e906b05799B744', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5988:33  address: 0xBB41898A3051A6b6D4A36a1c43e906b05799B744 id: 243
+VM5994:3 h {0: '0xF7fcD7e7B3853bf59bCA9183476F218ED07eD3B0', 1: '0', 2: '7941779', 3: '0', lpToken: '0xF7fcD7e7B3853bf59bCA9183476F218ED07eD3B0', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5988:33  address: 0xF7fcD7e7B3853bf59bCA9183476F218ED07eD3B0 id: 244
+VM5995:3 h {0: '0x5Ac5184eA06dE24ce8ED2133f58b4Aa2CEd2dC3b', 1: '0', 2: '7941779', 3: '0', lpToken: '0x5Ac5184eA06dE24ce8ED2133f58b4Aa2CEd2dC3b', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5988:33  address: 0x5Ac5184eA06dE24ce8ED2133f58b4Aa2CEd2dC3b id: 245
+VM5996:3 h {0: '0x6f41c9226fa89a552009c3AC087BA74b83772C52', 1: '0', 2: '7941779', 3: '0', lpToken: '0x6f41c9226fa89a552009c3AC087BA74b83772C52', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5988:33  address: 0x6f41c9226fa89a552009c3AC087BA74b83772C52 id: 246
+VM5997:3 h {0: '0xB9aA8B0d67DE546aaa82091065a64B7F1C4B1a1F', 1: '0', 2: '7941779', 3: '0', lpToken: '0xB9aA8B0d67DE546aaa82091065a64B7F1C4B1a1F', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5988:33  address: 0xB9aA8B0d67DE546aaa82091065a64B7F1C4B1a1F id: 247
+VM5998:3 h {0: '0x9ed1ca73AA8F1ccdc3c3a174E77014f8900411CE', 1: '0', 2: '7941779', 3: '0', lpToken: '0x9ed1ca73AA8F1ccdc3c3a174E77014f8900411CE', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5988:33  address: 0x9ed1ca73AA8F1ccdc3c3a174E77014f8900411CE id: 248
+VM5999:3 h {0: '0xBbE20dA99db94Fa1077F1C9A5d256761dAf89C60', 1: '0', 2: '7941779', 3: '0', lpToken: '0xBbE20dA99db94Fa1077F1C9A5d256761dAf89C60', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5988:33  address: 0xBbE20dA99db94Fa1077F1C9A5d256761dAf89C60 id: 249
+VM6000:3 h {0: '0xFD09CDbd6A7dCAd8AC47df4F139443a729264763', 1: '0', 2: '7941779', 3: '0', lpToken: '0xFD09CDbd6A7dCAd8AC47df4F139443a729264763', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '0'}
+VM5988:33  address: 0xFD09CDbd6A7dCAd8AC47df4F139443a729264763 id: 250
+VM6001:3 h {0: '0x0eD7e52944161450477ee417DE9Cd3a859b14fD0', 1: '4000', 2: '10902890', 3: '1919670189231', lpToken: '0x0eD7e52944161450477ee417DE9Cd3a859b14fD0', allocPoint: '4000', lastRewardBlock: '10902890', accCakePerShare: '1919670189231'}
+VM5988:33  address: 0x0eD7e52944161450477ee417DE9Cd3a859b14fD0 id: 251
+VM6002:3 h {0: '0x58F876857a02D6762E0101bb5C46A8c1ED44Dc16', 1: '1100', 2: '10902840', 3: '180097289138', lpToken: '0x58F876857a02D6762E0101bb5C46A8c1ED44Dc16', allocPoint: '1100', lastRewardBlock: '10902840', accCakePerShare: '180097289138'}
+VM5988:33  address: 0x58F876857a02D6762E0101bb5C46A8c1ED44Dc16 id: 252
+VM6003:3 h {0: '0x28415ff2C35b65B9E5c7de82126b4015ab9d031F', 1: '50', 2: '10902819', 3: '207457951103', lpToken: '0x28415ff2C35b65B9E5c7de82126b4015ab9d031F', allocPoint: '50', lastRewardBlock: '10902819', accCakePerShare: '207457951103'}
+VM5988:33  address: 0x28415ff2C35b65B9E5c7de82126b4015ab9d031F id: 253
+VM6004:3 h {0: '0x168B273278F3A8d302De5E879aA30690B7E6c28f', 1: '10', 2: '10901140', 3: '1039333692250', lpToken: '0x168B273278F3A8d302De5E879aA30690B7E6c28f', allocPoint: '10', lastRewardBlock: '10901140', accCakePerShare: '1039333692250'}
+VM5988:33  address: 0x168B273278F3A8d302De5E879aA30690B7E6c28f id: 254
+VM6005:3 h {0: '0xDd5bAd8f8b360d76d12FdA230F8BAF42fe0022CF', 1: '100', 2: '10902710', 3: '842828464463', lpToken: '0xDd5bAd8f8b360d76d12FdA230F8BAF42fe0022CF', allocPoint: '100', lastRewardBlock: '10902710', accCakePerShare: '842828464463'}
+VM5988:33  address: 0xDd5bAd8f8b360d76d12FdA230F8BAF42fe0022CF id: 255
+VM6006:3 h {0: '0xB6e34b5C65Eda51bb1BD4ea5F79d385Fb94b9504', 1: '0', 2: '10885717', 3: '461034965947', lpToken: '0xB6e34b5C65Eda51bb1BD4ea5F79d385Fb94b9504', allocPoint: '0', lastRewardBlock: '10885717', accCakePerShare: '461034965947'}
+VM5988:33  address: 0xB6e34b5C65Eda51bb1BD4ea5F79d385Fb94b9504 id: 256
+VM6007:3 h {0: '0x824eb9faDFb377394430d2744fa7C42916DE3eCe', 1: '50', 2: '10902716', 3: '1041096069165', lpToken: '0x824eb9faDFb377394430d2744fa7C42916DE3eCe', allocPoint: '50', lastRewardBlock: '10902716', accCakePerShare: '1041096069165'}
+VM5988:33  address: 0x824eb9faDFb377394430d2744fa7C42916DE3eCe id: 257
+VM6008:3 h {0: '0x7EFaEf62fDdCCa950418312c6C91Aef321375A00', 1: '250', 2: '10902871', 3: '2946418184', lpToken: '0x7EFaEf62fDdCCa950418312c6C91Aef321375A00', allocPoint: '250', lastRewardBlock: '10902871', accCakePerShare: '2946418184'}
+VM5988:33  address: 0x7EFaEf62fDdCCa950418312c6C91Aef321375A00 id: 258
+VM6009:3 h {0: '0x3DcB1787a95D2ea0Eb7d00887704EeBF0D79bb13', 1: '10', 2: '10902553', 3: '332916719213', lpToken: '0x3DcB1787a95D2ea0Eb7d00887704EeBF0D79bb13', allocPoint: '10', lastRewardBlock: '10902553', accCakePerShare: '332916719213'}
+VM5988:33  address: 0x3DcB1787a95D2ea0Eb7d00887704EeBF0D79bb13 id: 259
+VM6010:3 h {0: '0x7EB5D86FD78f3852a3e0e064f2842d45a3dB6EA2', 1: '100', 2: '10902699', 3: '2365182550095', lpToken: '0x7EB5D86FD78f3852a3e0e064f2842d45a3dB6EA2', allocPoint: '100', lastRewardBlock: '10902699', accCakePerShare: '2365182550095'}
+VM5988:33  address: 0x7EB5D86FD78f3852a3e0e064f2842d45a3dB6EA2 id: 260
+VM6011:3 h {0: '0x74E4716E431f45807DCF19f284c7aA99F18a4fbc', 1: '250', 2: '10902811', 3: '4842530430026', lpToken: '0x74E4716E431f45807DCF19f284c7aA99F18a4fbc', allocPoint: '250', lastRewardBlock: '10902811', accCakePerShare: '4842530430026'}
+VM5988:33  address: 0x74E4716E431f45807DCF19f284c7aA99F18a4fbc id: 261
+VM6012:3 h {0: '0x61EB789d75A95CAa3fF50ed7E47b96c132fEc082', 1: '250', 2: '10902880', 3: '23772417451324', lpToken: '0x61EB789d75A95CAa3fF50ed7E47b96c132fEc082', allocPoint: '250', lastRewardBlock: '10902880', accCakePerShare: '23772417451324'}
+VM5988:33  address: 0x61EB789d75A95CAa3fF50ed7E47b96c132fEc082 id: 262
+VM6013:3 h {0: '0xACF47CBEaab5c8A6Ee99263cfE43995f89fB3206', 1: '50', 2: '10902194', 3: '432197730811', lpToken: '0xACF47CBEaab5c8A6Ee99263cfE43995f89fB3206', allocPoint: '50', lastRewardBlock: '10902194', accCakePerShare: '432197730811'}
+VM5988:33  address: 0xACF47CBEaab5c8A6Ee99263cfE43995f89fB3206 id: 263
+VM6014:3 h {0: '0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE', 1: '600', 2: '10902775', 3: '158417511312', lpToken: '0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE', allocPoint: '600', lastRewardBlock: '10902775', accCakePerShare: '158417511312'}
+VM5988:33  address: 0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE id: 264
+VM6015:3 h {0: '0x03F18135c44C64ebFdCBad8297fe5bDafdBbdd86', 1: '50', 2: '10902820', 3: '235015013641', lpToken: '0x03F18135c44C64ebFdCBad8297fe5bDafdBbdd86', allocPoint: '50', lastRewardBlock: '10902820', accCakePerShare: '235015013641'}
+VM5988:33  address: 0x03F18135c44C64ebFdCBad8297fe5bDafdBbdd86 id: 265
+VM6016:3 h {0: '0x468b2DC8DC75990eE3E9dc0648965Ad6294E7914', 1: '0', 2: '10889587', 3: '774906996800', lpToken: '0x468b2DC8DC75990eE3E9dc0648965Ad6294E7914', allocPoint: '0', lastRewardBlock: '10889587', accCakePerShare: '774906996800'}
+VM5988:33  address: 0x468b2DC8DC75990eE3E9dc0648965Ad6294E7914 id: 266
+VM6017:3 h {0: '0xCE383277847f8217392eeA98C5a8B4a7D27811b0', 1: '0', 2: '10853952', 3: '5977395173134', lpToken: '0xCE383277847f8217392eeA98C5a8B4a7D27811b0', allocPoint: '0', lastRewardBlock: '10853952', accCakePerShare: '5977395173134'}
+VM5988:33  address: 0xCE383277847f8217392eeA98C5a8B4a7D27811b0 id: 267
+VM6018:3 h {0: '0x014608E87AF97a054C9a49f81E1473076D51d9a3', 1: '50', 2: '10902703', 3: '1052387055010', lpToken: '0x014608E87AF97a054C9a49f81E1473076D51d9a3', allocPoint: '50', lastRewardBlock: '10902703', accCakePerShare: '1052387055010'}
+VM5988:33  address: 0x014608E87AF97a054C9a49f81E1473076D51d9a3 id: 268
+VM6019:3 h {0: '0xD9bCcbbbDFd9d67BEb5d2273102CE0762421D1e3', 1: '0', 2: '10721532', 3: '608106331362', lpToken: '0xD9bCcbbbDFd9d67BEb5d2273102CE0762421D1e3', allocPoint: '0', lastRewardBlock: '10721532', accCakePerShare: '608106331362'}
+VM5988:33  address: 0xD9bCcbbbDFd9d67BEb5d2273102CE0762421D1e3 id: 269
+VM6020:3 h {0: '0x1BdCebcA3b93af70b58C41272AEa2231754B23ca', 1: '10', 2: '10901227', 3: '1231724614163', lpToken: '0x1BdCebcA3b93af70b58C41272AEa2231754B23ca', allocPoint: '10', lastRewardBlock: '10901227', accCakePerShare: '1231724614163'}
+VM5988:33  address: 0x1BdCebcA3b93af70b58C41272AEa2231754B23ca id: 270
+VM6021:3 h {0: '0xD8E2F8b6Db204c405543953Ef6359912FE3A88d6', 1: '10', 2: '10899764', 3: '440984407473', lpToken: '0xD8E2F8b6Db204c405543953Ef6359912FE3A88d6', allocPoint: '10', lastRewardBlock: '10899764', accCakePerShare: '440984407473'}
+VM5988:33  address: 0xD8E2F8b6Db204c405543953Ef6359912FE3A88d6 id: 271
+VM6022:3 h {0: '0x460b4193Ec4C1a17372Aa5FDcd44c520ba658646', 1: '0', 2: '10870632', 3: '412353479846696715', lpToken: '0x460b4193Ec4C1a17372Aa5FDcd44c520ba658646', allocPoint: '0', lastRewardBlock: '10870632', accCakePerShare: '412353479846696715'}
+VM5988:33  address: 0x460b4193Ec4C1a17372Aa5FDcd44c520ba658646 id: 272
+VM6023:3 h {0: '0x73566ca86248bD12F0979793e4671e99a40299A7', 1: '0', 2: '10885514', 3: '143090160689990527', lpToken: '0x73566ca86248bD12F0979793e4671e99a40299A7', allocPoint: '0', lastRewardBlock: '10885514', accCakePerShare: '143090160689990527'}
+VM5988:33  address: 0x73566ca86248bD12F0979793e4671e99a40299A7 id: 273
+VM6024:3 h {0: '0x44EA47F2765fd5D26b7eF0222736AD6FD6f61950', 1: '0', 2: '10674465', 3: '416977205598', lpToken: '0x44EA47F2765fd5D26b7eF0222736AD6FD6f61950', allocPoint: '0', lastRewardBlock: '10674465', accCakePerShare: '416977205598'}
+VM5988:33  address: 0x44EA47F2765fd5D26b7eF0222736AD6FD6f61950 id: 274
+VM6025:3 h {0: '0x356Dd24BfF8e23BdE0430f00ad0C290E33438bD7', 1: '0', 2: '10900590', 3: '143648211452812770', lpToken: '0x356Dd24BfF8e23BdE0430f00ad0C290E33438bD7', allocPoint: '0', lastRewardBlock: '10900590', accCakePerShare: '143648211452812770'}
+VM5988:33  address: 0x356Dd24BfF8e23BdE0430f00ad0C290E33438bD7 id: 275
+VM6026:3 h {0: '0x133ee93FE93320e1182923E1a640912eDE17C90C', 1: '10', 2: '10902701', 3: '4260885476', lpToken: '0x133ee93FE93320e1182923E1a640912eDE17C90C', allocPoint: '10', lastRewardBlock: '10902701', accCakePerShare: '4260885476'}
+VM5988:33  address: 0x133ee93FE93320e1182923E1a640912eDE17C90C id: 276
+VM6027:3 h {0: '0x8645148dE4E339964bA480AE3478653b5bc6E211', 1: '0', 2: '10804652', 3: '12195884441966765', lpToken: '0x8645148dE4E339964bA480AE3478653b5bc6E211', allocPoint: '0', lastRewardBlock: '10804652', accCakePerShare: '12195884441966765'}
+VM5988:33  address: 0x8645148dE4E339964bA480AE3478653b5bc6E211 id: 277
+VM6028:3 h {0: '0xd63b5CecB1f40d626307B92706Df357709D05827', 1: '10', 2: '10902781', 3: '66703321611', lpToken: '0xd63b5CecB1f40d626307B92706Df357709D05827', allocPoint: '10', lastRewardBlock: '10902781', accCakePerShare: '66703321611'}
+VM5988:33  address: 0xd63b5CecB1f40d626307B92706Df357709D05827 id: 278
+VM6029:3 h {0: '0x24EB18bA412701f278B172ef96697c4622b19da6', 1: '0', 2: '10708599', 3: '202275441783', lpToken: '0x24EB18bA412701f278B172ef96697c4622b19da6', allocPoint: '0', lastRewardBlock: '10708599', accCakePerShare: '202275441783'}
+VM5988:33  address: 0x24EB18bA412701f278B172ef96697c4622b19da6 id: 279
+VM6030:3 h {0: '0x1B415C3ec8095AfBF9d78882b3a6263c4ad141B5', 1: '0', 2: '10880953', 3: '475399269305', lpToken: '0x1B415C3ec8095AfBF9d78882b3a6263c4ad141B5', allocPoint: '0', lastRewardBlock: '10880953', accCakePerShare: '475399269305'}
+VM5988:33  address: 0x1B415C3ec8095AfBF9d78882b3a6263c4ad141B5 id: 280
+VM6031:3 h {0: '0x47C42b0A056A9C6e9C65b9Ef79020Af518e767A5', 1: '0', 2: '10887193', 3: '1183303737133', lpToken: '0x47C42b0A056A9C6e9C65b9Ef79020Af518e767A5', allocPoint: '0', lastRewardBlock: '10887193', accCakePerShare: '1183303737133'}
+VM5988:33  address: 0x47C42b0A056A9C6e9C65b9Ef79020Af518e767A5 id: 281
+VM6032:3 h {0: '0x66FDB2eCCfB58cF098eaa419e5EfDe841368e489', 1: '10', 2: '10902810', 3: '3400639200', lpToken: '0x66FDB2eCCfB58cF098eaa419e5EfDe841368e489', allocPoint: '10', lastRewardBlock: '10902810', accCakePerShare: '3400639200'}
+VM5988:33  address: 0x66FDB2eCCfB58cF098eaa419e5EfDe841368e489 id: 282
+VM6033:3 h {0: '0x2354ef4DF11afacb85a5C7f98B624072ECcddbB1', 1: '100', 2: '10902790', 3: '3061496394', lpToken: '0x2354ef4DF11afacb85a5C7f98B624072ECcddbB1', allocPoint: '100', lastRewardBlock: '10902790', accCakePerShare: '3061496394'}
+VM5988:33  address: 0x2354ef4DF11afacb85a5C7f98B624072ECcddbB1 id: 283
+VM6034:3 h {0: '0x71b01eBdDD797c8E9E0b003ea2f4FD207fBF46cC', 1: '10', 2: '10901700', 3: '1266548374870', lpToken: '0x71b01eBdDD797c8E9E0b003ea2f4FD207fBF46cC', allocPoint: '10', lastRewardBlock: '10901700', accCakePerShare: '1266548374870'}
+VM5988:33  address: 0x71b01eBdDD797c8E9E0b003ea2f4FD207fBF46cC id: 284
+VM6035:3 h {0: '0xB2678C414ebC63c9CC6d1a0fC45f43E249B50fdE', 1: '10', 2: '10902904', 3: '13729995163596', lpToken: '0xB2678C414ebC63c9CC6d1a0fC45f43E249B50fdE', allocPoint: '10', lastRewardBlock: '10902904', accCakePerShare: '13729995163596'}
+VM5988:33  address: 0xB2678C414ebC63c9CC6d1a0fC45f43E249B50fdE id: 285
+VM6036:3 h {0: '0xC869A9943b702B03770B6A92d2b2d25cf3a3f571', 1: '0', 2: '10902445', 3: '224987537426', lpToken: '0xC869A9943b702B03770B6A92d2b2d25cf3a3f571', allocPoint: '0', lastRewardBlock: '10902445', accCakePerShare: '224987537426'}
+VM5988:33  address: 0xC869A9943b702B03770B6A92d2b2d25cf3a3f571 id: 286
+VM6037:3 h {0: '0xC6b668548aA4A56792e8002A920d3159728121D5', 1: '10', 2: '10901869', 3: '793282634780', lpToken: '0xC6b668548aA4A56792e8002A920d3159728121D5', allocPoint: '10', lastRewardBlock: '10901869', accCakePerShare: '793282634780'}
+VM5988:33  address: 0xC6b668548aA4A56792e8002A920d3159728121D5 id: 287
+VM6038:3 h {0: '0x7653D2c31440f04d2c6520D482dC5DbD7650f70a', 1: '0', 2: '10248194', 3: '372422429994', lpToken: '0x7653D2c31440f04d2c6520D482dC5DbD7650f70a', allocPoint: '0', lastRewardBlock: '10248194', accCakePerShare: '372422429994'}
+VM6132:3 h {0: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', 1: '31870', 2: '10903011', 3: '2708150679536758121', lpToken: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', allocPoint: '31870', lastRewardBlock: '10903011', accCakePerShare: '2708150679536758121'}
+let startClickID = 288;
+let yourLpInput = "";
+let poolInfo = "9";
+
+let btn = document.querySelector(
+  "#readCollapse" + String(poolInfo) + " #btn_" + String(poolInfo)
+);
+
+async function Auto() {
+  if (
+    String(
+      document.querySelector("#myanswer_" + String(poolInfo) + " a").innerText
+    ) === String(yourLpInput)
+  ) {
+    if (Number(startClickID - 1) === -1) {
+      await alert(
+        "poolID is:" + document.querySelector("#readCollapse" + String(poolInfo) + " input").value
+      );
+    } else {
+      if (Number(document.querySelector("#readCollapse" + String(poolInfo) + " input").value) === Number(startClickID)) {
+        await alert("poolID is:" + (startClickID));
+      } else {
+        await alert("poolID is:" + (startClickID - 1));
+      }
+    }
+  } else {
+    document.querySelector(
+      "#readCollapse" + String(poolInfo) + " input"
+    ).value = await startClickID;
+    await btn.click();
+    if (btn.disabled) {
+      if (startClickID > 0) {
+        await console.log(" address: "+ document.querySelector("#myanswer_" + String(poolInfo) + " a").innerText + " id: " + (startClickID - 1));
+      }
+      await startClickID++;
+      await setTimeout(Auto, 1500);
+    } else {
+      await alert("BSC Limit click at pool_id:" + (startClickID - 1));
+      await location.reload();
+    }
+  }
+}
+
+Auto();
+
+VM6335:33  address: 0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82 id: 287
+Promise {<fulfilled>: undefined}
+VM6336:3 h {0: '0x7653D2c31440f04d2c6520D482dC5DbD7650f70a', 1: '0', 2: '10248194', 3: '372422429994', lpToken: '0x7653D2c31440f04d2c6520D482dC5DbD7650f70a', allocPoint: '0', lastRewardBlock: '10248194', accCakePerShare: '372422429994'}
+VM6335:33  address: 0x7653D2c31440f04d2c6520D482dC5DbD7650f70a id: 288
+VM6338:3 h {0: '0xEc6b56a736859AE8ea4bEdA16279Ecd8c60dA7EA', 1: '0', 2: '10820310', 3: '91702732398', lpToken: '0xEc6b56a736859AE8ea4bEdA16279Ecd8c60dA7EA', allocPoint: '0', lastRewardBlock: '10820310', accCakePerShare: '91702732398'}
+VM6335:33  address: 0xEc6b56a736859AE8ea4bEdA16279Ecd8c60dA7EA id: 289
+VM6339:3 h {0: '0x91417426C3FEaA3Ca795921eB9FdD9715ad92537', 1: '0', 2: '10166504', 3: '91704140857', lpToken: '0x91417426C3FEaA3Ca795921eB9FdD9715ad92537', allocPoint: '0', lastRewardBlock: '10166504', accCakePerShare: '91704140857'}
+VM6335:33  address: 0x91417426C3FEaA3Ca795921eB9FdD9715ad92537 id: 290
+VM6340:3 h {0: '0xA3BfBbAd526C6B856B1Fdf73F99BCD894761fbf3', 1: '0', 2: '10166483', 3: '174885500779', lpToken: '0xA3BfBbAd526C6B856B1Fdf73F99BCD894761fbf3', allocPoint: '0', lastRewardBlock: '10166483', accCakePerShare: '174885500779'}
+VM6335:33  address: 0xA3BfBbAd526C6B856B1Fdf73F99BCD894761fbf3 id: 291
+VM6341:3 h {0: '0xC05654C66756eBB82c518598c5f1ea1a0199a563', 1: '0', 2: '10484972', 3: '179921874996', lpToken: '0xC05654C66756eBB82c518598c5f1ea1a0199a563', allocPoint: '0', lastRewardBlock: '10484972', accCakePerShare: '179921874996'}
+VM6335:33  address: 0xC05654C66756eBB82c518598c5f1ea1a0199a563 id: 292
+VM6342:3 h {0: '0x05faf555522Fa3F93959F86B41A3808666093210', 1: '10', 2: '10902839', 3: '5003436658', lpToken: '0x05faf555522Fa3F93959F86B41A3808666093210', allocPoint: '10', lastRewardBlock: '10902839', accCakePerShare: '5003436658'}
+VM6335:33  address: 0x05faf555522Fa3F93959F86B41A3808666093210 id: 293
+VM6343:3 h {0: '0xcD68856b6E72E99b5eEaAE7d41Bb4A3b484c700D', 1: '0', 2: '10832890', 3: '643403198483', lpToken: '0xcD68856b6E72E99b5eEaAE7d41Bb4A3b484c700D', allocPoint: '0', lastRewardBlock: '10832890', accCakePerShare: '643403198483'}
+VM6335:33  address: 0xcD68856b6E72E99b5eEaAE7d41Bb4A3b484c700D id: 294
+VM6344:3 h {0: '0x4288706624e3dD839b069216eB03B8B9819C10d2', 1: '0', 2: '10884914', 3: '338928355709', lpToken: '0x4288706624e3dD839b069216eB03B8B9819C10d2', allocPoint: '0', lastRewardBlock: '10884914', accCakePerShare: '338928355709'}
+VM6335:33  address: 0x4288706624e3dD839b069216eB03B8B9819C10d2 id: 295
+VM6345:3 h {0: '0xF74ee1e10e097dc326a2ad004F9Cc95CB71088d3', 1: '0', 2: '10887375', 3: '2237257254009030603', lpToken: '0xF74ee1e10e097dc326a2ad004F9Cc95CB71088d3', allocPoint: '0', lastRewardBlock: '10887375', accCakePerShare: '2237257254009030603'}
+VM6335:33  address: 0xF74ee1e10e097dc326a2ad004F9Cc95CB71088d3 id: 296
+VM6346:3 h {0: '0x1F37d4226d23d09044B8005c127C0517BD7e94fD', 1: '10', 2: '10902571', 3: '876233239402', lpToken: '0x1F37d4226d23d09044B8005c127C0517BD7e94fD', allocPoint: '10', lastRewardBlock: '10902571', accCakePerShare: '876233239402'}
+VM6335:33  address: 0x1F37d4226d23d09044B8005c127C0517BD7e94fD id: 297
+VM6347:3 h {0: '0xC5768c5371568Cf1114cddD52CAeD163A42626Ed', 1: '10', 2: '10901209', 3: '6920256733', lpToken: '0xC5768c5371568Cf1114cddD52CAeD163A42626Ed', allocPoint: '10', lastRewardBlock: '10901209', accCakePerShare: '6920256733'}
+VM6335:33  address: 0xC5768c5371568Cf1114cddD52CAeD163A42626Ed id: 298
+VM6348:3 h {0: '0x942b294e59a8c47a0F7F20DF105B082710F7C305', 1: '50', 2: '10900751', 3: '316526302312', lpToken: '0x942b294e59a8c47a0F7F20DF105B082710F7C305', allocPoint: '50', lastRewardBlock: '10900751', accCakePerShare: '316526302312'}
+VM6335:33  address: 0x942b294e59a8c47a0F7F20DF105B082710F7C305 id: 299
+VM6349:3 h {0: '0x37908620dEf1491Dd591b5a2d16022A33cDDA415', 1: '0', 2: '10900008', 3: '8583660943460', lpToken: '0x37908620dEf1491Dd591b5a2d16022A33cDDA415', allocPoint: '0', lastRewardBlock: '10900008', accCakePerShare: '8583660943460'}
+VM6335:33  address: 0x37908620dEf1491Dd591b5a2d16022A33cDDA415 id: 300
+VM6350:3 h {0: '0x856f9AD94cA8680B899214Bb1EB3d235a3C33Afe', 1: '0', 2: '10827769', 3: '189026973121', lpToken: '0x856f9AD94cA8680B899214Bb1EB3d235a3C33Afe', allocPoint: '0', lastRewardBlock: '10827769', accCakePerShare: '189026973121'}
+VM6335:33  address: 0x856f9AD94cA8680B899214Bb1EB3d235a3C33Afe id: 301
+VM6351:3 h {0: '0x8e799cB0737525CeB8A6C6Ad07f748535fF6377B', 1: '0', 2: '10893609', 3: '669292724637', lpToken: '0x8e799cB0737525CeB8A6C6Ad07f748535fF6377B', allocPoint: '0', lastRewardBlock: '10893609', accCakePerShare: '669292724637'}
+VM6335:33  address: 0x8e799cB0737525CeB8A6C6Ad07f748535fF6377B id: 302
+VM6352:3 h {0: '0x21dD71aB78EDE3033c976948f769D506E4F489eE', 1: '0', 2: '10812945', 3: '757705442689', lpToken: '0x21dD71aB78EDE3033c976948f769D506E4F489eE', allocPoint: '0', lastRewardBlock: '10812945', accCakePerShare: '757705442689'}
+VM6335:33  address: 0x21dD71aB78EDE3033c976948f769D506E4F489eE id: 303
+VM6353:3 h {0: '0x4Fd6D315bEf387fAD2322fbc64368fC443F0886D', 1: '0', 2: '10900835', 3: '268512941036', lpToken: '0x4Fd6D315bEf387fAD2322fbc64368fC443F0886D', allocPoint: '0', lastRewardBlock: '10900835', accCakePerShare: '268512941036'}
+VM6335:33  address: 0x4Fd6D315bEf387fAD2322fbc64368fC443F0886D id: 304
+VM6354:3 h {0: '0xA9986Fcbdb23c2E8B11AB40102990a08f8E58f06', 1: '50', 2: '10902639', 3: '606420664996', lpToken: '0xA9986Fcbdb23c2E8B11AB40102990a08f8E58f06', allocPoint: '50', lastRewardBlock: '10902639', accCakePerShare: '606420664996'}
+VM6335:33  address: 0xA9986Fcbdb23c2E8B11AB40102990a08f8E58f06 id: 305
+VM6355:3 h {0: '0x16aFc4F2Ad82986bbE2a4525601F8199AB9c832D', 1: '30', 2: '10902509', 3: '1498918309993', lpToken: '0x16aFc4F2Ad82986bbE2a4525601F8199AB9c832D', allocPoint: '30', lastRewardBlock: '10902509', accCakePerShare: '1498918309993'}
+VM6335:33  address: 0x16aFc4F2Ad82986bbE2a4525601F8199AB9c832D id: 306
+VM6356:3 h {0: '0xc7A9c2af263ebB86139Cca9349e49b17129Ba033', 1: '0', 2: '10711294', 3: '304116254514', lpToken: '0xc7A9c2af263ebB86139Cca9349e49b17129Ba033', allocPoint: '0', lastRewardBlock: '10711294', accCakePerShare: '304116254514'}
+VM6335:33  address: 0xc7A9c2af263ebB86139Cca9349e49b17129Ba033 id: 307
+VM6357:3 h {0: '0xe094c686aD6cDda57b9564457F541FBF099B948A', 1: '0', 2: '10901179', 3: '6599042890888', lpToken: '0xe094c686aD6cDda57b9564457F541FBF099B948A', allocPoint: '0', lastRewardBlock: '10901179', accCakePerShare: '6599042890888'}
+VM6335:33  address: 0xe094c686aD6cDda57b9564457F541FBF099B948A id: 308
+VM6358:3 h {0: '0xc13aA76AAc067c86aE38028019F414D731b3D86A', 1: '10', 2: '10902136', 3: '5202487262', lpToken: '0xc13aA76AAc067c86aE38028019F414D731b3D86A', allocPoint: '10', lastRewardBlock: '10902136', accCakePerShare: '5202487262'}
+VM6335:33  address: 0xc13aA76AAc067c86aE38028019F414D731b3D86A id: 309
+VM6359:3 h {0: '0xc20A92a1424b29b78DFaF92FD35D4cf8A06419B4', 1: '0', 2: '10895817', 3: '3449521900517', lpToken: '0xc20A92a1424b29b78DFaF92FD35D4cf8A06419B4', allocPoint: '0', lastRewardBlock: '10895817', accCakePerShare: '3449521900517'}
+VM6335:33  address: 0xc20A92a1424b29b78DFaF92FD35D4cf8A06419B4 id: 310
+VM6360:3 h {0: '0xAa40f1AC20AAFcFEE8595Da606D78C503C7e70A3', 1: '0', 2: '10882932', 3: '5786375007039437', lpToken: '0xAa40f1AC20AAFcFEE8595Da606D78C503C7e70A3', allocPoint: '0', lastRewardBlock: '10882932', accCakePerShare: '5786375007039437'}
+VM6335:33  address: 0xAa40f1AC20AAFcFEE8595Da606D78C503C7e70A3 id: 311
+VM6361:3 h {0: '0x13321AcfF4A27f3d2bcA64b8bEaC6e5FdAAAf12C', 1: '0', 2: '10903009', 3: '447816826946', lpToken: '0x13321AcfF4A27f3d2bcA64b8bEaC6e5FdAAAf12C', allocPoint: '0', lastRewardBlock: '10903009', accCakePerShare: '447816826946'}
+VM6335:33  address: 0x13321AcfF4A27f3d2bcA64b8bEaC6e5FdAAAf12C id: 312
+VM6362:3 h {0: '0x6D0c831254221ba121fB53fb44Df289A6558867d', 1: '10', 2: '10902046', 3: '40515936541623864', lpToken: '0x6D0c831254221ba121fB53fb44Df289A6558867d', allocPoint: '10', lastRewardBlock: '10902046', accCakePerShare: '40515936541623864'}
+VM6335:33  address: 0x6D0c831254221ba121fB53fb44Df289A6558867d id: 313
+VM6363:3 h {0: '0x69DEE989c30b5fFe40867f5FC14F00E4bCE7B681', 1: '50', 2: '10901685', 3: '831594252541', lpToken: '0x69DEE989c30b5fFe40867f5FC14F00E4bCE7B681', allocPoint: '50', lastRewardBlock: '10901685', accCakePerShare: '831594252541'}
+VM6335:33  address: 0x69DEE989c30b5fFe40867f5FC14F00E4bCE7B681 id: 314
+VM6364:3 h {0: '0x3578B1f9BCE98D2F4D293b422d8850fdf48B1f21', 1: '10', 2: '10901387', 3: '131511870857', lpToken: '0x3578B1f9BCE98D2F4D293b422d8850fdf48B1f21', allocPoint: '10', lastRewardBlock: '10901387', accCakePerShare: '131511870857'}
+VM6335:33  address: 0x3578B1f9BCE98D2F4D293b422d8850fdf48B1f21 id: 315
+VM6365:3 h {0: '0x153Ad7d25B0b810497483d0cEE8AF42Fc533FeC8', 1: '0', 2: '10881734', 3: '9033358826367', lpToken: '0x153Ad7d25B0b810497483d0cEE8AF42Fc533FeC8', allocPoint: '0', lastRewardBlock: '10881734', accCakePerShare: '9033358826367'}
+VM6335:33  address: 0x153Ad7d25B0b810497483d0cEE8AF42Fc533FeC8 id: 316
+VM6366:3 h {0: '0xE834bf723f5bDff34a5D1129F3c31Ea4787Bc76a', 1: '50', 2: '10902627', 3: '17690133141', lpToken: '0xE834bf723f5bDff34a5D1129F3c31Ea4787Bc76a', allocPoint: '50', lastRewardBlock: '10902627', accCakePerShare: '17690133141'}
+VM6335:33  address: 0xE834bf723f5bDff34a5D1129F3c31Ea4787Bc76a id: 317
+VM6367:3 h {0: '0xF3Bc6FC080ffCC30d93dF48BFA2aA14b869554bb', 1: '10', 2: '10901826', 3: '4305158177611', lpToken: '0xF3Bc6FC080ffCC30d93dF48BFA2aA14b869554bb', allocPoint: '10', lastRewardBlock: '10901826', accCakePerShare: '4305158177611'}
+VM6335:33  address: 0xF3Bc6FC080ffCC30d93dF48BFA2aA14b869554bb id: 318
+VM6368:3 h {0: '0x853784B7BDe87d858555715c0123374242db7943', 1: '0', 2: '10891248', 3: '2175710862776406', lpToken: '0x853784B7BDe87d858555715c0123374242db7943', allocPoint: '0', lastRewardBlock: '10891248', accCakePerShare: '2175710862776406'}
+VM6335:33  address: 0x853784B7BDe87d858555715c0123374242db7943 id: 319
+VM6369:3 h {0: '0x222C3CbB89647bF77822435Bd4c234A04272A77A', 1: '0', 2: '10820644', 3: '308849440302', lpToken: '0x222C3CbB89647bF77822435Bd4c234A04272A77A', allocPoint: '0', lastRewardBlock: '10820644', accCakePerShare: '308849440302'}
+VM6335:33  address: 0x222C3CbB89647bF77822435Bd4c234A04272A77A id: 320
+VM6370:3 h {0: '0xE60B4e87645093A42fa9dcC5d0C8Df6E67f1f9d2', 1: '0', 2: '10901801', 3: '7202026578', lpToken: '0xE60B4e87645093A42fa9dcC5d0C8Df6E67f1f9d2', allocPoint: '0', lastRewardBlock: '10901801', accCakePerShare: '7202026578'}
+VM6335:33  address: 0xE60B4e87645093A42fa9dcC5d0C8Df6E67f1f9d2 id: 321
+VM6371:3 h {0: '0xcAD7019D6d84a3294b0494aEF02e73BD0f2572Eb', 1: '50', 2: '10901975', 3: '1589142022886891429', lpToken: '0xcAD7019D6d84a3294b0494aEF02e73BD0f2572Eb', allocPoint: '50', lastRewardBlock: '10901975', accCakePerShare: '1589142022886891429'}
+VM6335:33  address: 0xcAD7019D6d84a3294b0494aEF02e73BD0f2572Eb id: 322
+VM6372:3 h {0: '0x5aFEf8567414F29f0f927A0F2787b188624c10E2', 1: '100', 2: '10902704', 3: '2229557925885', lpToken: '0x5aFEf8567414F29f0f927A0F2787b188624c10E2', allocPoint: '100', lastRewardBlock: '10902704', accCakePerShare: '2229557925885'}
+VM6335:33  address: 0x5aFEf8567414F29f0f927A0F2787b188624c10E2 id: 323
+VM6373:3 h {0: '0xe98585bBb2dc81854fF100A3d9D7B0F53E0dafEd', 1: '0', 2: '10886437', 3: '80508342371', lpToken: '0xe98585bBb2dc81854fF100A3d9D7B0F53E0dafEd', allocPoint: '0', lastRewardBlock: '10886437', accCakePerShare: '80508342371'}
+VM6335:33  address: 0xe98585bBb2dc81854fF100A3d9D7B0F53E0dafEd id: 324
+VM6374:3 h {0: '0x1434BB50196A0C7eA825940b1DFd8aAd25d79817', 1: '0', 2: '10850935', 3: '10953389832', lpToken: '0x1434BB50196A0C7eA825940b1DFd8aAd25d79817', allocPoint: '0', lastRewardBlock: '10850935', accCakePerShare: '10953389832'}
+VM6335:33  address: 0x1434BB50196A0C7eA825940b1DFd8aAd25d79817 id: 325
+VM6375:3 h {0: '0x3f1A9f3D9aaD8bD339eD4853F345d2eF89fbfE0c', 1: '10', 2: '10901823', 3: '14861336195513', lpToken: '0x3f1A9f3D9aaD8bD339eD4853F345d2eF89fbfE0c', allocPoint: '10', lastRewardBlock: '10901823', accCakePerShare: '14861336195513'}
+VM6335:33  address: 0x3f1A9f3D9aaD8bD339eD4853F345d2eF89fbfE0c id: 326
+VM6376:3 h {0: '0x678EDb8B268e73dB57b7694c163e1dc296b6e219', 1: '0', 2: '10901568', 3: '238431174219', lpToken: '0x678EDb8B268e73dB57b7694c163e1dc296b6e219', allocPoint: '0', lastRewardBlock: '10901568', accCakePerShare: '238431174219'}
+VM6335:33  address: 0x678EDb8B268e73dB57b7694c163e1dc296b6e219 id: 327
+VM6377:3 h {0: '0x8F6baf368E7A4f6e2C9c995f22702d5e654A0237', 1: '0', 2: '10797806', 3: '376308851711', lpToken: '0x8F6baf368E7A4f6e2C9c995f22702d5e654A0237', allocPoint: '0', lastRewardBlock: '10797806', accCakePerShare: '376308851711'}
+VM6335:33  address: 0x8F6baf368E7A4f6e2C9c995f22702d5e654A0237 id: 328
+VM6378:3 h {0: '0x89666d026696660e93Bf6edf57B71A68615768B7', 1: '0', 2: '10811499', 3: '34989674143', lpToken: '0x89666d026696660e93Bf6edf57B71A68615768B7', allocPoint: '0', lastRewardBlock: '10811499', accCakePerShare: '34989674143'}
+VM6335:33  address: 0x89666d026696660e93Bf6edf57B71A68615768B7 id: 329
+VM6379:3 h {0: '0xa5Bb44c6F5fD9B836E5a654c8AbbCCc96A15deE5', 1: '0', 2: '10848440', 3: '318673554160', lpToken: '0xa5Bb44c6F5fD9B836E5a654c8AbbCCc96A15deE5', allocPoint: '0', lastRewardBlock: '10848440', accCakePerShare: '318673554160'}
+VM6335:33  address: 0xa5Bb44c6F5fD9B836E5a654c8AbbCCc96A15deE5 id: 330
+VM6380:3 h {0: '0x81d776C90c89B8d51E9497D58338933127e2fA80', 1: '0', 2: '10872605', 3: '526338398250685', lpToken: '0x81d776C90c89B8d51E9497D58338933127e2fA80', allocPoint: '0', lastRewardBlock: '10872605', accCakePerShare: '526338398250685'}
+VM6335:33  address: 0x81d776C90c89B8d51E9497D58338933127e2fA80 id: 331
+VM6381:3 h {0: '0x5A58609dA96469E9dEf3fE344bC39B00d18eb9A5', 1: '0', 2: '10867347', 3: '14909220108526', lpToken: '0x5A58609dA96469E9dEf3fE344bC39B00d18eb9A5', allocPoint: '0', lastRewardBlock: '10867347', accCakePerShare: '14909220108526'}
+VM6335:33  address: 0x5A58609dA96469E9dEf3fE344bC39B00d18eb9A5 id: 332
+VM6382:3 h {0: '0x6615CE60D71513aA4849269dD63821D324A23F8C', 1: '0', 2: '10895215', 3: '3202340605596', lpToken: '0x6615CE60D71513aA4849269dD63821D324A23F8C', allocPoint: '0', lastRewardBlock: '10895215', accCakePerShare: '3202340605596'}
+VM6335:33  address: 0x6615CE60D71513aA4849269dD63821D324A23F8C id: 333
+VM6383:3 h {0: '0x6A97867a4b7Eb7646ffB1F359ad582e9903aa1C2', 1: '10', 2: '10902866', 3: '134506405046749', lpToken: '0x6A97867a4b7Eb7646ffB1F359ad582e9903aa1C2', allocPoint: '10', lastRewardBlock: '10902866', accCakePerShare: '134506405046749'}
+VM6335:33  address: 0x6A97867a4b7Eb7646ffB1F359ad582e9903aa1C2 id: 334
+VM6384:3 h {0: '0xa4963B38b271c0D714593063497Fc786Fa4029Ce', 1: '0', 2: '10838532', 3: '511036708257098348', lpToken: '0xa4963B38b271c0D714593063497Fc786Fa4029Ce', allocPoint: '0', lastRewardBlock: '10838532', accCakePerShare: '511036708257098348'}
+VM6335:33  address: 0xa4963B38b271c0D714593063497Fc786Fa4029Ce id: 335
+VM6385:3 h {0: '0x123D475E13aA54A43a7421d94CAa4459dA021c77', 1: '0', 2: '10881439', 3: '8971934536712574', lpToken: '0x123D475E13aA54A43a7421d94CAa4459dA021c77', allocPoint: '0', lastRewardBlock: '10881439', accCakePerShare: '8971934536712574'}
+VM6481:3 h {0: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', 1: '31870', 2: '10903045', 3: '2708150679538784619', lpToken: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', allocPoint: '31870', lastRewardBlock: '10903045', accCakePerShare: '2708150679538784619'}
+let startClickID = 337;
+let yourLpInput = "";
+let poolInfo = "9";
+
+let btn = document.querySelector(
+  "#readCollapse" + String(poolInfo) + " #btn_" + String(poolInfo)
+);
+
+async function Auto() {
+  if (
+    String(
+      document.querySelector("#myanswer_" + String(poolInfo) + " a").innerText
+    ) === String(yourLpInput)
+  ) {
+    if (Number(startClickID - 1) === -1) {
+      await alert(
+        "poolID is:" + document.querySelector("#readCollapse" + String(poolInfo) + " input").value
+      );
+    } else {
+      if (Number(document.querySelector("#readCollapse" + String(poolInfo) + " input").value) === Number(startClickID)) {
+        await alert("poolID is:" + (startClickID));
+      } else {
+        await alert("poolID is:" + (startClickID - 1));
+      }
+    }
+  } else {
+    document.querySelector(
+      "#readCollapse" + String(poolInfo) + " input"
+    ).value = await startClickID;
+    await btn.click();
+    if (btn.disabled) {
+      if (startClickID > 0) {
+        await console.log(" address: "+ document.querySelector("#myanswer_" + String(poolInfo) + " a").innerText + " id: " + (startClickID - 1));
+      }
+      await startClickID++;
+      await setTimeout(Auto, 1500);
+    } else {
+      await alert("BSC Limit click at pool_id:" + (startClickID - 1));
+      await location.reload();
+    }
+  }
+}
+
+Auto();
+
+VM6596:33  address: 0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82 id: 336
+Promise {<fulfilled>: undefined}
+VM6597:3 h {0: '0x24d3B0eD4C444A4f6882d527cBF67aDc8c026582', 1: '0', 2: '10841669', 3: '548143658004', lpToken: '0x24d3B0eD4C444A4f6882d527cBF67aDc8c026582', allocPoint: '0', lastRewardBlock: '10841669', accCakePerShare: '548143658004'}
+VM6596:33  address: 0x24d3B0eD4C444A4f6882d527cBF67aDc8c026582 id: 337
+VM6599:3 h {0: '0x0362ba706DFE8ED12Ec1470aB171d8Dcb1C72B8D', 1: '0', 2: '10889606', 3: '68436544135577', lpToken: '0x0362ba706DFE8ED12Ec1470aB171d8Dcb1C72B8D', allocPoint: '0', lastRewardBlock: '10889606', accCakePerShare: '68436544135577'}
+VM6596:33  address: 0x0362ba706DFE8ED12Ec1470aB171d8Dcb1C72B8D id: 338
+VM6600:3 h {0: '0x28Ea5894D4DBbE90bB58eE3BAB2869387d711c87', 1: '0', 2: '10901125', 3: '1136682025996', lpToken: '0x28Ea5894D4DBbE90bB58eE3BAB2869387d711c87', allocPoint: '0', lastRewardBlock: '10901125', accCakePerShare: '1136682025996'}
+VM6596:33  address: 0x28Ea5894D4DBbE90bB58eE3BAB2869387d711c87 id: 339
+VM6601:3 h {0: '0xF1Ec67fA1881796BFf63Db3E1A301cE9cb787Fad', 1: '10', 2: '10901924', 3: '1877384959424', lpToken: '0xF1Ec67fA1881796BFf63Db3E1A301cE9cb787Fad', allocPoint: '10', lastRewardBlock: '10901924', accCakePerShare: '1877384959424'}
+VM6596:33  address: 0xF1Ec67fA1881796BFf63Db3E1A301cE9cb787Fad id: 340
+VM6602:3 h {0: '0xE482249Cd295C0d1e9D2baAEE71e66de21024C68', 1: '0', 2: '10898613', 3: '1278908407270', lpToken: '0xE482249Cd295C0d1e9D2baAEE71e66de21024C68', allocPoint: '0', lastRewardBlock: '10898613', accCakePerShare: '1278908407270'}
+VM6596:33  address: 0xE482249Cd295C0d1e9D2baAEE71e66de21024C68 id: 341
+VM6603:3 h {0: '0x20c6De8983Fb2D641c55004646aEF40b4EA66E18', 1: '0', 2: '10896523', 3: '1460154164239', lpToken: '0x20c6De8983Fb2D641c55004646aEF40b4EA66E18', allocPoint: '0', lastRewardBlock: '10896523', accCakePerShare: '1460154164239'}
+VM6596:33  address: 0x20c6De8983Fb2D641c55004646aEF40b4EA66E18 id: 342
+VM6604:3 h {0: '0x3c2c77353E2F6AC1578807b6b2336Bf3a3CbB014', 1: '0', 2: '10895541', 3: '1209130681887', lpToken: '0x3c2c77353E2F6AC1578807b6b2336Bf3a3CbB014', allocPoint: '0', lastRewardBlock: '10895541', accCakePerShare: '1209130681887'}
+VM6596:33  address: 0x3c2c77353E2F6AC1578807b6b2336Bf3a3CbB014 id: 343
+VM6605:3 h {0: '0x3e42C1f7239231E3752B507764445dd8e6A570d5', 1: '0', 2: '10841857', 3: '3914118242225727', lpToken: '0x3e42C1f7239231E3752B507764445dd8e6A570d5', allocPoint: '0', lastRewardBlock: '10841857', accCakePerShare: '3914118242225727'}
+VM6596:33  address: 0x3e42C1f7239231E3752B507764445dd8e6A570d5 id: 344
+VM6606:3 h {0: '0x510b29a93ebf098f3fC24A16541aAA0114D07056', 1: '0', 2: '10875903', 3: '888576486472', lpToken: '0x510b29a93ebf098f3fC24A16541aAA0114D07056', allocPoint: '0', lastRewardBlock: '10875903', accCakePerShare: '888576486472'}
+VM6596:33  address: 0x510b29a93ebf098f3fC24A16541aAA0114D07056 id: 345
+VM6607:3 h {0: '0xFFd4B200d3C77A0B691B5562D804b3bd54294e6e', 1: '50', 2: '10902789', 3: '635531659186', lpToken: '0xFFd4B200d3C77A0B691B5562D804b3bd54294e6e', allocPoint: '50', lastRewardBlock: '10902789', accCakePerShare: '635531659186'}
+VM6596:33  address: 0xFFd4B200d3C77A0B691B5562D804b3bd54294e6e id: 346
+VM6608:3 h {0: '0xb8b4383B49d451BBeA63BC4421466E1086da6f18', 1: '0', 2: '10901105', 3: '301357721495', lpToken: '0xb8b4383B49d451BBeA63BC4421466E1086da6f18', allocPoint: '0', lastRewardBlock: '10901105', accCakePerShare: '301357721495'}
+VM6596:33  address: 0xb8b4383B49d451BBeA63BC4421466E1086da6f18 id: 347
+VM6609:3 h {0: '0xd02DA76c813b9cd4516eD50442923E625f90228f', 1: '50', 2: '10902870', 3: '176450941823', lpToken: '0xd02DA76c813b9cd4516eD50442923E625f90228f', allocPoint: '50', lastRewardBlock: '10902870', accCakePerShare: '176450941823'}
+VM6596:33  address: 0xd02DA76c813b9cd4516eD50442923E625f90228f id: 348
+VM6610:3 h {0: '0x9730c791743300E9f984C9264395ce705A55Da7c', 1: '0', 2: '10852216', 3: '162607164951', lpToken: '0x9730c791743300E9f984C9264395ce705A55Da7c', allocPoint: '0', lastRewardBlock: '10852216', accCakePerShare: '162607164951'}
+VM6596:33  address: 0x9730c791743300E9f984C9264395ce705A55Da7c id: 349
+VM6611:3 h {0: '0xddE420cbB3794ebD8FFC3Ac69F9c78e5d1411870', 1: '50', 2: '10902734', 3: '1090075062873', lpToken: '0xddE420cbB3794ebD8FFC3Ac69F9c78e5d1411870', allocPoint: '50', lastRewardBlock: '10902734', accCakePerShare: '1090075062873'}
+VM6596:33  address: 0xddE420cbB3794ebD8FFC3Ac69F9c78e5d1411870 id: 350
+VM6612:3 h {0: '0x7275278C94b5e20708380561C4Af98F38dDC6374', 1: '0', 2: '10873802', 3: '1556470684731', lpToken: '0x7275278C94b5e20708380561C4Af98F38dDC6374', allocPoint: '0', lastRewardBlock: '10873802', accCakePerShare: '1556470684731'}
+VM6596:33  address: 0x7275278C94b5e20708380561C4Af98F38dDC6374 id: 351
+VM6613:3 h {0: '0xE6b421a4408c82381b226Ab5B6F8C4b639044359', 1: '50', 2: '10902330', 3: '3383944580783257640', lpToken: '0xE6b421a4408c82381b226Ab5B6F8C4b639044359', allocPoint: '50', lastRewardBlock: '10902330', accCakePerShare: '3383944580783257640'}
+VM6596:33  address: 0xE6b421a4408c82381b226Ab5B6F8C4b639044359 id: 352
+VM6614:3 h {0: '0x61010e6CbA3b56ba47E9dFd56Da682daCFe76131', 1: '0', 2: '10902901', 3: '262337746185', lpToken: '0x61010e6CbA3b56ba47E9dFd56Da682daCFe76131', allocPoint: '0', lastRewardBlock: '10902901', accCakePerShare: '262337746185'}
+VM6596:33  address: 0x61010e6CbA3b56ba47E9dFd56Da682daCFe76131 id: 353
+VM6615:3 h {0: '0x4cC442220BE1cE560C1f2573f8CA8f460B3E4172', 1: '0', 2: '10882801', 3: '957017199044', lpToken: '0x4cC442220BE1cE560C1f2573f8CA8f460B3E4172', allocPoint: '0', lastRewardBlock: '10882801', accCakePerShare: '957017199044'}
+VM6596:33  address: 0x4cC442220BE1cE560C1f2573f8CA8f460B3E4172 id: 354
+VM6616:3 h {0: '0xDc9a574b9B341D4a98cE29005b614e1E27430E74', 1: '0', 2: '10896761', 3: '455696156174', lpToken: '0xDc9a574b9B341D4a98cE29005b614e1E27430E74', allocPoint: '0', lastRewardBlock: '10896761', accCakePerShare: '455696156174'}
+VM6596:33  address: 0xDc9a574b9B341D4a98cE29005b614e1E27430E74 id: 355
+VM6617:3 h {0: '0x950FD020F8E4B8C57285EC7020b7a204348dadFa', 1: '0', 2: '10871440', 3: '65241610157', lpToken: '0x950FD020F8E4B8C57285EC7020b7a204348dadFa', allocPoint: '0', lastRewardBlock: '10871440', accCakePerShare: '65241610157'}
+VM6596:33  address: 0x950FD020F8E4B8C57285EC7020b7a204348dadFa id: 356
+VM6618:3 h {0: '0x2d5DB889392Bc3c8B023A8631ca230A033eEA1B8', 1: '0', 2: '10900533', 3: '88162355282', lpToken: '0x2d5DB889392Bc3c8B023A8631ca230A033eEA1B8', allocPoint: '0', lastRewardBlock: '10900533', accCakePerShare: '88162355282'}
+VM6596:33  address: 0x2d5DB889392Bc3c8B023A8631ca230A033eEA1B8 id: 357
+VM6619:3 h {0: '0x0604471c532F9fEBAD3E37190B667f44BD0894b3', 1: '0', 2: '10899149', 3: '799980649321', lpToken: '0x0604471c532F9fEBAD3E37190B667f44BD0894b3', allocPoint: '0', lastRewardBlock: '10899149', accCakePerShare: '799980649321'}
+VM6596:33  address: 0x0604471c532F9fEBAD3E37190B667f44BD0894b3 id: 358
+VM6620:3 h {0: '0x2C624C9Ecf16Cb81aB85cC2C0B0c5e12A09AFDa6', 1: '0', 2: '10903014', 3: '8050199127', lpToken: '0x2C624C9Ecf16Cb81aB85cC2C0B0c5e12A09AFDa6', allocPoint: '0', lastRewardBlock: '10903014', accCakePerShare: '8050199127'}
+VM6596:33  address: 0x2C624C9Ecf16Cb81aB85cC2C0B0c5e12A09AFDa6 id: 359
+VM6621:3 h {0: '0xa7A0b605343dF36B748FF4B5f7578b3F2D0651CE', 1: '0', 2: '10901566', 3: '726528384779', lpToken: '0xa7A0b605343dF36B748FF4B5f7578b3F2D0651CE', allocPoint: '0', lastRewardBlock: '10901566', accCakePerShare: '726528384779'}
+VM6596:33  address: 0xa7A0b605343dF36B748FF4B5f7578b3F2D0651CE id: 360
+VM6622:3 h {0: '0x8046fa66753928F35f7Db23ae0188ee6743C2FBA', 1: '0', 2: '10899804', 3: '15607212182899887669', lpToken: '0x8046fa66753928F35f7Db23ae0188ee6743C2FBA', allocPoint: '0', lastRewardBlock: '10899804', accCakePerShare: '15607212182899887669'}
+VM6596:33  address: 0x8046fa66753928F35f7Db23ae0188ee6743C2FBA id: 361
+VM6623:3 h {0: '0x7752e1FA9F3a2e860856458517008558DEb989e3', 1: '100', 2: '10902945', 3: '27873866536', lpToken: '0x7752e1FA9F3a2e860856458517008558DEb989e3', allocPoint: '100', lastRewardBlock: '10902945', accCakePerShare: '27873866536'}
+VM6596:33  address: 0x7752e1FA9F3a2e860856458517008558DEb989e3 id: 362
+VM6624:3 h {0: '0x029D66f9C0469450B7b4834B8dDC6a1118CeC3e1', 1: '0', 2: '10889984', 3: '38439115890', lpToken: '0x029D66f9C0469450B7b4834B8dDC6a1118CeC3e1', allocPoint: '0', lastRewardBlock: '10889984', accCakePerShare: '38439115890'}
+VM6596:33  address: 0x029D66f9C0469450B7b4834B8dDC6a1118CeC3e1 id: 363
+VM6625:3 h {0: '0x8271d7eAfeEb8F24d7C9fE1AccE2AE20611972E5', 1: '0', 2: '10902393', 3: '1014678871620', lpToken: '0x8271d7eAfeEb8F24d7C9fE1AccE2AE20611972E5', allocPoint: '0', lastRewardBlock: '10902393', accCakePerShare: '1014678871620'}
+VM6596:33  address: 0x8271d7eAfeEb8F24d7C9fE1AccE2AE20611972E5 id: 364
+VM6626:3 h {0: '0xF45cd219aEF8618A92BAa7aD848364a158a24F33', 1: '250', 2: '10902980', 3: '2356987852853', lpToken: '0xF45cd219aEF8618A92BAa7aD848364a158a24F33', allocPoint: '250', lastRewardBlock: '10902980', accCakePerShare: '2356987852853'}
+VM6596:33  address: 0xF45cd219aEF8618A92BAa7aD848364a158a24F33 id: 365
+VM6627:3 h {0: '0xDAA89d335926628367b47852989bb22EE62CA5DE', 1: '0', 2: '10887366', 3: '7312693011211', lpToken: '0xDAA89d335926628367b47852989bb22EE62CA5DE', allocPoint: '0', lastRewardBlock: '10887366', accCakePerShare: '7312693011211'}
+VM6596:33  address: 0xDAA89d335926628367b47852989bb22EE62CA5DE id: 366
+VM6628:3 h {0: '0x946696344e7d4346b223e1Cf77035a76690d6A73', 1: '0', 2: '10903013', 3: '31043914341', lpToken: '0x946696344e7d4346b223e1Cf77035a76690d6A73', allocPoint: '0', lastRewardBlock: '10903013', accCakePerShare: '31043914341'}
+VM6596:33  address: 0x946696344e7d4346b223e1Cf77035a76690d6A73 id: 367
+VM6629:3 h {0: '0x3cd338c3BB249B6b3C55799F85a589FEbBBFf9Dd', 1: '0', 2: '10902905', 3: '102170367968', lpToken: '0x3cd338c3BB249B6b3C55799F85a589FEbBBFf9Dd', allocPoint: '0', lastRewardBlock: '10902905', accCakePerShare: '102170367968'}
+VM6596:33  address: 0x3cd338c3BB249B6b3C55799F85a589FEbBBFf9Dd id: 368
+VM6630:3 h {0: '0x894bd57afD8EFc93D9171cb585d11d0977557425', 1: '0', 2: '10902895', 3: '15518236508', lpToken: '0x894bd57afD8EFc93D9171cb585d11d0977557425', allocPoint: '0', lastRewardBlock: '10902895', accCakePerShare: '15518236508'}
+VM6596:33  address: 0x894bd57afD8EFc93D9171cb585d11d0977557425 id: 369
+VM6631:3 h {0: '0xBCf01a42f6BC42F3Cfe81B05519565044d65D22a', 1: '0', 2: '10853028', 3: '273238724752', lpToken: '0xBCf01a42f6BC42F3Cfe81B05519565044d65D22a', allocPoint: '0', lastRewardBlock: '10853028', accCakePerShare: '273238724752'}
+VM6596:33  address: 0xBCf01a42f6BC42F3Cfe81B05519565044d65D22a id: 370
+VM6632:3 h {0: '0xB7CADa0F120Ca46745A024E6b9FE907B2Fe10CF3', 1: '10', 2: '10901314', 3: '45675905821', lpToken: '0xB7CADa0F120Ca46745A024E6b9FE907B2Fe10CF3', allocPoint: '10', lastRewardBlock: '10901314', accCakePerShare: '45675905821'}
+VM6596:33  address: 0xB7CADa0F120Ca46745A024E6b9FE907B2Fe10CF3 id: 371
+VM6633:3 h {0: '0x4EafBF68A2d50291ffD163d4E00ad0F040aae707', 1: '0', 2: '10839061', 3: '58412737226', lpToken: '0x4EafBF68A2d50291ffD163d4E00ad0F040aae707', allocPoint: '0', lastRewardBlock: '10839061', accCakePerShare: '58412737226'}
+VM6596:33  address: 0x4EafBF68A2d50291ffD163d4E00ad0F040aae707 id: 372
+VM6634:3 h {0: '0xeA61020E5a128D2BEC67d48F7CFbe3408dB7E391', 1: '0', 2: '10877348', 3: '88119614624', lpToken: '0xeA61020E5a128D2BEC67d48F7CFbe3408dB7E391', allocPoint: '0', lastRewardBlock: '10877348', accCakePerShare: '88119614624'}
+VM6596:33  address: 0xeA61020E5a128D2BEC67d48F7CFbe3408dB7E391 id: 373
+VM6635:3 h {0: '0x0716725d78081A9E0E1Ff81516f5415b399e274D', 1: '0', 2: '10888911', 3: '345110177004', lpToken: '0x0716725d78081A9E0E1Ff81516f5415b399e274D', allocPoint: '0', lastRewardBlock: '10888911', accCakePerShare: '345110177004'}
+VM6596:33  address: 0x0716725d78081A9E0E1Ff81516f5415b399e274D id: 374
+VM6636:3 h {0: '0x6a00E41561ac36A78dbA1D09091b0F00C4E53724', 1: '0', 2: '10888123', 3: '3364368637405358', lpToken: '0x6a00E41561ac36A78dbA1D09091b0F00C4E53724', allocPoint: '0', lastRewardBlock: '10888123', accCakePerShare: '3364368637405358'}
+VM6596:33  address: 0x6a00E41561ac36A78dbA1D09091b0F00C4E53724 id: 375
+VM6637:3 h {0: '0xac109C8025F272414fd9e2faA805a583708A017f', 1: '50', 2: '10903026', 3: '13915375106039695', lpToken: '0xac109C8025F272414fd9e2faA805a583708A017f', allocPoint: '50', lastRewardBlock: '10903026', accCakePerShare: '13915375106039695'}
+VM6596:33  address: 0xac109C8025F272414fd9e2faA805a583708A017f id: 376
+VM6638:3 h {0: '0xC309a6d2F1537922E06f15aA2eb21CaA1b2eEDb6', 1: '10', 2: '10903044', 3: '885962781921', lpToken: '0xC309a6d2F1537922E06f15aA2eb21CaA1b2eEDb6', allocPoint: '10', lastRewardBlock: '10903044', accCakePerShare: '885962781921'}
+VM6596:33  address: 0xC309a6d2F1537922E06f15aA2eb21CaA1b2eEDb6 id: 377
+VM6639:3 h {0: '0x4d057F769D930eaFD597B49d6Fb2e1009A73a702', 1: '0', 2: '10855998', 3: '1789890033', lpToken: '0x4d057F769D930eaFD597B49d6Fb2e1009A73a702', allocPoint: '0', lastRewardBlock: '10855998', accCakePerShare: '1789890033'}
+VM6596:33  address: 0x4d057F769D930eaFD597B49d6Fb2e1009A73a702 id: 378
+VM6640:3 h {0: '0xcdb0016d97FD0E7EC2C3B78aA4786Cbd8e19C14C', 1: '10', 2: '10903053', 3: '176929618682', lpToken: '0xcdb0016d97FD0E7EC2C3B78aA4786Cbd8e19C14C', allocPoint: '10', lastRewardBlock: '10903053', accCakePerShare: '176929618682'}
+VM6596:33  address: 0xcdb0016d97FD0E7EC2C3B78aA4786Cbd8e19C14C id: 379
+VM6641:3 h {0: '0x2030845Ce7d4224523fd2F03Ca20Afe4aAD1D890', 1: '0', 2: '10898251', 3: '266555074523747476', lpToken: '0x2030845Ce7d4224523fd2F03Ca20Afe4aAD1D890', allocPoint: '0', lastRewardBlock: '10898251', accCakePerShare: '266555074523747476'}
+VM6596:33  address: 0x2030845Ce7d4224523fd2F03Ca20Afe4aAD1D890 id: 380
+VM6642:3 h {0: '0xBC7AC609Fa730239190A70952e64eE1DFC2530AC', 1: '0', 2: '10848114', 3: '24822388184', lpToken: '0xBC7AC609Fa730239190A70952e64eE1DFC2530AC', allocPoint: '0', lastRewardBlock: '10848114', accCakePerShare: '24822388184'}
+VM6596:33  address: 0xBC7AC609Fa730239190A70952e64eE1DFC2530AC id: 381
+VM6643:3 h {0: '0x81FEF06B20cA041041E6DEfeb59f79Ed87e7Eb0d', 1: '0', 2: '7941779', 3: '871118636731', lpToken: '0x81FEF06B20cA041041E6DEfeb59f79Ed87e7Eb0d', allocPoint: '0', lastRewardBlock: '7941779', accCakePerShare: '871118636731'}
+VM6596:33  address: 0x81FEF06B20cA041041E6DEfeb59f79Ed87e7Eb0d id: 382
+VM6644:3 h {0: '0x8D3FF27D2aD6a9556B7C4F82F4d602D20114bC90', 1: '0', 2: '10852187', 3: '11820713209', lpToken: '0x8D3FF27D2aD6a9556B7C4F82F4d602D20114bC90', allocPoint: '0', lastRewardBlock: '10852187', accCakePerShare: '11820713209'}
+VM6596:33  address: 0x8D3FF27D2aD6a9556B7C4F82F4d602D20114bC90 id: 383
+VM6645:3 h {0: '0xeC95ff6281c3aD8E27372fA6675EB337640b8E5E', 1: '0', 2: '10849399', 3: '2640451311225087', lpToken: '0xeC95ff6281c3aD8E27372fA6675EB337640b8E5E', allocPoint: '0', lastRewardBlock: '10849399', accCakePerShare: '2640451311225087'}
+VM6596:33  address: 0xeC95ff6281c3aD8E27372fA6675EB337640b8E5E id: 384
+VM6646:3 h {0: '0x8E04b3972b5C25766c681dFD30a8A1cBf6dcc8c1', 1: '10', 2: '10900849', 3: '1594181892660', lpToken: '0x8E04b3972b5C25766c681dFD30a8A1cBf6dcc8c1', allocPoint: '10', lastRewardBlock: '10900849', accCakePerShare: '1594181892660'}
+VM6658:3 h {0: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', 1: '31870', 2: '10903076', 3: '2708150679540633683', lpToken: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', allocPoint: '31870', lastRewardBlock: '10903076', accCakePerShare: '2708150679540633683'}
+let startClickID = 385;
+let yourLpInput = "";
+let poolInfo = "9";
+
+let btn = document.querySelector(
+  "#readCollapse" + String(poolInfo) + " #btn_" + String(poolInfo)
+);
+
+async function Auto() {
+  if (
+    String(
+      document.querySelector("#myanswer_" + String(poolInfo) + " a").innerText
+    ) === String(yourLpInput)
+  ) {
+    if (Number(startClickID - 1) === -1) {
+      await alert(
+        "poolID is:" + document.querySelector("#readCollapse" + String(poolInfo) + " input").value
+      );
+    } else {
+      if (Number(document.querySelector("#readCollapse" + String(poolInfo) + " input").value) === Number(startClickID)) {
+        await alert("poolID is:" + (startClickID));
+      } else {
+        await alert("poolID is:" + (startClickID - 1));
+      }
+    }
+  } else {
+    document.querySelector(
+      "#readCollapse" + String(poolInfo) + " input"
+    ).value = await startClickID;
+    await btn.click();
+    if (btn.disabled) {
+      if (startClickID > 0) {
+        await console.log(" address: "+ document.querySelector("#myanswer_" + String(poolInfo) + " a").innerText + " id: " + (startClickID - 1));
+      }
+      await startClickID++;
+      await setTimeout(Auto, 1500);
+    } else {
+      await alert("BSC Limit click at pool_id:" + (startClickID - 1));
+      await location.reload();
+    }
+  }
+}
+
+Auto();
+
+VM6780:33  address: 0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82 id: 384
+Promise {<fulfilled>: undefined}
+VM6781:3 h {0: '0x8E04b3972b5C25766c681dFD30a8A1cBf6dcc8c1', 1: '10', 2: '10900849', 3: '1594181892660', lpToken: '0x8E04b3972b5C25766c681dFD30a8A1cBf6dcc8c1', allocPoint: '10', lastRewardBlock: '10900849', accCakePerShare: '1594181892660'}
+VM6780:33  address: 0x8E04b3972b5C25766c681dFD30a8A1cBf6dcc8c1 id: 385
+VM6783:3 h {0: '0xF23BAD605E94dE0e3B60c9718a43A94A5aF43915', 1: '10', 2: '10902716', 3: '4741839932773', lpToken: '0xF23BAD605E94dE0e3B60c9718a43A94A5aF43915', allocPoint: '10', lastRewardBlock: '10902716', accCakePerShare: '4741839932773'}
+VM6780:33  address: 0xF23BAD605E94dE0e3B60c9718a43A94A5aF43915 id: 386
+VM6784:3 h {0: '0xcECfC2789af72ed151589a96a59f3A1ABC65c3b5', 1: '0', 2: '10893960', 3: '680096199437', lpToken: '0xcECfC2789af72ed151589a96a59f3A1ABC65c3b5', allocPoint: '0', lastRewardBlock: '10893960', accCakePerShare: '680096199437'}
+VM6780:33  address: 0xcECfC2789af72ed151589a96a59f3A1ABC65c3b5 id: 387
+VM6785:3 h {0: '0xECf30FbecfA642012f54212a3bE92eEF1e48eDaC', 1: '0', 2: '10889415', 3: '32101020200220', lpToken: '0xECf30FbecfA642012f54212a3bE92eEF1e48eDaC', allocPoint: '0', lastRewardBlock: '10889415', accCakePerShare: '32101020200220'}
+VM6780:33  address: 0xECf30FbecfA642012f54212a3bE92eEF1e48eDaC id: 388
+VM6786:3 h {0: '0x804678fa97d91B974ec2af3c843270886528a9E6', 1: '250', 2: '10903060', 3: '106434203091', lpToken: '0x804678fa97d91B974ec2af3c843270886528a9E6', allocPoint: '250', lastRewardBlock: '10903060', accCakePerShare: '106434203091'}
+VM6780:33  address: 0x804678fa97d91B974ec2af3c843270886528a9E6 id: 389
+VM6787:3 h {0: '0x6045931E511EF7e53A4A817F971e0CA28c758809', 1: '50', 2: '10902736', 3: '22422886561301767', lpToken: '0x6045931E511EF7e53A4A817F971e0CA28c758809', allocPoint: '50', lastRewardBlock: '10902736', accCakePerShare: '22422886561301767'}
+VM6780:33  address: 0x6045931E511EF7e53A4A817F971e0CA28c758809 id: 390
+VM6788:3 h {0: '0xDc7188AC11e124B1fA650b73BA88Bf615Ef15256', 1: '0', 2: '10902511', 3: '21786101283', lpToken: '0xDc7188AC11e124B1fA650b73BA88Bf615Ef15256', allocPoint: '0', lastRewardBlock: '10902511', accCakePerShare: '21786101283'}
+VM6780:33  address: 0xDc7188AC11e124B1fA650b73BA88Bf615Ef15256 id: 391
+VM6789:3 h {0: '0x1d94cb25895AbD6ccFeF863c53372bb462AA6b86', 1: '0', 2: '10898077', 3: '36940736983', lpToken: '0x1d94cb25895AbD6ccFeF863c53372bb462AA6b86', allocPoint: '0', lastRewardBlock: '10898077', accCakePerShare: '36940736983'}
+VM6780:33  address: 0x1d94cb25895AbD6ccFeF863c53372bb462AA6b86 id: 392
+VM6790:3 h {0: '0x1090c996Fd1490D15dD7906322eE676A5cC3cF82', 1: '0', 2: '10891244', 3: '700494369405', lpToken: '0x1090c996Fd1490D15dD7906322eE676A5cC3cF82', allocPoint: '0', lastRewardBlock: '10891244', accCakePerShare: '700494369405'}
+VM6780:33  address: 0x1090c996Fd1490D15dD7906322eE676A5cC3cF82 id: 393
+VM6791:3 h {0: '0xc74f7243766269DeC5b85b0eF4aF186e909c1b06', 1: '50', 2: '10903007', 3: '3303814913001', lpToken: '0xc74f7243766269DeC5b85b0eF4aF186e909c1b06', allocPoint: '50', lastRewardBlock: '10903007', accCakePerShare: '3303814913001'}
+VM6780:33  address: 0xc74f7243766269DeC5b85b0eF4aF186e909c1b06 id: 394
+VM6792:3 h {0: '0x51BF99bBae59b67E5cE2fA9c17b683384773F8b3', 1: '0', 2: '10855445', 3: '2062986734799', lpToken: '0x51BF99bBae59b67E5cE2fA9c17b683384773F8b3', allocPoint: '0', lastRewardBlock: '10855445', accCakePerShare: '2062986734799'}
+VM6780:33  address: 0x51BF99bBae59b67E5cE2fA9c17b683384773F8b3 id: 395
+VM6793:3 h {0: '0xEf5212aDa83EC2cc105C409DF10b8806D20E3b35', 1: '10', 2: '10903005', 3: '2143985716975', lpToken: '0xEf5212aDa83EC2cc105C409DF10b8806D20E3b35', allocPoint: '10', lastRewardBlock: '10903005', accCakePerShare: '2143985716975'}
+VM6780:33  address: 0xEf5212aDa83EC2cc105C409DF10b8806D20E3b35 id: 396
+VM6794:3 h {0: '0x2E28b9B74D6d99D4697e913b82B41ef1CAC51c6C', 1: '100', 2: '10902722', 3: '3708892839', lpToken: '0x2E28b9B74D6d99D4697e913b82B41ef1CAC51c6C', allocPoint: '100', lastRewardBlock: '10902722', accCakePerShare: '3708892839'}
+VM6780:33  address: 0x2E28b9B74D6d99D4697e913b82B41ef1CAC51c6C id: 397
+VM6796:3 h {0: '0x226Af4e918fCf3E62E5eeEC867A3e78aAa7BB01d', 1: '0', 2: '10832318', 3: '4199910787050', lpToken: '0x226Af4e918fCf3E62E5eeEC867A3e78aAa7BB01d', allocPoint: '0', lastRewardBlock: '10832318', accCakePerShare: '4199910787050'}
+VM6780:33  address: 0x226Af4e918fCf3E62E5eeEC867A3e78aAa7BB01d id: 398
+VM6797:3 h {0: '0x4dcA4D427511bC327639b222DA18FA5e334F686F', 1: '0', 2: '10832729', 3: '323776435149', lpToken: '0x4dcA4D427511bC327639b222DA18FA5e334F686F', allocPoint: '0', lastRewardBlock: '10832729', accCakePerShare: '323776435149'}
+VM6780:33  address: 0x4dcA4D427511bC327639b222DA18FA5e334F686F id: 399
+VM6799:3 h {0: '0x48028De4A9b0d3D91180333d796021ec7757bA1B', 1: '0', 2: '10820647', 3: '4981050945591', lpToken: '0x48028De4A9b0d3D91180333d796021ec7757bA1B', allocPoint: '0', lastRewardBlock: '10820647', accCakePerShare: '4981050945591'}
+VM6780:33  address: 0x48028De4A9b0d3D91180333d796021ec7757bA1B id: 400
+VM6800:3 h {0: '0x8853E3309a31583eA438F7704681F46F0D4D909b', 1: '0', 2: '10900433', 3: '131671171233', lpToken: '0x8853E3309a31583eA438F7704681F46F0D4D909b', allocPoint: '0', lastRewardBlock: '10900433', accCakePerShare: '131671171233'}
+VM6780:33  address: 0x8853E3309a31583eA438F7704681F46F0D4D909b id: 401
+VM6801:3 h {0: '0xA0387eBeA6be90849c2261b911fBBD52B4C9eAC4', 1: '0', 2: '10832778', 3: '79790672019', lpToken: '0xA0387eBeA6be90849c2261b911fBBD52B4C9eAC4', allocPoint: '0', lastRewardBlock: '10832778', accCakePerShare: '79790672019'}
+VM6780:33  address: 0xA0387eBeA6be90849c2261b911fBBD52B4C9eAC4 id: 402
+VM6802:3 h {0: '0x41F049D990D38305504631C9835f6F856Bf1BA67', 1: '10', 2: '10901695', 3: '30305105937', lpToken: '0x41F049D990D38305504631C9835f6F856Bf1BA67', allocPoint: '10', lastRewardBlock: '10901695', accCakePerShare: '30305105937'}
+VM6780:33  address: 0x41F049D990D38305504631C9835f6F856Bf1BA67 id: 403
+VM6803:3 h {0: '0xeF7767677867552CFA699148b96a03358A9be779', 1: '10', 2: '10902682', 3: '786881432356', lpToken: '0xeF7767677867552CFA699148b96a03358A9be779', allocPoint: '10', lastRewardBlock: '10902682', accCakePerShare: '786881432356'}
+VM6780:33  address: 0xeF7767677867552CFA699148b96a03358A9be779 id: 404
+VM6804:3 h {0: '0x8FA59693458289914dB0097F5F366d771B7a7C3F', 1: '100', 2: '10903023', 3: '5075953093898661200', lpToken: '0x8FA59693458289914dB0097F5F366d771B7a7C3F', allocPoint: '100', lastRewardBlock: '10903023', accCakePerShare: '5075953093898661200'}
+VM6780:33  address: 0x8FA59693458289914dB0097F5F366d771B7a7C3F id: 405
+VM6805:3 h {0: '0xDfA808Da5CFB9ABA5Fb3748FF85888F79174F378', 1: '0', 2: '10900511', 3: '73956276837', lpToken: '0xDfA808Da5CFB9ABA5Fb3748FF85888F79174F378', allocPoint: '0', lastRewardBlock: '10900511', accCakePerShare: '73956276837'}
+VM6780:33  address: 0xDfA808Da5CFB9ABA5Fb3748FF85888F79174F378 id: 406
+VM6806:3 h {0: '0x222F93187f15F354D41Ff6a7703eF7e18cdD5103', 1: '0', 2: '10821486', 3: '1555969883737', lpToken: '0x222F93187f15F354D41Ff6a7703eF7e18cdD5103', allocPoint: '0', lastRewardBlock: '10821486', accCakePerShare: '1555969883737'}
+VM6780:33  address: 0x222F93187f15F354D41Ff6a7703eF7e18cdD5103 id: 407
+VM6807:3 h {0: '0xD171B26E4484402de70e3Ea256bE5A2630d7e88D', 1: '100', 2: '10902932', 3: '41197726110497', lpToken: '0xD171B26E4484402de70e3Ea256bE5A2630d7e88D', allocPoint: '100', lastRewardBlock: '10902932', accCakePerShare: '41197726110497'}
+VM6780:33  address: 0xD171B26E4484402de70e3Ea256bE5A2630d7e88D id: 408
+VM6808:3 h {0: '0xEa26B78255Df2bBC31C1eBf60010D78670185bD0', 1: '100', 2: '10902870', 3: '496601552394', lpToken: '0xEa26B78255Df2bBC31C1eBf60010D78670185bD0', allocPoint: '100', lastRewardBlock: '10902870', accCakePerShare: '496601552394'}
+VM6780:33  address: 0xEa26B78255Df2bBC31C1eBf60010D78670185bD0 id: 409
+VM6809:3 h {0: '0x6E98Beb694Ff1CDb1eE130eDD2b21b0298683d58', 1: '10', 2: '10902375', 3: '1418877041702061', lpToken: '0x6E98Beb694Ff1CDb1eE130eDD2b21b0298683d58', allocPoint: '10', lastRewardBlock: '10902375', accCakePerShare: '1418877041702061'}
+VM6780:33  address: 0x6E98Beb694Ff1CDb1eE130eDD2b21b0298683d58 id: 410
+VM6810:3 h {0: '0x7759283571Da8c0928786A96AE601944E10461Ff', 1: '10', 2: '10903053', 3: '121348661155', lpToken: '0x7759283571Da8c0928786A96AE601944E10461Ff', allocPoint: '10', lastRewardBlock: '10903053', accCakePerShare: '121348661155'}
+VM6780:33  address: 0x7759283571Da8c0928786A96AE601944E10461Ff id: 411
+VM6811:3 h {0: '0x289841bFb694767bCb56fBc7B741aB4B4D97D490', 1: '0', 2: '10879576', 3: '38573222184982868', lpToken: '0x289841bFb694767bCb56fBc7B741aB4B4D97D490', allocPoint: '0', lastRewardBlock: '10879576', accCakePerShare: '38573222184982868'}
+VM6780:33  address: 0x289841bFb694767bCb56fBc7B741aB4B4D97D490 id: 412
+VM6812:3 h {0: '0x2a995d355D5df641e878C0F366685741Fd18D004', 1: '0', 2: '10898996', 3: '324867461412', lpToken: '0x2a995d355D5df641e878C0F366685741Fd18D004', allocPoint: '0', lastRewardBlock: '10898996', accCakePerShare: '324867461412'}
+VM6780:33  address: 0x2a995d355D5df641e878C0F366685741Fd18D004 id: 413
+VM6813:3 h {0: '0x89eE0491CE55d2f7472A97602a95426216167189', 1: '10', 2: '10901777', 3: '1123565917188', lpToken: '0x89eE0491CE55d2f7472A97602a95426216167189', allocPoint: '10', lastRewardBlock: '10901777', accCakePerShare: '1123565917188'}
+VM6780:33  address: 0x89eE0491CE55d2f7472A97602a95426216167189 id: 414
+VM6814:3 h {0: '0x8B2824D57eebf07f5AfF5C91Fa67eD7C501A9f43', 1: '0', 2: '10901435', 3: '10039348974219', lpToken: '0x8B2824D57eebf07f5AfF5C91Fa67eD7C501A9f43', allocPoint: '0', lastRewardBlock: '10901435', accCakePerShare: '10039348974219'}
+VM6780:33  address: 0x8B2824D57eebf07f5AfF5C91Fa67eD7C501A9f43 id: 415
+VM6815:3 h {0: '0xB87b857670A44356f2b70337E0F218713D2378e8', 1: '0', 2: '10896119', 3: '8260219434', lpToken: '0xB87b857670A44356f2b70337E0F218713D2378e8', allocPoint: '0', lastRewardBlock: '10896119', accCakePerShare: '8260219434'}
+VM6780:33  address: 0xB87b857670A44356f2b70337E0F218713D2378e8 id: 416
+VM6816:3 h {0: '0x3E19C18Fe3458A6065D8F0844cB7Eae52C9DAE07', 1: '10', 2: '10901071', 3: '21313565084', lpToken: '0x3E19C18Fe3458A6065D8F0844cB7Eae52C9DAE07', allocPoint: '10', lastRewardBlock: '10901071', accCakePerShare: '21313565084'}
+VM6780:33  address: 0x3E19C18Fe3458A6065D8F0844cB7Eae52C9DAE07 id: 417
+VM6817:3 h {0: '0x547A355E70cd1F8CAF531B950905aF751dBEF5E6', 1: '10', 2: '10902761', 3: '99596550097', lpToken: '0x547A355E70cd1F8CAF531B950905aF751dBEF5E6', allocPoint: '10', lastRewardBlock: '10902761', accCakePerShare: '99596550097'}
+VM6780:33  address: 0x547A355E70cd1F8CAF531B950905aF751dBEF5E6 id: 418
+VM6818:3 h {0: '0x3e4370204f598205998143F07ebCC486E441b456', 1: '0', 2: '10888604', 3: '106655894294', lpToken: '0x3e4370204f598205998143F07ebCC486E441b456', allocPoint: '0', lastRewardBlock: '10888604', accCakePerShare: '106655894294'}
+VM6780:33  address: 0x3e4370204f598205998143F07ebCC486E441b456 id: 419
+VM6819:3 h {0: '0x04b56A5B3f45CFeaFbfDCFc999c14be5434f2146', 1: '10', 2: '10903026', 3: '698276141847', lpToken: '0x04b56A5B3f45CFeaFbfDCFc999c14be5434f2146', allocPoint: '10', lastRewardBlock: '10903026', accCakePerShare: '698276141847'}
+VM6780:33  address: 0x04b56A5B3f45CFeaFbfDCFc999c14be5434f2146 id: 420
+VM6820:3 h {0: '0xba01662E978DE7d67F8FfC937726215eb8995d17', 1: '10', 2: '10902837', 3: '1715194093825', lpToken: '0xba01662E978DE7d67F8FfC937726215eb8995d17', allocPoint: '10', lastRewardBlock: '10902837', accCakePerShare: '1715194093825'}
+VM6780:33  address: 0xba01662E978DE7d67F8FfC937726215eb8995d17 id: 421
+VM6821:3 h {0: '0xA39Af17CE4a8eb807E076805Da1e2B8EA7D0755b', 1: '200', 2: '10902775', 3: '146618175273', lpToken: '0xA39Af17CE4a8eb807E076805Da1e2B8EA7D0755b', allocPoint: '200', lastRewardBlock: '10902775', accCakePerShare: '146618175273'}
+VM6780:33  address: 0xA39Af17CE4a8eb807E076805Da1e2B8EA7D0755b id: 422
+VM6822:3 h {0: '0xEc6557348085Aa57C72514D67070dC863C0a5A8c', 1: '100', 2: '10902886', 3: '17011639177', lpToken: '0xEc6557348085Aa57C72514D67070dC863C0a5A8c', allocPoint: '100', lastRewardBlock: '10902886', accCakePerShare: '17011639177'}
+VM6780:33  address: 0xEc6557348085Aa57C72514D67070dC863C0a5A8c id: 423
+VM6823:3 h {0: '0x0648ff5de80Adf54aAc07EcE2490f50a418Dde23', 1: '10', 2: '10902490', 3: '44340065422', lpToken: '0x0648ff5de80Adf54aAc07EcE2490f50a418Dde23', allocPoint: '10', lastRewardBlock: '10902490', accCakePerShare: '44340065422'}
+VM6780:33  address: 0x0648ff5de80Adf54aAc07EcE2490f50a418Dde23 id: 424
+VM6824:3 h {0: '0x89EBF9cD99864f6E51bd7a578965922029cAB977', 1: '100', 2: '10903006', 3: '692174513515', lpToken: '0x89EBF9cD99864f6E51bd7a578965922029cAB977', allocPoint: '100', lastRewardBlock: '10903006', accCakePerShare: '692174513515'}
+VM6780:33  address: 0x89EBF9cD99864f6E51bd7a578965922029cAB977 id: 425
+VM6825:3 h {0: '0x46c6bA71af7648cD7f67D0AD4d16f75bE251ed12', 1: '50', 2: '10902986', 3: '1533866570033', lpToken: '0x46c6bA71af7648cD7f67D0AD4d16f75bE251ed12', allocPoint: '50', lastRewardBlock: '10902986', accCakePerShare: '1533866570033'}
+VM6780:33  address: 0x46c6bA71af7648cD7f67D0AD4d16f75bE251ed12 id: 426
+VM6826:3 h {0: '0x9D2296e2Fe3CdBf2EB3e3e2CA8811BaFA42eeDFF', 1: '10', 2: '10902919', 3: '152185783832', lpToken: '0x9D2296e2Fe3CdBf2EB3e3e2CA8811BaFA42eeDFF', allocPoint: '10', lastRewardBlock: '10902919', accCakePerShare: '152185783832'}
+VM6780:33  address: 0x9D2296e2Fe3CdBf2EB3e3e2CA8811BaFA42eeDFF id: 427
+VM6827:3 h {0: '0x9392a1f471d9Aa14c0B8EB28bD7a3F4A814727bE', 1: '10', 2: '10898543', 3: '83031238393', lpToken: '0x9392a1f471d9Aa14c0B8EB28bD7a3F4A814727bE', allocPoint: '10', lastRewardBlock: '10898543', accCakePerShare: '83031238393'}
+VM6780:33  address: 0x9392a1f471d9Aa14c0B8EB28bD7a3F4A814727bE id: 428
+VM6828:3 h {0: '0x1472976E0B97F5B2fC93f1FFF14e2b5C4447b64F', 1: '100', 2: '10902934', 3: '38472281059', lpToken: '0x1472976E0B97F5B2fC93f1FFF14e2b5C4447b64F', allocPoint: '100', lastRewardBlock: '10902934', accCakePerShare: '38472281059'}
+VM6780:33  address: 0x1472976E0B97F5B2fC93f1FFF14e2b5C4447b64F id: 429
+VM6829:3 h {0: '0xC2d00De94795e60FB76Bc37d899170996cBdA436', 1: '100', 2: '10902787', 3: '3219320899409', lpToken: '0xC2d00De94795e60FB76Bc37d899170996cBdA436', allocPoint: '100', lastRewardBlock: '10902787', accCakePerShare: '3219320899409'}
+VM6780:33  address: 0xC2d00De94795e60FB76Bc37d899170996cBdA436 id: 430
+VM6830:3 h {0: '0x92247860A03F48d5c6425c7CA35CDcFCB1013AA1', 1: '100', 2: '10903005', 3: '346847673963', lpToken: '0x92247860A03F48d5c6425c7CA35CDcFCB1013AA1', allocPoint: '100', lastRewardBlock: '10903005', accCakePerShare: '346847673963'}
+VM6780:33  address: 0x92247860A03F48d5c6425c7CA35CDcFCB1013AA1 id: 431
+VM6831:3 h {0: '0xFdFde3aF740A22648B9dD66D05698e5095940850', 1: '50', 2: '10903098', 3: '230287751854', lpToken: '0xFdFde3aF740A22648B9dD66D05698e5095940850', allocPoint: '50', lastRewardBlock: '10903098', accCakePerShare: '230287751854'}
+VM6780:33  address: 0xFdFde3aF740A22648B9dD66D05698e5095940850 id: 432
+VM6832:3 h {0: '0x7b4682D2B3f8670b125aF6AEA8d7eD2Daa43Bdc1', 1: '50', 2: '10902928', 3: '52028427411', lpToken: '0x7b4682D2B3f8670b125aF6AEA8d7eD2Daa43Bdc1', allocPoint: '50', lastRewardBlock: '10902928', accCakePerShare: '52028427411'}
+VM6844:3 h {0: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', 1: '31870', 2: '10903111', 3: '2708150679542721320', lpToken: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', allocPoint: '31870', lastRewardBlock: '10903111', accCakePerShare: '2708150679542721320'}
+let startClickID = 433;
+let yourLpInput = "";
+let poolInfo = "9";
+
+let btn = document.querySelector(
+  "#readCollapse" + String(poolInfo) + " #btn_" + String(poolInfo)
+);
+
+async function Auto() {
+  if (
+    String(
+      document.querySelector("#myanswer_" + String(poolInfo) + " a").innerText
+    ) === String(yourLpInput)
+  ) {
+    if (Number(startClickID - 1) === -1) {
+      await alert(
+        "poolID is:" + document.querySelector("#readCollapse" + String(poolInfo) + " input").value
+      );
+    } else {
+      if (Number(document.querySelector("#readCollapse" + String(poolInfo) + " input").value) === Number(startClickID)) {
+        await alert("poolID is:" + (startClickID));
+      } else {
+        await alert("poolID is:" + (startClickID - 1));
+      }
+    }
+  } else {
+    document.querySelector(
+      "#readCollapse" + String(poolInfo) + " input"
+    ).value = await startClickID;
+    await btn.click();
+    if (btn.disabled) {
+      if (startClickID > 0) {
+        await console.log(" address: "+ document.querySelector("#myanswer_" + String(poolInfo) + " a").innerText + " id: " + (startClickID - 1));
+      }
+      await startClickID++;
+      await setTimeout(Auto, 1500);
+    } else {
+      await alert("BSC Limit click at pool_id:" + (startClickID - 1));
+      await location.reload();
+    }
+  }
+}
+
+Auto();
+
+VM6999:33  address: 0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82 id: 432
+Promise {<fulfilled>: undefined}
+VM7000:3 h {0: '0x7b4682D2B3f8670b125aF6AEA8d7eD2Daa43Bdc1', 1: '50', 2: '10902928', 3: '52028427411', lpToken: '0x7b4682D2B3f8670b125aF6AEA8d7eD2Daa43Bdc1', allocPoint: '50', lastRewardBlock: '10902928', accCakePerShare: '52028427411'}
+VM6999:33  address: 0x7b4682D2B3f8670b125aF6AEA8d7eD2Daa43Bdc1 id: 433
+VM7002:3 h {0: '0xC19dfd34D3ba5816dF9CBDaa02D32A9F8dc6F6fC', 1: '50', 2: '10902924', 3: '7549384469641', lpToken: '0xC19dfd34D3ba5816dF9CBDaa02D32A9F8dc6F6fC', allocPoint: '50', lastRewardBlock: '10902924', accCakePerShare: '7549384469641'}
+VM6999:33  address: 0xC19dfd34D3ba5816dF9CBDaa02D32A9F8dc6F6fC id: 434
+VM7003:3 h {0: '0x1Cc18962B919ef90085a8b21f8dDC95824Fbad9E', 1: '50', 2: '10902395', 3: '135292719155', lpToken: '0x1Cc18962B919ef90085a8b21f8dDC95824Fbad9E', allocPoint: '50', lastRewardBlock: '10902395', accCakePerShare: '135292719155'}
+VM6999:33  address: 0x1Cc18962B919ef90085a8b21f8dDC95824Fbad9E id: 435
+VM7004:3 h {0: '0xb5e33fE13a821e55ED33C884589a804B1b4F6fD8', 1: '0', 2: '10899472', 3: '677818285434', lpToken: '0xb5e33fE13a821e55ED33C884589a804B1b4F6fD8', allocPoint: '0', lastRewardBlock: '10899472', accCakePerShare: '677818285434'}
+VM6999:33  address: 0xb5e33fE13a821e55ED33C884589a804B1b4F6fD8 id: 436
+VM7005:3 h {0: '0x3C2b7B578Dd2175A1c3524Aa0D515106282Bf108', 1: '0', 2: '10887382', 3: '1325821740199', lpToken: '0x3C2b7B578Dd2175A1c3524Aa0D515106282Bf108', allocPoint: '0', lastRewardBlock: '10887382', accCakePerShare: '1325821740199'}
+VM6999:33  address: 0x3C2b7B578Dd2175A1c3524Aa0D515106282Bf108 id: 437
+VM7006:3 h {0: '0x37Ff7D4459ad96E0B01275E5efffe091f33c2CAD', 1: '0', 2: '10887125', 3: '4168140605', lpToken: '0x37Ff7D4459ad96E0B01275E5efffe091f33c2CAD', allocPoint: '0', lastRewardBlock: '10887125', accCakePerShare: '4168140605'}
+VM6999:33  address: 0x37Ff7D4459ad96E0B01275E5efffe091f33c2CAD id: 438
+VM7007:3 h {0: '0xe8D5d81dac092Ae61d097f84EFE230759BF2e522', 1: '100', 2: '10903112', 3: '4817636148623', lpToken: '0xe8D5d81dac092Ae61d097f84EFE230759BF2e522', allocPoint: '100', lastRewardBlock: '10903112', accCakePerShare: '4817636148623'}
+VM6999:33  address: 0xe8D5d81dac092Ae61d097f84EFE230759BF2e522 id: 439
+VM7008:3 h {0: '0xe267018C943E77992e7e515724B07b9CE7938124', 1: '0', 2: '10876939', 3: '80304032321', lpToken: '0xe267018C943E77992e7e515724B07b9CE7938124', allocPoint: '0', lastRewardBlock: '10876939', accCakePerShare: '80304032321'}
+VM6999:33  address: 0xe267018C943E77992e7e515724B07b9CE7938124 id: 440
+VM7009:3 h {0: '0x6a445cEB72c8B1751755386c3990055ff92e14A0', 1: '100', 2: '10902968', 3: '362439842', lpToken: '0x6a445cEB72c8B1751755386c3990055ff92e14A0', allocPoint: '100', lastRewardBlock: '10902968', accCakePerShare: '362439842'}
+VM6999:33  address: 0x6a445cEB72c8B1751755386c3990055ff92e14A0 id: 441
+VM7010:3 h {0: '0xb5D108578Be3750209d1b3A8f45FFee8C5a75146', 1: '100', 2: '10902981', 3: '2002829345', lpToken: '0xb5D108578Be3750209d1b3A8f45FFee8C5a75146', allocPoint: '100', lastRewardBlock: '10902981', accCakePerShare: '2002829345'}
+VM6999:33  address: 0xb5D108578Be3750209d1b3A8f45FFee8C5a75146 id: 442
+VM7011:3 h {0: '0xdcfbB12DED3FEa12D2A078Bc6324131cD14bF835', 1: '100', 2: '10902710', 3: '334213940', lpToken: '0xdcfbB12DED3FEa12D2A078Bc6324131cD14bF835', allocPoint: '100', lastRewardBlock: '10902710', accCakePerShare: '334213940'}
+VM6999:33  address: 0xdcfbB12DED3FEa12D2A078Bc6324131cD14bF835 id: 443
+VM7012:3 h {0: '0x0000000000000000000000000000000000000064', 1: '0', 2: '9878565', 3: '0', lpToken: '0x0000000000000000000000000000000000000064', allocPoint: '0', lastRewardBlock: '9878565', accCakePerShare: '0'}
+VM6999:33  address: 0x0000000000000000000000000000000000000064 id: 444
+VM7013:3 h {0: '0xF90BAA331Cfd40F094476E752Bf272892170d399', 1: '50', 2: '10903034', 3: '61000881299', lpToken: '0xF90BAA331Cfd40F094476E752Bf272892170d399', allocPoint: '50', lastRewardBlock: '10903034', accCakePerShare: '61000881299'}
+VM6999:33  address: 0xF90BAA331Cfd40F094476E752Bf272892170d399 id: 445
+VM7014:3 h {0: '0x00e53C169dA54a7E11172aEEDf8Eb87F060F479e', 1: '0', 2: '10899153', 3: '5615399258', lpToken: '0x00e53C169dA54a7E11172aEEDf8Eb87F060F479e', allocPoint: '0', lastRewardBlock: '10899153', accCakePerShare: '5615399258'}
+VM6999:33  address: 0x00e53C169dA54a7E11172aEEDf8Eb87F060F479e id: 446
+VM7015:3 h {0: '0x3747e3e107223539FD09bb730b055A1f11F78Adf', 1: '100', 2: '10903018', 3: '1240949980', lpToken: '0x3747e3e107223539FD09bb730b055A1f11F78Adf', allocPoint: '100', lastRewardBlock: '10903018', accCakePerShare: '1240949980'}
+VM6999:33  address: 0x3747e3e107223539FD09bb730b055A1f11F78Adf id: 447
+VM7016:3 h {0: '0x59FaC9e98479fc9979aE2a0C7422Af50bCBB9B26', 1: '0', 2: '10870245', 3: '2936187905', lpToken: '0x59FaC9e98479fc9979aE2a0C7422Af50bCBB9B26', allocPoint: '0', lastRewardBlock: '10870245', accCakePerShare: '2936187905'}
+VM6999:33  address: 0x59FaC9e98479fc9979aE2a0C7422Af50bCBB9B26 id: 448
+VM7017:3 h {0: '0x2bF2dEB40639201C9A94c9e33b4852D9AEa5fd2D', 1: '50', 2: '10903005', 3: '261283794970', lpToken: '0x2bF2dEB40639201C9A94c9e33b4852D9AEa5fd2D', allocPoint: '50', lastRewardBlock: '10903005', accCakePerShare: '261283794970'}
+VM6999:33  address: 0x2bF2dEB40639201C9A94c9e33b4852D9AEa5fd2D id: 449
+VM7018:3 h {0: '0x74fA517715C4ec65EF01d55ad5335f90dce7CC87', 1: '0', 2: '10879018', 3: '375684213956', lpToken: '0x74fA517715C4ec65EF01d55ad5335f90dce7CC87', allocPoint: '0', lastRewardBlock: '10879018', accCakePerShare: '375684213956'}
+VM6999:33  address: 0x74fA517715C4ec65EF01d55ad5335f90dce7CC87 id: 450
+VM7019:3 h {0: '0x4ddd56e2f34338839BB5953515833950eA680aFb', 1: '50', 2: '10903011', 3: '3889126360', lpToken: '0x4ddd56e2f34338839BB5953515833950eA680aFb', allocPoint: '50', lastRewardBlock: '10903011', accCakePerShare: '3889126360'}
+VM6999:33  address: 0x4ddd56e2f34338839BB5953515833950eA680aFb id: 451
+VM7020:3 h {0: '0xCAA662aD41a662b81be2AEa5D59EC0697628665F', 1: '50', 2: '10902982', 3: '228260634858', lpToken: '0xCAA662aD41a662b81be2AEa5D59EC0697628665F', allocPoint: '50', lastRewardBlock: '10902982', accCakePerShare: '228260634858'}
+VM6999:33  address: 0xCAA662aD41a662b81be2AEa5D59EC0697628665F id: 452
+VM7021:3 h {0: '0x67EFeF66A55c4562144B9AcfCFbc62F9E4269b3e', 1: '100', 2: '10903118', 3: '87612540977', lpToken: '0x67EFeF66A55c4562144B9AcfCFbc62F9E4269b3e', allocPoint: '100', lastRewardBlock: '10903118', accCakePerShare: '87612540977'}
+VM6999:33  address: 0x67EFeF66A55c4562144B9AcfCFbc62F9E4269b3e id: 453
+VM7022:3 h {0: '0x5B0A3b98C2f01741A11E57A9d0595B254E62F9F2', 1: '50', 2: '10902988', 3: '124915376073', lpToken: '0x5B0A3b98C2f01741A11E57A9d0595B254E62F9F2', allocPoint: '50', lastRewardBlock: '10902988', accCakePerShare: '124915376073'}
+VM6999:33  address: 0x5B0A3b98C2f01741A11E57A9d0595B254E62F9F2 id: 454
+VM7023:3 h {0: '0x5d937c3966002cbD9d32c890a59439b4b300a14d', 1: '50', 2: '10903076', 3: '134179028337', lpToken: '0x5d937c3966002cbD9d32c890a59439b4b300a14d', allocPoint: '50', lastRewardBlock: '10903076', accCakePerShare: '134179028337'}
+VM6999:33  address: 0x5d937c3966002cbD9d32c890a59439b4b300a14d id: 455
+VM7024:3 h {0: '0x3eDb06e2d182d133864fe7C0f9B4C204bBf61D4E', 1: '50', 2: '10902264', 3: '82706683265', lpToken: '0x3eDb06e2d182d133864fe7C0f9B4C204bBf61D4E', allocPoint: '50', lastRewardBlock: '10902264', accCakePerShare: '82706683265'}0: "0x3eDb06e2d182d133864fe7C0f9B4C204bBf61D4E"1: "50"2: "10902264"3: "82706683265"accCakePerShare: "82706683265"allocPoint: "50"lastRewardBlock: "10902264"lpToken: "0x3eDb06e2d182d133864fe7C0f9B4C204bBf61D4E"[[Prototype]]: Object
+VM6999:33  address: 0x3eDb06e2d182d133864fe7C0f9B4C204bBf61D4E id: 456
+VM6999:12 Uncaught (in promise) TypeError: Cannot read properties of null (reading 'innerText')
+    at Auto (<anonymous>:12:69)
+Auto @ VM6999:12
+setTimeout (async)
+Auto @ VM6999:36
+async function (async)
+Auto @ VM6999:29
+setTimeout (async)
+Auto @ VM6999:36
+async function (async)
+Auto @ VM6999:29
+setTimeout (async)
+Auto @ VM6999:36
+async function (async)
+Auto @ VM6999:29
+setTimeout (async)
+Auto @ VM6999:36
+async function (async)
+Auto @ VM6999:29
+setTimeout (async)
+Auto @ VM6999:36
+async function (async)
+Auto @ VM6999:29
+setTimeout (async)
+Auto @ VM6999:36
+async function (async)
+Auto @ VM6999:29
+setTimeout (async)
+Auto @ VM6999:36
+async function (async)
+Auto @ VM6999:29
+setTimeout (async)
+Auto @ VM6999:36
+async function (async)
+Auto @ VM6999:29
+setTimeout (async)
+Auto @ VM6999:36
+async function (async)
+Auto @ VM6999:29
+setTimeout (async)
+Auto @ VM6999:36
+async function (async)
+Auto @ VM6999:29
+setTimeout (async)
+Auto @ VM6999:36
+async function (async)
+Auto @ VM6999:29
+setTimeout (async)
+Auto @ VM6999:36
+async function (async)
+Auto @ VM6999:29
+setTimeout (async)
+Auto @ VM6999:36
+async function (async)
+Auto @ VM6999:29
+setTimeout (async)
+Auto @ VM6999:36
+async function (async)
+Auto @ VM6999:29
+setTimeout (async)
+Auto @ VM6999:36
+async function (async)
+Auto @ VM6999:29
+setTimeout (async)
+Auto @ VM6999:36
+async function (async)
+Auto @ VM6999:29
