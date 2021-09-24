@@ -1,6 +1,6 @@
-let startClickID = 0;
-let yourLpInput = "";
-let poolInfo = "9";
+let startClickID = 0;  // You can change length.
+let yourLpInput = "";  // You can change lp address.
+let poolInfo = "9";    // You can change collapse.
 
 let btn = document.querySelector(
   "#readCollapse" + String(poolInfo) + " #btn_" + String(poolInfo)
