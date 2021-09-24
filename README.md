@@ -1,6 +1,6 @@
-# BSC_POOL_ID
+# FIND_POOL_ID
 
-- auto click and find your pool id from BSC scan by pure javascript mode console panel of DevTools.
+- auto click and find your pool id from blockchain scan by pure javascript mode console panel of DevTools.
 
 # HOW TO USE
 ![image](https://user-images.githubusercontent.com/58971201/132912826-9f41deef-d3a4-463d-aa8b-e51c1648621b.png)
